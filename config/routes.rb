@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#index'
   get '/contact_us' => 'home#contact_us'
   # The priority is based upon order of creation: first created -> highest priority.
