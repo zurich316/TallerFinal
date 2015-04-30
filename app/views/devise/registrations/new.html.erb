@@ -1,13 +1,14 @@
-<h2>Sign up</h2>
+<div style="width:800px; margin:0 auto;">
+<h2>Nuevo Usuario</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="field" >
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
+  <br>
   <div class="field">
     <%= f.label :password %>
     <% if @validatable %>
@@ -15,15 +16,16 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
+   <br>
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
+ <br>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+   <br>
 <% end %>
-
 <%= render "devise/shared/links" %>
+</div>
