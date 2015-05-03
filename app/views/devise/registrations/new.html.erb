@@ -1,29 +1,77 @@
-<h2>Sign up</h2>
+<head>
+<title>Sign Up | FiTrack</title>
+</head>
+<div class="container">
+  <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">  SIGN UP </h1>
+  <br>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <table>
+        <col width="45%">
+        <col width="45%">
+        <tr>
+          <td>
+             <div class="field">
+                 <%= f.label :name %><br />
+                 <%= f.text_field :name, autofocus: true , autocomplete: "on", :size => "50"%>
+              </div>
+              <br>
+          </td>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <td>
+             <div class="field">
+                 <%= f.label :last_name %><br />
+                 <%= f.text_field :last_name, autocomplete: "on", :size => "50"%>
+             </div>
+            <br>
+          </td>
+        </tr>
+      <tr>
+        <td>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, :size =>"50"%>
+          </div>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td> 
+          <div class="field">
+            <%= f.label :password %>
+            <% if @validatable %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", :size =>"50"%>
+          </div>
+          <br>
+        </td>
+        <td>
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off",:size =>"50"%>
+          </div>
+          <br>
+        </td>
+      </tr>
+      
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+      <tr>
+        <td>
+          <div class="actions">
+            <%= f.submit "Sign up" %>
+          </div>
+          <br>
+        </td>
+      </tr>
+    <% end %>
+<tr>
+  <td>
+  <%= render "devise/shared/links" %>
+  <br>
+  </td>
+</tr>
+</table>
+</div>
