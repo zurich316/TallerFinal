@@ -3,41 +3,42 @@
 </head>
 <div class="container">
   <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">  Sign Up </h1>
-   <br>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
-      <table>
+      <table >
         <col width="45%">
         <col width="45%">
         <tr>
-          <td>
+          <td style="padding-left:30px;">
              <div class="field">
                  <%= f.label :name %><br />
                  <%= f.text_field :name, autofocus: true , autocomplete: "on", :size => "50"%>
               </div>
-               
+               <br>
           </td>
 
-          <td>
+           <td style="padding-left:20px;"> 
              <div class="field">
                  <%= f.label :last_name %><br />
                  <%= f.text_field :last_name, autocomplete: "on", :size => "50"%>
              </div>
              
+               <br>
           </td>
         </tr>
       <tr>
-        <td>
+        <td style="padding-left:30px;">
           <div class="field">
             <%= f.label :email %><br />
             <%= f.email_field :email, :size =>"50" , :placeholder => 'your_email@domain.com'%>
           </div>
            
+               <br>
         </td>
       </tr>
       <tr>
-        <td> 
+        <td style="padding-left:30px;"> 
           <div class="field">
             <%= f.label :password %>
             <% if @validatable %>
@@ -46,38 +47,42 @@
             <%= f.password_field :password, autocomplete: "off", :size =>"50"%>
           </div>
            
+               <br>
         </td>
-        <td>
+         <td style="padding-left:20px;"> 
           <div class="field">
             <%= f.label :password_confirmation %><br />
             <%= f.password_field :password_confirmation, autocomplete: "off",:size =>"50"%>
           </div>
            
+               <br>
         </td>
       </tr>
 
       <tr>
-          <td>
+          <td style="padding-left:30px;">
              <div class="field">
                  <%= f.label :birthdate %><br />
                  <%= f.date_field :birthdate%>
               </div>
                
+               <br>
           </td>
 
-          <td>
+           <td style="padding-left:20px;"> 
              
              <div class="field">
                  <%= f.label :height %><br />
                  <%= f.number_field :height,in: 1..300 %> cm.
               </div>
              
+               <br>
           </td>
         </tr>
       <tr>
 
       <tr>
-          <td>
+          <td style="padding-left:30px;">
             <div class="field">
                  <%= f.label :gender %><br />
                  <%= f.select :sex ,["Male","Female"], {},:style =>"width:100px; font-size:50px;"%>
@@ -85,7 +90,8 @@
                <br>
           </td>
 
-          <td>
+               <br>
+           <td style="padding-left:20px;"> 
              <div class="field">
                  <%= f.label :weight %><br />
                  <%= f.number_field :weight, in: 1.0..200.0, step: 0.5 %> Kg.
@@ -94,19 +100,14 @@
              <br>
           </td>
         </tr>
-        <td>
+        <td style="padding-left:30px;">
           <div class="actions">
-            <%= f.submit  "Sign up", :class => "btn btn-primary" %>
+            <%= f.submit  "Sign up", :class => "btn btn-primary"%>
+            &nbsp; <%= render "devise/shared/links" %>
           </div>
            <br>
         </td>
       </tr>
     <% end %>
-<tr>
-  <td>
-  <%= render "devise/shared/links" %>
-   <br>
-  </td>
-</tr>
 </table>
 </div>

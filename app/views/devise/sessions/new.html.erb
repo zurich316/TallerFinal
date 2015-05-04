@@ -14,7 +14,7 @@
          <h4 sytle="border-bottom: 0px solid #00000;">
            "Those who think they have not time for bodily exercise will sooner or later have to find time for illness."
          </h4>
-         <h5><b>Edward Stanley</b></h5>
+         <h5 align="right"><i>Edward Stanley</i></h5>
       </div>
 
     </div>
@@ -34,6 +34,7 @@
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off" ,class:"form-control input-lg"%>
       </div>
+      <br>
       <% if devise_mapping.rememberable? -%>
         <div class="field">
           <%= f.check_box :remember_me %>
