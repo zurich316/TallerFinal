@@ -54,7 +54,45 @@
           <br>
         </td>
       </tr>
+
       <tr>
+          <td>
+             <div class="field">
+                 <%= f.label :birthdate %><br />
+                 <%= f.date_field :birthdate%>
+              </div>
+              <br>
+          </td>
+
+          <td>
+             
+             <div class="field">
+                 <%= f.label :height %><br />
+                 <%= f.number_field :height,in: 1..300 %> cm.
+              </div>
+            <br>
+          </td>
+        </tr>
+      <tr>
+
+      <tr>
+          <td>
+            <div class="field">
+                 <%= f.label :gender %><br />
+                 <%= f.select :sex ,["Male","Female"], {},:style =>"width:100px; font-size:50px;"%>
+             </div>
+              <br>
+          </td>
+
+          <td>
+             <div class="field">
+                 <%= f.label :weight %><br />
+                 <%= f.number_field :weight, in: 1.0..200.0, step: 0.5 %> Kg.
+
+             </div>
+            <br>
+          </td>
+        </tr>
         <td>
           <div class="actions">
             <%= f.submit "Sign up" %>

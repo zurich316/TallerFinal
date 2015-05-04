@@ -23,5 +23,8 @@ module TallerProject
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.to_prepare do
+        Devise::SessionsController.layout "single_column_with_banner"
+    end
   end
 end
