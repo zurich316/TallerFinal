@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @goal.user_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @goal.type %>
+</p>
+
+<p>
+  <strong>Burned calories:</strong>
+  <%= @goal.burned_calories %>
+</p>
+
+<p>
+  <strong>Hearth rate:</strong>
+  <%= @goal.hearth_rate %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @goal.total_time %>
+</p>
+
+<p>
+  <strong>Time started:</strong>
+  <%= @goal.time_started %>
+</p>
+
+<p>
+  <strong>Time finished:</strong>
+  <%= @goal.time_finished %>
+</p>
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>
