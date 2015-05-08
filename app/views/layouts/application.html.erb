@@ -24,6 +24,8 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
+    <%= javascript_include_tag :defaults %>
+
 
  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -123,6 +125,7 @@
                     <a href="#">Contact</a>
                 </li>
                 <li>
+
                     <%= link_to('Sign out', '/users/sign_in', :method => :delete) %> 
                 </li>
             </ul>
@@ -217,79 +220,7 @@
 
 
 
- <body>
-        <script src="/assets/js/ie-emulation-modes-warning.js"></script>
-            <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-          
-
-          
-          <style>
-          .carousel-inner > .item > img,
-          .carousel-inner > .item > a > img {
-              width: 70%;
-              margin: auto;
-          }
-          </style>
-          <div id="margincarousel">
-         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img class="first-slide" src="assets/firstimage.jpg" alt="First slide">
-                  <div class="container">
-                    <div class="carousel-caption">
-                      <h1>Fitness Tracker</h1>
-                      <p>The new way to keep your fitness controlled.</p>
-                      <p><a class="btn btn-lg btn-primary" href="/users/sign_up" role="button">Start Now</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="second-slide" src="assets/fitbit.jpg" alt="Second slide">
-                  <div class="container">
-                    <div class="carousel-caption">
-                      <h1>FitBit Charge HR</h1>
-                      <p>FitBit newest band.</p>
-                      <p><a class="btn btn-lg btn-primary" href="https://www.fitbit.com/chargehr" role="button">Learn More</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="third-slide" src="assets/microsoft.jpg" alt="Third slide">
-                  <div class="container">
-                    <div class="carousel-caption">
-                      <h1>Microsoft Band</h1>
-                      <p>Look what Microsoft got for you.</p>
-                      <p><a class="btn btn-lg btn-primary" href="https://www.microsoft.com/Microsoft-Band/en-us" role="button">Learn More</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div><!-- /.carousel -->
-        </div>
-
-
-
-    <%= yield %>
-
  
-  
-</body>
 
             <% end %>
 
@@ -305,3 +236,6 @@
       
     </footer>
 </html>
+
+
+<!-- main view main sign in nav bar left -->
