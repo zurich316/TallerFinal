@@ -1,39 +1,87 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Goals</h1>
+<html lang="en">
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Type</th>
-      <th>Burned calories</th>
-      <th>Hearth rate</th>
-      <th>Total time</th>
-      <th>Time started</th>
-      <th>Time finished</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<head>
 
-  <tbody>
-    <% @goals.each do |goal| %>
-      <tr>
-        <td><%= goal.user_id %></td>
-        <td><%= goal.type %></td>
-        <td><%= goal.burned_calories %></td>
-        <td><%= goal.hearth_rate %></td>
-        <td><%= goal.total_time %></td>
-        <td><%= goal.time_started %></td>
-        <td><%= goal.time_finished %></td>
-        <td><%= link_to 'Show', goal %></td>
-        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<br>
+    <title>index_goals</title>
 
-<%= link_to 'New Goal', new_goal_path %>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+
+ 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  
+ 
+
+   
+    
+</head>
+
+<body>
+
+    
+<div id="page-content-wrapper">
+       
+        <h1>GOALS</h1>
+        <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+
+      <div class="row">
+        <% @goals.each do |goal| %>
+      
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2><td><%= goal.type_id %></td></h2>
+          <p>Goal:<%= goal.goal %></p>
+          <p>Frequency:<%= goal.frequency %></p>
+          <%= link_to 'Show', goal ,class:"btn btn-default"%>
+          <%= link_to 'Edit', edit_goal_path(goal) %>
+          <%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+       
+      
+      <% end %>
+
+      </div>
+      
+
+
+            
+        
+          <br>
+
+               
+                  <button type="button" class="btn btn-default btn-lg">
+                  <%= link_to 'New Goal', new_goal_path %>
+                    </button>
+                    <p class="pull-right"><a href="#">Back to top</a></p>
+                
+                <!--<%= link_to 'New Goal', new_goal_path %>-->
+                
+</div>
+    
+
+     
+
+    
+    
+
+
+
+
+ 
+
+</body>
+</html>
+

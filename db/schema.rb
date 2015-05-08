@@ -11,18 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504021932) do
+ActiveRecord::Schema.define(version: 20150507204820) do
+
+  create_table "TypeGoal", force: :cascade do |t|
+    t.string "type"
+    t.string "DirImg"
+  end
 
   create_table "goals", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "type"
-    t.integer  "burned_calories"
-    t.integer  "hearth_rate"
-    t.time     "total_time"
     t.datetime "time_started"
     t.datetime "time_finished"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "frequency"
+    t.integer  "type_id"
+    t.integer  "goal"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -35,6 +39,13 @@ ActiveRecord::Schema.define(version: 20150504021932) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
+
+  create_table "type_goals", force: :cascade do |t|
+    t.string   "type"
+    t.string   "DirImg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
