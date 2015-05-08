@@ -28,6 +28,8 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <%= javascript_include_tag :defaults %><!--para el log out-->
 
+    <%= javascript_include_tag :defaults %>
+
 
  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -128,6 +130,8 @@
                 </li>
                 <li>
                     <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %> 
+
+                   
                 </li>
             </ul>
          </div>
@@ -218,6 +222,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
+
 </header>
 
 
@@ -226,6 +231,10 @@
 
    
     <% end %>
+
+ 
+
+            <% end %>
 
 
 
@@ -239,3 +248,6 @@
       
     </footer>
 </html>
+
+
+<!-- main view main sign in nav bar left -->
