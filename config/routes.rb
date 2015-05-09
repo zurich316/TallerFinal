@@ -1,9 +1,12 @@
 
 Rails.application.routes.draw do
+  get 'user/welcome'
+
   resources :goals
 
   devise_for :users
   root 'home#index'
+  get '/users/welcome' => 'user#welcome'
   get '/contact_us' => 'home#contact_us'
   get '/jogging' => 'home#jogging'
   
