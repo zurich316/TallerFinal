@@ -84,7 +84,7 @@
                               </ul>
                               <ul class="nav navbar-nav navbar-right">
                                   
-                                  <a class="navbar-brand" href="#"><%= current_user.name %> <%= current_user.last_name %></a>
+                                  <a class="navbar-brand" href="/users/welcome"><%= current_user.name %> <%= current_user.last_name %></a>
                               </ul>
                         </div>
                       </div>
@@ -205,7 +205,7 @@
                                 </li>
                               </ul>
                               <ul class="nav navbar-nav navbar-right">
-                                  <li><a href="/users/sign_in">Sign In</a>
+                                  <li><a href="/user/welcome">Sign In</a>
                                   
                                   </li>
                                   <form action="/users/sign_up" class="navbar-form navbar-left" role="signup">
