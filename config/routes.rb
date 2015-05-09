@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'home#index'
-  get '/users/welcome' => 'user#welcome'
+  
   get '/contact_us' => 'home#contact_us'
   get '/jogging' => 'home#jogging'
   
