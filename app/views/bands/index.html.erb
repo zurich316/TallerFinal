@@ -1,7 +1,9 @@
+    
+<div id="page-content-wrapper" style="margin-left:3%; padding-right:10%;">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bands</h1>
-
+<h1>Listing Bands</h1>       
+ 
 <table>
   <thead>
     <tr>
@@ -11,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @bands.each do |band| %>
+    <% current_user.bands.each do |band| %>
       <tr>
         <td><%= band.code %></td>
         <td><%= link_to 'Show', band %></td>
@@ -23,5 +25,8 @@
 </table>
 
 <br>
-
-<%= link_to 'New Band', new_band_path %>
+<%if current_user.bands.count == 1%>
+<%else%>
+    <%= link_to 'New Band', new_band_path %>
+<%end%>
+</div>
