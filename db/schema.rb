@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150510222810) do
+ActiveRecord::Schema.define(version: 20150510231135) do
 
   create_table "TypeGoal", force: :cascade do |t|
     t.string "type"
@@ -36,10 +36,14 @@ ActiveRecord::Schema.define(version: 20150510222810) do
     t.integer  "user_id_id"
     t.integer  "band_id_id"
     t.integer  "band_typegoer_id"
+    t.integer  "band_type_id"
+    t.integer  "user_id"
   end
 
   add_index "bands", ["band_id_id"], name: "index_bands_on_band_id_id"
+  add_index "bands", ["band_type_id"], name: "index_bands_on_band_type_id"
   add_index "bands", ["band_typegoer_id"], name: "index_bands_on_band_typegoer_id"
+  add_index "bands", ["user_id"], name: "index_bands_on_user_id"
   add_index "bands", ["user_id_id"], name: "index_bands_on_user_id_id"
 
   create_table "goals", force: :cascade do |t|
