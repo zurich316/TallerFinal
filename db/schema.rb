@@ -11,12 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150510211905) do
+ActiveRecord::Schema.define(version: 20150511024359) do
 
   create_table "TypeGoal", force: :cascade do |t|
     t.string "type"
     t.string "DirImg"
   end
+
+  create_table "band_typegoers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "band_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "path"
+  end
+
+  create_table "bands", force: :cascade do |t|
+    t.string   "code"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "band_typegoer_id"
+    t.integer  "band_type_id"
+    t.integer  "user_id"
+  end
+
+  add_index "bands", ["band_type_id"], name: "index_bands_on_band_type_id"
+  add_index "bands", ["band_typegoer_id"], name: "index_bands_on_band_typegoer_id"
+  add_index "bands", ["user_id"], name: "index_bands_on_user_id"
 
   create_table "goals", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,9 +50,11 @@ ActiveRecord::Schema.define(version: 20150510211905) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "frequency"
-    t.integer  "type_id"
     t.integer  "goal"
+    t.integer  "type_goal_id"
   end
+
+  add_index "goals", ["type_goal_id"], name: "index_goals_on_type_goal_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
