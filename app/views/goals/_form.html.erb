@@ -21,6 +21,15 @@
     <%= f.label :type_goal_id %><br>
     <%= f.text_field :type_goal_id %>
   </div>
+
+   <div class="field" align="center" style="padding-left:30px;" >
+      <% TypeGoal.all.each do |brand|%>
+      <br>
+        <%= f.radio_button :type_goal_id, brand.id , :checked =>true%>
+      <%= f.label :type_goal_id, ""+brand.tip%>
+        <br>
+      <%end%>
+      </div>
   </td>
   </tr>
   <tr>

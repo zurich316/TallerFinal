@@ -12,7 +12,7 @@ band_types.each do |brand|
   BandType.create( name: brand[:name], path: brand[:path])
 end
 
-type_goals = [{tip: 'Steps' , img: '/assets/img1.png'},{tip: 'Dream' , img: '/assets/img2.png'},{tip: 'Weight' , img: '/assets/img3.png'},{tip: 'Calories' , img: '/assets/img4.png'}]
+type_goals = [{tip: 'Steps' , img: '/assets/img1.PNG'},{tip: 'Dream' , img: '/assets/img2.png'},{tip: 'Weight' , img: '/assets/img3.png'},{tip: 'Calories' , img: '/assets/img4.png'}]
 
 type_goals.each do |tgoal|
   TypeGoal.create( tip: tgoal[:tip], img: tgoal[:img])

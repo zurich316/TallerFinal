@@ -38,16 +38,17 @@
       <!-- Three columns of text below the carousel -->
 
       <div class="row">
-        <% @goals.each do |goal| %>
+        <% @goals.each do |tgoal| %>
       
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2><td><%= goal.type_goal_id %></td></h2>
-          <p>Goal:<%= goal.goal %></p>
-          <p>Frequency:<%= goal.frequency %></p>
-          <%= link_to 'Show', goal ,class:"btn btn-default"%>
-          <%= link_to 'Edit', edit_goal_path(goal) %>
-          <%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %>
+        
+          <img class="img-circle" src="<%=tgoal.type_goal.img%>" width="140" height="140">
+          <h2><td><%= tgoal.type_goal.tip%></td></h2>
+          <p>Goal:<%= tgoal.goal %></p>
+          <p>Frequency:<%= tgoal.frequency %></p>
+          <%= link_to 'Show', tgoal ,class:"btn btn-default"%>
+          <%= link_to 'Edit', edit_goal_path(tgoal) %>
+          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
        
       
