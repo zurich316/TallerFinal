@@ -25,13 +25,15 @@ class BandsController < ApplicationController
   # POST /bands.json
   def create
     @band = Band.new(band_params)
-
+    if current_user.goals.count==0
     goals = [{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 4}]
     
       goals.each do |g|
         Goal.create(frequency: g[:frequency], goal: g[:goal], user_id: g[:user_id], type_goal_id: g[:type_goal_id])
 
       end
+
+    end
     respond_to do |format|
       if @band.save
         format.html { redirect_to @band, notice: 'Band was successfully created.' }
