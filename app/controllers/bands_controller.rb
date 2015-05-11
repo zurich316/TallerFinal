@@ -26,6 +26,12 @@ class BandsController < ApplicationController
   def create
     @band = Band.new(band_params)
 
+    goals = [{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal:"1000",user_id:current_user.id,type_goal_id: 4}]
+    
+      goals.each do |g|
+        Goal.create(frequency: g[:frequency], goal: g[:goal], user_id: g[:user_id], type_goal_id: g[:type_goal_id])
+
+      end
     respond_to do |format|
       if @band.save
         format.html { redirect_to @band, notice: 'Band was successfully created.' }
@@ -35,6 +41,7 @@ class BandsController < ApplicationController
         format.json { render json: @band.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /bands/1

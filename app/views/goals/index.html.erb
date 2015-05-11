@@ -48,8 +48,8 @@
           <p>Goal:<%= tgoal.goal %></p>
           <p>Frequency:<%= tgoal.frequency %></p>
           <%= link_to 'Show', tgoal ,class:"btn btn-default"%>
-          <%= link_to 'Edit', edit_goal_path(tgoal) %>
-          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' } %>
+          
+          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-default" %>
         </div>
        
       

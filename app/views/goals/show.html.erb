@@ -2,7 +2,7 @@
 
  <link href="css/bootstrap.min.css" rel="stylesheet">
 <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
+        <div class="col-md-7">
           <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead"><p>
   <strong>Type:</strong>
@@ -31,11 +31,12 @@
   <%= @goal.time_finished %>
 </p></p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="/assets/goals.jpg" alt="Generic placeholder image">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="<%= @goal.type_goal.img%>" alt="Generic placeholder image">
         </div>
       </div>
+        <hr class="featurette-divider">
 
 
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', goals_path %>
+<%= link_to 'Edit', edit_goal_path(@goal), class:"btn btn-default" %> |
+<%= link_to 'Back', goals_path, class:"btn btn-default" %>
