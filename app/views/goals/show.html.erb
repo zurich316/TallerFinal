@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-
-<p>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+<div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead"><p>
   <strong>Type:</strong>
   <%= @goal.type_goal.tip%>
 </p>
@@ -26,7 +29,13 @@
 <p>
   <strong>Time finished:</strong>
   <%= @goal.time_finished %>
-</p>
+</p></p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="/assets/goals.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
 
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
 <%= link_to 'Back', goals_path %>
