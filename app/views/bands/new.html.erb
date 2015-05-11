@@ -1,8 +1,48 @@
     
 <div id="page-content-wrapper" style="margin-left:3%; padding-right:10%;">
-<h1>New Band</h1>
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Associate Band</h1>
+<br>
+<%= form_for(@band) do |f| %>
+  <% if @band.errors.any? %>
+    <div id="error_explanation"style="padding-left:30px;">
+      <h2><%= pluralize(@band.errors.count, "error") %> prohibited this band from being saved:</h2>
 
-<%= render 'form' %>
+      <ul>
+      <% @band.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
 
-<%= link_to 'Back', bands_path %>
+  <% end %>
+  <div class="row" >
+  	 <div class="field" align="center" style="padding-left:30px;" >
+  		<% BandType.all.each do |brand|%>
+  		<div class="col-xs-6" align="center">	
+			<img src="<%=brand.path%>" width="40%" height="40%">
+			<br>
+		  	<%= f.radio_button :band_type_id, brand.id , :checked =>true%>
+			<%= f.label :band_type_id, ""+brand.name%>
+	  		<br>
+  		</div>
+  		<%end%>
+  	</div>
+  </div>
+  <br><br><br>
+  <div class="field" align="center" style="padding-left:30px;">
+    <%= f.label :code %><br>
+    <%= f.text_field :code,autocomplete: "off", :size => "50"%>
+  </div>
+  <br>
+  <div class="field">
+  <%= f.hidden_field :user_id, :value => current_user.id%>
+  </div>
+  <div class="actions" align="center" style="padding-left:30px;">
+    <%= f.submit "Associate", :class => "btn btn-primary"%>
+    &nbsp;&nbsp;<%= link_to 'Back', bands_path %>
+  </div>
+<% end %>
+
 </div>
+<script type="text/javascript">
+</script>
