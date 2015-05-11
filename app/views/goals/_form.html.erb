@@ -13,14 +13,7 @@
 
 
 <table class="table table-striped">
-  <tr>
-  <td>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  </td>
-  </tr>
+  
   <tr>
   <td>
 
@@ -52,7 +45,7 @@
   <td>
   <div class="field">
     <%= f.label :time_started %><br>
-    <%= f.datetime_select :time_started %>
+    <%= f.date_select :time_started %>
   </div>
    </div>
   </td>
@@ -61,7 +54,7 @@
   <td>
   <div class="field">
     <%= f.label :time_finished %><br>
-    <%= f.datetime_select :time_finished %>
+    <%= f.date_select :time_finished %>
   </div>
   <div class="actions">
     <%= f.submit %>

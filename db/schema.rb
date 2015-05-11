@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507204820) do
+ActiveRecord::Schema.define(version: 20150510211905) do
 
   create_table "TypeGoal", force: :cascade do |t|
     t.string "type"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20150507204820) do
 
   create_table "goals", force: :cascade do |t|
     t.integer  "user_id"
-    t.datetime "time_started"
-    t.datetime "time_finished"
+    t.date     "time_started"
+    t.date     "time_finished"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "frequency"
