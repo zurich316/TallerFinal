@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/contact_us' => 'home#contact_us'
   get '/jogging' => 'home#jogging'
-  
+  get '/cycling' => 'home#cycling'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
