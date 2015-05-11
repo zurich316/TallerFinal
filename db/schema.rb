@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511024359) do
-
-  create_table "TypeGoal", force: :cascade do |t|
-    t.string "type"
-    t.string "DirImg"
-  end
+ActiveRecord::Schema.define(version: 20150511050122) do
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -47,14 +42,16 @@ ActiveRecord::Schema.define(version: 20150511024359) do
     t.integer  "user_id"
     t.date     "time_started"
     t.date     "time_finished"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "frequency"
     t.integer  "goal"
     t.integer  "type_goal_id"
+    t.integer  "type_goalgoer_id"
   end
 
   add_index "goals", ["type_goal_id"], name: "index_goals_on_type_goal_id"
+  add_index "goals", ["type_goalgoer_id"], name: "index_goals_on_type_goalgoer_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -67,9 +64,14 @@ ActiveRecord::Schema.define(version: 20150511024359) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
+  create_table "type_goalgoers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "type_goals", force: :cascade do |t|
     t.string   "type"
-    t.string   "DirImg"
+    t.string   "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
