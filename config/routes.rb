@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/contact_us' => 'home#contact_us'
   get '/jogging' => 'home#jogging'
   get '/cycling' => 'home#cycling'
+  get '/weight_lifting' => 'home#weight_lifting'
+  get '/terms_of_use' => 'home#terms_of_use'
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
