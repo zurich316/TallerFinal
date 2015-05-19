@@ -6,5 +6,13 @@ class User < ActiveRecord::Base
   	# :confirmable, :lockable, :timeoutable and :omniauthable
   	devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :trackable, :validatable
+    before_create :role_user
+    def role_user
+    	if self.email == 'admin@fitrack.com'
+    		self.add_role :admin
+    	else
+    		self.add_role :user
+    	end
+    end
 
 end
