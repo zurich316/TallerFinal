@@ -1,9 +1,54 @@
-    
-<div id="page-content-wrapper" style="margin-left:3%; padding-right:10%;">
-<h1>Editing Band</h1>
+<title>Edit Band | FiTrack</title>
+<div id="page-content-wrapper">
+<div class="container"> 
+      <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Edit Band</h1>
+      <br>
+      <%= form_for(@band) do |f| %>
+        <% if @band.errors.any? %>
+          <div id="error_explanation"style="padding-left:30px;">
+            <h2><%= pluralize(@band.errors.count, "error") %> prohibited this band from being saved:</h2>
 
-<%= render 'form' %>
+            <ul>
+            <% @band.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
 
-<%= link_to 'Show', @band %> |
-<%= link_to 'Back', bands_path %>
+        <% end %>
+        <div class="row" >
+        	 <div class="field" align="center" style="padding-left:30px;" >
+        		<% BandType.all.each do |brand|%>
+        		<div class="col-xs-6" align="center">
+                  <label class="radio-inline">
+                    <img class="img-circle" src="<%=brand.path%>" width="200px" height="200px" style="border: 1px solid #A6AAA9;"><br><br>
+                    <%if @band.band_type.id==brand.id%>
+                    	<input type="radio" name="band[band_type_id]" checked="True" value=<%=brand.id%> >
+                    <%else%>
+                    	<input type="radio" name="band[band_type_id]" value=<%=brand.id%> >
+                    <%end%>
+                    <strong><%= brand.name%></strong>
+                </label>
+                <br>
+        		</div>
+        		<%end%>
+        	</div>
+        </div>
+        <br><br><br>
+        <div class="field" align="center" style="padding-left:30px;">
+          <%= f.label :code %><br>
+          <%= f.text_field :code, :size => "50"%>
+        </div>
+        <br>
+        <div class="field">
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+        </div>
+        <div class="actions" align="center" style="padding-left:30px;">
+          <%= f.submit "Save", :class => "btn btn-primary btn-sm"%>
+          <%= link_to 'Disassociate', @band, method: :delete, data: { confirm: 'Are you sure?' }, :class=>'btn btn-danger btn-sm' %>
+          <%= link_to 'Back', bands_path, :class => "btn btn-default btn-sm" %>
+        </div>
+      <% end %>
+</div>
+</div>
 </div>

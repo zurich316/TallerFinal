@@ -2,7 +2,7 @@
 <html>
 <head>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   
   <%= csrf_meta_tags %>
@@ -157,12 +157,10 @@
          });
     </script>
 
-
-    <%= yield %></div>
-        
-
+    </div>
+    <%= yield %>
+    
  <%else%>
-
 
  <header>
                       <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -225,33 +223,18 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-
 </header>
-
-
 
     <%= yield %>
 
-   
-    
-
- 
-
             <% end %>
 
-
-
-          
-              
-
-
-    
-    <footer class="modal-footer" style="position: fixed; bottom: 0px; padding-top:10px; background:#ffffff">
-    <div class="wrapper">
+<div class="wrapper"> 
+<footer class="modal-footer" style="position: fixed; bottom: 0px; padding-top:10px; padding-right:10px; background:#ffffff;">
         <p class="text-muted">Copyright © 2015 FiTrack. All rights reserved. | <a style="color: #000000;" href="/terms_of_use">Terms of Use</a> | <a style="color: #000000;" href="/">Updated Privacy Policy</a> | <a style="color: #000000;"  href="/contact_us">Contact Us</a> | EN (US)</p>
-      </div>
-    </footer>
-    
+     
+</footer>
+</div>
 </html>
 
 
