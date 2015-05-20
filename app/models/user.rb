@@ -5,8 +5,9 @@ class User < ActiveRecord::Base
   	# Include default devise modules. Others available are:
   	# :confirmable, :lockable, :timeoutable and :omniauthable
   	devise :database_authenticatable, :registerable,
-           :recoverable, :rememberable, :trackable, :validatable
+           :recoverable, :rememberable, :trackable, :validatable, :lockable
     before_create :role_user
+
     def role_user
     	if self.email == 'admin@fitrack.com'
     		self.add_role :admin

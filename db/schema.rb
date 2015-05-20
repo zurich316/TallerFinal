@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511063450) do
+ActiveRecord::Schema.define(version: 20150520175021) do
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -95,6 +95,9 @@ ActiveRecord::Schema.define(version: 20150511063450) do
     t.decimal  "height"
     t.string   "sex"
     t.date     "birthdate"
+    t.integer  "failed_attempts",        default: 0
+    t.string   "unlock_token"
+    t.datetime "locked_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
