@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @session.user_id %>
+</p>
+
+<p>
+  <strong>Type sessiongoer:</strong>
+  <%= @session.type_sessiongoer_id %>
+</p>
+
+<p>
+  <strong>Type session:</strong>
+  <%= @session.type_session_id %>
+</p>
+
+<p>
+  <strong>Burned calories:</strong>
+  <%= @session.burned_calories %>
+</p>
+
+<p>
+  <strong>Hearth rate:</strong>
+  <%= @session.hearth_rate %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @session.total_time %>
+</p>
+
+<p>
+  <strong>Time started:</strong>
+  <%= @session.time_started %>
+</p>
+
+<p>
+  <strong>Time finished:</strong>
+  <%= @session.time_finished %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

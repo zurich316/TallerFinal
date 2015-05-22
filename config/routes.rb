@@ -1,5 +1,7 @@
 
 Rails.application.routes.draw do
+  resources :sessions
+
   resources :bands
 
   get 'user/welcome'=>'home#welcome'
