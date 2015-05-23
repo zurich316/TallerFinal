@@ -33,18 +33,22 @@
           <%end%>
           <td><%= user.last_sign_in_at.to_date %></td>
           <td>
-            <p>
+              <%if user.has_role? :user%>
+                
               <form action="/lock_unlock" method="get">
-                <input type="hidden" name="id" value ="<%=user.id%>">
+                <input type="hidden" name="id" value="<%=user.id%>">
                 <%if user.locked_at==nil%>
-                  <input type="hidden" name="status"value ="true">
+                  <input type="hidden" name="status" value ="true">
                   <input type="submit" class="btn btn-danger btn-xs" value="Lock">
                  <%else%>
                   <input type="hidden" name="status" value ="false">
                   <input type="submit" class="btn btn-primary btn-xs" value="Unlock">
                 <%end%>
               </form>
-            </p>
+
+              <%else%>
+                  <button class="btn btn-primary btn-xs" disabled><span>Admin</span></button>
+              <%end%>
           </td>
         
         </tr>

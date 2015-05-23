@@ -1,10 +1,11 @@
 class FitnessSessionsController < ApplicationController
   before_action :set_session, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! 
 
   # GET /sessions
   # GET /sessions.json
   def index
-    @sessions = FitnessSession.all
+    @sessions = current_user.fitness_sessions
   end
 
   # GET /sessions/1

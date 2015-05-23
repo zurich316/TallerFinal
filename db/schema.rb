@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521211927) do
+ActiveRecord::Schema.define(version: 20150523121428) do
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -39,9 +39,6 @@ ActiveRecord::Schema.define(version: 20150521211927) do
   add_index "bands", ["user_id"], name: "index_bands_on_user_id"
 
   create_table "fitness_sessions", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "type_sessiongoer_id"
-    t.integer  "type_session_id"
     t.integer  "burned_calories"
     t.integer  "hearth_rate"
     t.time     "total_time"
@@ -49,7 +46,14 @@ ActiveRecord::Schema.define(version: 20150521211927) do
     t.datetime "time_finished"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "user_id"
+    t.integer  "type_session_id"
+    t.integer  "type_sessiongoer_id"
   end
+
+  add_index "fitness_sessions", ["type_session_id"], name: "index_fitness_sessions_on_type_session_id"
+  add_index "fitness_sessions", ["type_sessiongoer_id"], name: "index_fitness_sessions_on_type_sessiongoer_id"
+  add_index "fitness_sessions", ["user_id"], name: "index_fitness_sessions_on_user_id"
 
   create_table "goals", force: :cascade do |t|
     t.integer  "user_id"
