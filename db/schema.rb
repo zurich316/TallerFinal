@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(version: 20150521211927) do
   add_index "bands", ["band_typegoer_id"], name: "index_bands_on_band_typegoer_id"
   add_index "bands", ["user_id"], name: "index_bands_on_user_id"
 
+  create_table "fitness_sessions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "type_sessiongoer_id"
+    t.integer  "type_session_id"
+    t.integer  "burned_calories"
+    t.integer  "hearth_rate"
+    t.time     "total_time"
+    t.datetime "time_started"
+    t.datetime "time_finished"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
   create_table "goals", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "time_started"
@@ -63,19 +76,6 @@ ActiveRecord::Schema.define(version: 20150521211927) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
-
-  create_table "sessions", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "type_sessiongoer_id"
-    t.integer  "type_session_id"
-    t.integer  "burned_calories"
-    t.integer  "hearth_rate"
-    t.time     "total_time"
-    t.datetime "time_started"
-    t.datetime "time_finished"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
 
   create_table "type_goalgoers", force: :cascade do |t|
     t.datetime "created_at", null: false

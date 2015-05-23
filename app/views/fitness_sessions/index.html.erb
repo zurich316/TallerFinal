@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Type sessiongoer</th>
+      <th>Type session</th>
+      <th>Burned calories</th>
+      <th>Hearth rate</th>
+      <th>Total time</th>
+      <th>Time started</th>
+      <th>Time finished</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= session.user_id %></td>
+        <td><%= session.type_sessiongoer_id %></td>
+        <td><%= session.type_session_id %></td>
+        <td><%= session.burned_calories %></td>
+        <td><%= session.hearth_rate %></td>
+        <td><%= session.total_time %></td>
+        <td><%= session.time_started %></td>
+        <td><%= session.time_finished %></td>
+        <td><%= link_to 'Show', session %></td>
+        <td><%= link_to 'Edit', edit_fitness_session_path(session) %></td>
+        <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Session', new_fitness_session_path %>

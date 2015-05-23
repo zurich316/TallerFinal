@@ -1,6 +1,6 @@
 
 Rails.application.routes.draw do
-  resources :sessions
+  resources :fitness_sessions
 
   resources :bands
 

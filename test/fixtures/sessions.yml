@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  type_sessiongoer_id: 1
+  type_session_id: 1
+  burned_calories: 1
+  hearth_rate: 1
+  total_time: 2015-05-21 17:09:39
+  time_started: 2015-05-21 17:09:39
+  time_finished: 2015-05-21 17:09:39
+
+two:
+  user_id: 1
+  type_sessiongoer_id: 1
+  type_session_id: 1
+  burned_calories: 1
+  hearth_rate: 1
+  total_time: 2015-05-21 17:09:39
+  time_started: 2015-05-21 17:09:39
+  time_finished: 2015-05-21 17:09:39
