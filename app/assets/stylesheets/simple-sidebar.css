@@ -123,3 +123,8 @@
         margin-right: 0;
     }
 }
+.sidebar-divider {
+border-left: 1px solid #ccc ;
+top: 0;
+right: 0;
+}

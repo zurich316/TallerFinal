@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523164832) do
+
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -38,6 +38,34 @@ ActiveRecord::Schema.define(version: 20150523164832) do
   add_index "bands", ["band_typegoer_id"], name: "index_bands_on_band_typegoer_id"
   add_index "bands", ["user_id"], name: "index_bands_on_user_id"
 
+
+  create_table "cycling_sessions", force: :cascade do |t|
+    t.integer  "distance"
+    t.integer  "velocity"
+    t.integer  "fitness_session_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "cycling_sessions", ["fitness_session_id"], name: "index_cycling_sessions_on_fitness_session_id"
+
+  create_table "fitness_sessions", force: :cascade do |t|
+    t.integer  "burned_calories"
+    t.integer  "hearth_rate"
+    t.time     "total_time"
+    t.datetime "time_started"
+    t.datetime "time_finished"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "user_id"
+    t.integer  "type_session_id"
+    t.integer  "type_sessiongoer_id"
+  end
+
+  add_index "fitness_sessions", ["type_session_id"], name: "index_fitness_sessions_on_type_session_id"
+  add_index "fitness_sessions", ["type_sessiongoer_id"], name: "index_fitness_sessions_on_type_sessiongoer_id"
+  add_index "fitness_sessions", ["user_id"], name: "index_fitness_sessions_on_user_id"
+
   create_table "goals", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "time_started"
@@ -53,6 +81,18 @@ ActiveRecord::Schema.define(version: 20150523164832) do
   add_index "goals", ["type_goal_id"], name: "index_goals_on_type_goal_id"
   add_index "goals", ["type_goalgoer_id"], name: "index_goals_on_type_goalgoer_id"
 
+
+  create_table "jogging_sessions", force: :cascade do |t|
+    t.integer  "distance"
+    t.integer  "steps"
+    t.integer  "fitness_session_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "jogging_sessions", ["fitness_session_id"], name: "index_jogging_sessions_on_fitness_session_id"
+
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -64,20 +104,48 @@ ActiveRecord::Schema.define(version: 20150523164832) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
+
+  create_table "type_cycling_sessionsgoers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
   create_table "type_goalgoers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+
   create_table "type_goals", force: :cascade do |t|
     t.string   "tip"
     t.string   "img"
     t.integer  "goal_id"
+
+  create_table "type_jogging_sessionsgoers", force: :cascade do |t|
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+
   add_index "type_goals", ["goal_id"], name: "index_type_goals_on_goal_id"
+
+  create_table "type_sessiongoers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "type_sessions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "type_weight_lifting_sessiongoers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -113,4 +181,15 @@ ActiveRecord::Schema.define(version: 20150523164832) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
 
-end
+
+  create_table "weight_lifting_sessions", force: :cascade do |t|
+    t.string   "muscle"
+    t.integer  "series"
+    t.integer  "fitness_session_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "weight_lifting_sessions", ["fitness_session_id"], name: "index_weight_lifting_sessions_on_fitness_session_id"
+
+

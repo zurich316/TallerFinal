@@ -1,0 +1,49 @@
+<%= form_for(@session) do |f| %>
+  <% if @session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@session.errors.count, "error") %> prohibited this session from being saved:</h2>
+
+      <ul>
+      <% @session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type_sessiongoer_id %><br>
+    <%= f.number_field :type_sessiongoer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type_session_id %><br>
+    <%= f.number_field :type_session_id %>
+  </div>
+  <div class="field">
+    <%= f.label :burned_calories %><br>
+    <%= f.number_field :burned_calories %>
+  </div>
+  <div class="field">
+    <%= f.label :hearth_rate %><br>
+    <%= f.number_field :hearth_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :total_time %><br>
+    <%= f.time_select :total_time %>
+  </div>
+  <div class="field">
+    <%= f.label :time_started %><br>
+    <%= f.datetime_select :time_started %>
+  </div>
+  <div class="field">
+    <%= f.label :time_finished %><br>
+    <%= f.datetime_select :time_finished %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
