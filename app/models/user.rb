@@ -15,5 +15,4 @@ class User < ActiveRecord::Base
     		self.add_role :user
     	end
     end
-
 end
