@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520175021) do
+ActiveRecord::Schema.define(version: 20150523164832) do
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -72,9 +72,12 @@ ActiveRecord::Schema.define(version: 20150520175021) do
   create_table "type_goals", force: :cascade do |t|
     t.string   "tip"
     t.string   "img"
+    t.integer  "goal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "type_goals", ["goal_id"], name: "index_type_goals_on_goal_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
