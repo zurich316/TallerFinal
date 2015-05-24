@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 	def welcome
 	end
 	def users
-		@users=User.all
+		@users=User.all.order(created_at: :desc)
 	end 
 
 	def lock_unlock

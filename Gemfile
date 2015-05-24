@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'rolify'
 gem 'authority'
+gem 'time_diff'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
