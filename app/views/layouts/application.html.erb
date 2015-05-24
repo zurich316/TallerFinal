@@ -85,7 +85,7 @@
                               </ul>
                               <ul class="nav navbar-nav navbar-right">
                                   
-                                  <a class="navbar-brand" href="/user/welcome"><%= current_user.name %> <%= current_user.last_name %></a>
+                                  <a class="navbar-brand" href="/user/profile"><%= current_user.name %> <%= current_user.last_name %></a>
                               </ul>
                         </div>
                       </div>
@@ -101,14 +101,12 @@
                <div id="sidebar-wrapper">
                  <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        <%= current_user.name%>
+                    <a href="/user/welcome">
+                        Start
                     </a>
                 </li>
                 <li>
                     <a href="/bands">Band</a>
-
-
                 </li>
                 <li>
                     <a href="#">Alarm</a>
@@ -125,23 +123,17 @@
                 <li>
                     <a href="#">Sleeping Tracking</a>
                 </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %> 
-                </li>
-
-                <%if current_user.has_role? :admin%>
+                
                     <div class="sidebar-divider hidden-xs hidden-sm">
+                <%if current_user.has_role? :admin%>
                     <li>
                       <a href="/users">Users Management</a>
                      </li>
-                   </div>
                 <%end%>
+                <li>
+                    <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %> 
+                </li>
+                </div>
             </ul>
          </div>
 

@@ -1,27 +1,11 @@
 class HomeController < ApplicationController
-	before_action :authenticate_user! , only: [:welcome]
+	before_action :authenticate_user! , only: [:welcome, :users, :lock_unlock]
 	def index
 	end
 	def contact_us
 	end
 	def welcome
 	end
-	def users
-		@users=User.all.order(created_at: :desc)
-	end 
 
-	def lock_unlock
-		@user=User.find(params[:id])
-		if params[:status]=='true'
-			@user.lock_access!
-		else
-			@user.unlock_access!
-		end
-		@user.save
-		redirect_to '/users/', notice: 'Done.' 
-	end
-
-	def permitted_params
-    		params.permit(:user => [:id, :status])
-	end
+	
 end
