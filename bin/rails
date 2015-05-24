@@ -6,6 +6,8 @@ end
 #!/usr/bin/env ruby
 begin
   load File.expand_path("../spring", __FILE__)
+  require 'metric_fu'
+  
 rescue LoadError
 end
 APP_PATH = File.expand_path('../../config/application', __FILE__)
