@@ -57,7 +57,7 @@
         <strong> Birthdate: </strong>
     </div>
     <div class="col-xs-6">
-      <%=@user.birthdate%>   
+      <%=@user.birthdate.to_formatted_s(:long)%>   
     </div>
   </div>
   <br>
