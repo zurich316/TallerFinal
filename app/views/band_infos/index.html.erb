@@ -1,0 +1,46 @@
+<div class="row" align="left" style="margin-left: 30px;  " >
+          <h1 >Daily Tracking Information</h1>
+        <div style="border-bottom: 1px solid #A6AAA9; color: #000000;"></div>
+          <% @band_infos.each do |band| %>
+          <strong>Steps:</strong>
+              <%= band.steps%>
+            </p>
+
+            <p>
+              <strong>Calories:</strong>
+              <%= band.calories %>
+            </p>
+
+            <p>
+              <strong>Latitude:</strong>
+              <%= band.lat %>
+            </p>
+       
+              <strong>Long:</strong>
+              <%= band.long %>
+            </p>
+
+
+            <p>
+              <strong>Time started:</strong>
+              <%= band.created_at %>
+            </p>
+            <p>
+              <strong>Time updated:</strong>
+              <%= band.updated_at %>
+            </p>
+            <p>
+              <strong>Id of User:</strong>
+              <%= band.user_id %>
+            </p>
+            <p>
+              <strong>Id of Band:</strong>
+              <%= band.band_id %>
+
+            </p>
+            <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;"></h1>
+           
+            
+       <% end %>
+       <%= link_to 'New', new_band_info_path, class:"btn btn-default btn-lg" %>
+</div>
