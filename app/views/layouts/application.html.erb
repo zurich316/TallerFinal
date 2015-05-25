@@ -149,10 +149,15 @@
          });
     </script>
 
-    
+    <%if current_page?(:controller => 'home', :action => 'index')%>    
     <%= yield %>
     </div>
     
+    <%else%>
+      </div>
+      <%= yield %>
+    
+    <%end%>
  <%else%>
 
  <header>
