@@ -1,12 +1,35 @@
+
+<div id="page-content-wrapper">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sessions</h1>
 
-<table>
+
+ <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Listing Sessions</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+             <img class="img-responsive" src="assets/ciclismo.jpg" alt="Generic placeholder image" >
+
+              <h4>Cycling</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img class="img-responsive" src="assets/pesasindex.jpg" alt="Generic placeholder image">
+              <h4>Weight Lifting</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img class="img-responsive" src="assets/trote.jpg" alt="Generic placeholder image" width="200" height="200">
+              <h4>Jogging</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+<div class="table-responsive" style="margin-left=-15px">
+  <table class="table table-striped">
   <thead>
     <tr>
-      <th>User</th>
-      <th>Type sessiongoer</th>
+      
       <th>Type session</th>
       <th>Burned calories</th>
       <th>Hearth rate</th>
@@ -20,9 +43,8 @@
   <tbody>
     <% @sessions.each do |session| %>
       <tr>
-        <td><%= session.user_id %></td>
-        <td><%= session.type_sessiongoer_id %></td>
-        <td><%= session.type_session_id %></td>
+        
+        <td><%= session.type_session.tipo %></td>
         <td><%= session.burned_calories %></td>
         <td><%= session.hearth_rate %></td>
         <td><%= session.total_time %></td>
@@ -35,7 +57,14 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
+
+
+</div>
 <br>
+<br>
+<br>
+<%= link_to 'New Session', new_fitness_session_path, class:"btn btn-default btn-lg" %>
 
-<%= link_to 'New Session', new_fitness_session_path %>
+

@@ -18,3 +18,10 @@ type_goals.each do |tgoal|
   TypeGoal.create( tip: tgoal[:tip], img: tgoal[:img])
   #TypeGoal.create( type: 'steps', img: '/assets/img1.png')
 end
+
+type_session = [{tipo: 'Cycling' },{tipo: 'Weight Lifting'},{tipo: 'Jogging' }]
+
+type_session.each do |tses|
+  TypeSession.create( tipo: tses[:tipo])
+  #TypeGoal.create( type: 'steps', img: '/assets/img1.png')
+end

@@ -1,8 +1,10 @@
+<div id="page-content-wrapper">
 <p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>User:</strong>
-  <%= @session.user_id %>
+  <%= @session.user.name %>
 </p>
 
 <p>
@@ -12,7 +14,7 @@
 
 <p>
   <strong>Type session:</strong>
-  <%= @session.type_session_id %>
+  <%= @session.type_session.tipo %>
 </p>
 
 <p>
@@ -40,5 +42,7 @@
   <%= @session.time_finished %>
 </p>
 
-<%= link_to 'Edit', edit_fitness_session_path(@session) %> |
-<%= link_to 'Back', fitness_sessions_path %>
+</div>
+
+<%= link_to 'Edit', edit_fitness_session_path(@session),class:"btn btn-default"%> |
+<%= link_to 'Back', fitness_sessions_path, class:"btn btn-default" %>
