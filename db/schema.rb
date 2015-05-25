@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523164832) do
+
+  create_table "TypeGoal", force: :cascade do |t|
+    t.string "type"
+    t.string "DirImg"
+  end
+
+  create_table "band_infos", force: :cascade do |t|
+    t.integer  "steps"
+    t.integer  "calories"
+    t.integer  "lat"
+    t.integer  "long"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "band_id"
+  end
+
+  add_index "band_infos", ["band_id"], name: "index_band_infos_on_band_id"
+  add_index "band_infos", ["user_id"], name: "index_band_infos_on_user_id"
+
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false

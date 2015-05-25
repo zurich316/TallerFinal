@@ -27,6 +27,13 @@ class FitnessSessionsController < ApplicationController
   # POST /sessions.json
   def create
     @session = FitnessSession.new(session_params)
+    if params[:type_session_id] == 1
+        CyclingSession.create(session_params)
+      elsif params[:type_session_id] ==2
+        WeightLiftingSession.create(session_params)
+      else
+        JoggingSession.create()
+    end
 
     respond_to do |format|
       if @session.save

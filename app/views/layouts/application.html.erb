@@ -16,18 +16,18 @@
     <meta name="author" content="">
 
   <link rel="stylesheet" type="text/css" href="blogstyle.scss">
-   <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+   <script src="assets/ie-emulation-modes-warning.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-switch.css" rel="stylesheet">
+<link href="assets/bootstrap.css" rel="stylesheet">
+<link href="assets/bootstrap-switch.css" rel="stylesheet">
 <script src="javascript/bootstrap-switch.js"></script>
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="assets/simple-sidebar.css" rel="stylesheet">
     <%= javascript_include_tag :defaults %><!--para el log out-->
 
     <%= javascript_include_tag :defaults %>
@@ -94,9 +94,9 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 </header>
             <div id="wrapper">
                <div id="sidebar-wrapper">
@@ -119,11 +119,12 @@
                     <a href="/goals">Goals</a>
                 </li>
                 <li>
-                    <a href="#">Daily Tracking</a>
+                    <a href="/band_info">Daily Tracking</a>
                 </li>
                 <li>
                     <a href="#">Sleeping Tracking</a>
                 </li>
+                 
                 
                     <div class="sidebar-divider hidden-xs hidden-sm">
                 <%if current_user.has_role? :admin%>
@@ -148,8 +149,9 @@
          });
     </script>
 
-    </div>
+    
     <%= yield %>
+    </div>
     
  <%else%>
 
@@ -210,7 +212,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     

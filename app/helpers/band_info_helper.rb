@@ -1,0 +1,2 @@
+module BandInfoHelper
+end
