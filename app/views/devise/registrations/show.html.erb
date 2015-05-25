@@ -1,0 +1,126 @@
+<head>
+<title>Edit Profile | FiTrack</title>
+</head>
+<div class="container">
+  <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;"> Edit Profile </h1>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <table >
+        <col width="45%">
+        <col width="45%">
+        <tr>
+          <td style="padding-left:30px;">
+             <div class="field">
+                 <%= f.label :name %><br />
+                 <%= f.text_field :name, autofocus: true , autocomplete: "on", :size => "50"%>
+              </div>
+               <br>
+          </td>
+
+           <td style="padding-left:20px;"> 
+             <div class="field">
+                 <%= f.label :last_name %><br />
+                 <%= f.text_field :last_name, autocomplete: "on", :size => "50"%>
+             </div>
+             
+               <br>
+          </td>
+        </tr>
+      <tr>
+        <td style="padding-left:30px;">
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email,  :size =>"50" , :placeholder => 'your_email@domain.com'%>
+          </div>
+           
+               <br>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left:30px;"> 
+          <div class="field">
+            <%= f.label :password %>
+            <% if @validatable %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", :size =>"50"%>
+          </div>
+           
+               <br>
+        </td>
+         <td style="padding-left:20px;"> 
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off",:size =>"50"%>
+          </div>
+           
+               <br>
+        </td>
+      </tr>
+
+      <tr>
+          <td style="padding-left:30px;">
+             <div class="field">
+                 <%= f.label :birthdate %><br />
+                 <%= f.date_select :birthdate, :start_year=>1900,:end_year=>Time.now.year%>
+              </div>
+               
+               <br>
+          </td>
+
+           <td style="padding-left:20px;"> 
+             
+             <div class="field">
+                 <%= f.label :height %><br />
+                 <%= f.number_field :height,in: 1..300 %> cm.
+              </div>
+             
+               <br>
+          </td>
+        </tr>
+      <tr>
+
+      <tr>
+          <td style="padding-left:30px;">
+            <div class="field">
+                 <%= f.label :gender %><br />
+                 <%= f.select :sex ,["Male","Female"], {},:style =>"width:80px; font-size:14px;"%>
+             </div>
+               <br>
+          </td>
+
+               <br>
+           <td style="padding-left:20px;"> 
+             <div class="field">
+                 <%= f.label :weight %><br />
+                 <%= f.number_field :weight, in: 1.0..200.0, step: 0.5 %> Kg.
+
+             </div>
+             <br>
+          </td>
+        </tr>
+        <td style="padding-left:30px;">
+          <div class="actions">
+            <%= f.submit  "Sign up", :class => "btn btn-primary btn-sm"%>
+            &nbsp; <%= render "devise/shared/links" %>
+          </div>
+           <br>
+        </td>
+      </tr>
+    <% end %>
+</table>
+
+<h3 style="border-bottom: 1px solid #A80000; color: #a80000; padding-bottom:10px;"> Cancel Account </h3>
+<table style="margin-bottom:30px;">
+  <tr>
+          <td style="padding-left:30px;">
+            <p>Are you unhappy with Fitrack?<br><br>
+              <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-danger btn-sm' %>&nbsp;<%= link_to "Back", :back ,:class=>'btn-sm'%>
+            </p>
+          </td>
+  </tr>
+</table>
+
+</div>

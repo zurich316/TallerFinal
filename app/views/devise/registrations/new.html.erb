@@ -4,9 +4,10 @@
 <div class="container">
   <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">  Sign Up </h1>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-
+      
       <table >
+        <%= devise_error_messages! %>
+
         <col width="45%">
         <col width="45%">
         <tr>
@@ -27,7 +28,8 @@
                <br>
           </td>
         </tr>
-      <tr>
+
+          <tr>
         <td style="padding-left:30px;">
           <div class="field">
             <%= f.label :email %><br />
@@ -102,12 +104,15 @@
         </tr>
         <td style="padding-left:30px;">
           <div class="actions">
-            <%= f.submit  "Sign up", :class => "btn btn-primary"%>
-            &nbsp; <%= render "devise/shared/links" %>
+            <%= f.submit  "Sign up", :class => "btn btn-primary btn-sm"%>
+            &nbsp; | <%= link_to "Sign in", new_session_path(resource_name) , :class => "btn-sm"%> 
+             | <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) , :class => "btn-sm" %>
           </div>
            <br>
         </td>
       </tr>
     <% end %>
 </table>
+<br>
+<br>
 </div>

@@ -1,0 +1,72 @@
+<head>
+<title>Users Management | FiTrack</title>
+</head>
+<header>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/highlight.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet">
+    
+</header>
+<div class="container">
+    <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">  FiTrack Users </h1>
+
+        <br>
+    <%if current_user.has_role? :user%>
+    <br>
+       <center>
+        <p class="text-muted">
+            <h5 style="color: #858585;">Oops! You cannot access to this page.</h5>
+            <h5 style="color: #858585;">Only FiTrack administrators can access to this point.</h5>
+            <br>
+        </p>
+      </center>
+    <%else%>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Band Type</th>
+        <th>Last Session</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.last_name %></td>
+          <%if user.bands.count()!=0%>
+            <td><%= user.bands.first.band_type.name %></td>  
+          <%else%>
+            <td>No band associated</td>
+          <%end%>
+          <td><%= user.last_sign_in_at.to_date %></td>
+          <td>
+              <%if user.has_role? :user%>
+                
+              <form action="/lock_unlock" method="get">
+                <input type="hidden" name="id" value="<%=user.id%>">
+                <%if user.locked_at==nil%>
+                  <input type="hidden" name="status" value ="true">
+                  <input type="submit" class="btn btn-danger btn-xs" value="Lock">
+                 <%else%>
+                  <input type="hidden" name="status" value ="false">
+                  <input type="submit" class="btn btn-primary btn-xs" value="Unlock">
+                <%end%>
+              </form>
+
+              <%else%>
+                  <button class="btn btn-primary btn-xs" disabled><span>Admin</span></button>
+              <%end%>
+          </td>
+        
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+    <%end%>
+  <br>
+</div>

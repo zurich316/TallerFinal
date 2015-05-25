@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  muscle: MyString
+  series: 1
+  jogging_session_id: 1
+
+two:
+  muscle: MyString
+  series: 1
+  jogging_session_id: 1

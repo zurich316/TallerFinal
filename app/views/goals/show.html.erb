@@ -1,41 +1,41 @@
 <p id="notice"><%= notice %></p>
 
- <link href="css/bootstrap.min.css" rel="stylesheet">
-<div class="row featurette">
-        <div class="col-md-7">
+ <link href="assets/bootstrap.min.css" rel="stylesheet" >
+<div class="row featurette" style="margin-top:-1%;">
+        <div class="col-md-7" >
           <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead"><p>
-  <strong>Type:</strong>
-  <%= @goal.type_goal.tip%>
-</p>
+              <strong>Type:</strong>
+              <%= @goal.type_goal.tip%>
+            </p>
 
-<p>
-  <strong>Frequency:</strong>
-  <%= @goal.frequency %>
-</p>
+            <p>
+              <strong>Frequency:</strong>
+              <%= @goal.frequency %>
+            </p>
 
-<p>
-  <strong>Goal:</strong>
-  <%= @goal.goal %>
-</p>
+            <p>
+              <strong>Goal:</strong>
+              <%= @goal.goal %>
+            </p>
 
 
 
-<p>
-  <strong>Time started:</strong>
-  <%= @goal.time_started %>
-</p>
+            <p>
+              <strong>Time started:</strong>
+              <%= @goal.time_started %>
+            </p>
 
-<p>
-  <strong>Time finished:</strong>
-  <%= @goal.time_finished %>
-</p></p>
+            <p>
+              <strong>Time finished:</strong>
+              <%= @goal.time_finished %>
+            </p></p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5" style="margin-top:10%;">
           <img class="featurette-image img-responsive center-block" src="<%= @goal.type_goal.img%>" alt="Generic placeholder image">
         </div>
       </div>
-        <hr class="featurette-divider">
+        
 
 
 <%= link_to 'Edit', edit_goal_path(@goal), class:"btn btn-default" %> |

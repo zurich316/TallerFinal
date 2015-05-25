@@ -1,20 +1,13 @@
 
 Rails.application.routes.draw do
+  resources :fitness_sessions
   resources :bands
-
   get 'user/welcome'=>'home#welcome'
-
+  get 'user/profile' => 'profile#show'
   resources :goals
 
   devise_for :users
   root 'home#index'
-  get '/contact_us' => 'home#contact_us'
-  get '/jogging' => 'home#jogging'
-  get '/cycling' => 'home#cycling'
-  get '/weight_lifting' => 'home#weight_lifting'
-  get '/terms_of_use' => 'home#terms_of_use'
-
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -23,7 +16,13 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  get '/contact_us' => 'home#contact_us'
+  get '/jogging' => 'home#jogging'
+  get '/cycling' => 'home#cycling'
+  get '/weight_lifting' => 'home#weight_lifting'
+  get '/terms_of_use' => 'home#terms_of_use'
+  get '/users'=>'admin#users'
+  get '/lock_unlock'=>'admin#lock_unlock'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
