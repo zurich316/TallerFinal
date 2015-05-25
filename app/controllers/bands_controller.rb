@@ -41,7 +41,6 @@ class BandsController < ApplicationController
         format.json { render json: @band.errors, status: :unprocessable_entity }
       end
     end
-    
   end
 
   # PATCH/PUT /bands/1
@@ -193,4 +192,6 @@ class BandsController < ApplicationController
     return year1
 
   end
+ 
+
 end
