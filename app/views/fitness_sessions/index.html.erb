@@ -1,5 +1,4 @@
 
-
 <div id="page-content-wrapper">
 <p id="notice"><%= notice %></p>
 
@@ -42,10 +41,10 @@
   </thead>
 
   <tbody>
-    <% @essions.each do |session| %>
+    <% @sessions.each do |session| %>
       <tr>
         
-        <td><%= session.type_session_id %></td>
+        <td><%= session.type_session.tipo %></td>
         <td><%= session.burned_calories %></td>
         <td><%= session.hearth_rate %></td>
         <td><%= session.total_time %></td>
@@ -59,7 +58,13 @@
   </tbody>
 </table>
 </div>
+
+
+
 </div>
 <br>
+<br>
+<br>
+<%= link_to 'New Session', new_fitness_session_path, class:"btn btn-default btn-lg" %>
 
-<%= link_to 'New Session', new_fitness_session_path %>
+

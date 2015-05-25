@@ -5,8 +5,8 @@ class FitnessSessionsController < ApplicationController
   # GET /sessions
   # GET /sessions.json
   def index
-    #@sessions = current_user.fitness_sessions
-    @sessions = FitnessSession.all
+    @sessions = current_user.fitness_sessions
+    #@sessions = FitnessSession.all
   end
 
   # GET /sessions/1
@@ -17,6 +17,7 @@ class FitnessSessionsController < ApplicationController
   # GET /sessions/new
   def new
     @session = FitnessSession.new
+    @session.time_started=DateTime.now
   end
 
   # GET /sessions/1/edit
@@ -26,17 +27,18 @@ class FitnessSessionsController < ApplicationController
   # POST /sessions
   # POST /sessions.json
   def create
-    @session = FitnessSession.new(session_params)
-    if params[:type_session_id] == 1
-        CyclingSession.create(session_params)
-      elsif params[:type_session_id] ==2
-        WeightLiftingSession.create(session_params)
+    @session = FitnessSession.create(session_params)
+    if @session.type_session_id == 1
+        CyclingSession.create(:fitness_session_id =>@session.id)
+      elsif @session.type_session_id == 2
+        WeightLiftingSession.create(:fitness_session_id =>@session.id)
       else
-        JoggingSession.create()
+        JoggingSession.create(:fitness_session_id =>@session.id)
     end
 
     respond_to do |format|
       if @session.save
+
         format.html { redirect_to @session, notice: 'Session was successfully created.' }
         format.json { render :show, status: :created, location: @session }
       else

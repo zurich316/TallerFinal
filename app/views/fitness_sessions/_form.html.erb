@@ -11,39 +11,43 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
+
+<div class="col-lg-4">
   <div class="field">
-    <%= f.label :type_sessiongoer_id %><br>
-    <%= f.number_field :type_sessiongoer_id %>
+   <%= f.label :type_session %><br />
+<%= f.collection_select :type_session_id ,TypeSession.all, :id ,:tipo,:style =>"width:80px; font-size:14px;"%>
   </div>
-  <div class="field">
-    <%= f.label :type_session_id %><br>
-    <%= f.number_field :type_session_id %>
-  </div>
+
   <div class="field">
     <%= f.label :burned_calories %><br>
-    <%= f.number_field :burned_calories %>
+    <%= f.number_field :burned_calories ,class:"form-control input-lg"%>
   </div>
   <div class="field">
     <%= f.label :hearth_rate %><br>
-    <%= f.number_field :hearth_rate %>
+    <%= f.number_field :hearth_rate ,class:"form-control input-lg"%>
   </div>
   <div class="field">
     <%= f.label :total_time %><br>
-    <%= f.time_select :total_time %>
+    <%= f.time_select :total_time ,class:"form-control input-lg"%>
   </div>
   <div class="field">
     <%= f.label :time_started %><br>
     <%= f.datetime_select :time_started %>
   </div>
-  <div class="field">
-    <%= f.label :time_finished %><br>
-    <%= f.datetime_select :time_finished %>
-  </div>
+ 
+<br>
   <div class="actions">
-    <%= f.submit %>
+     <%= f.submit :Finish,class:"btn btn-success btn-lg"%>
   </div>
+</div>
+
+
+
+
+  
+
 <% end %>
