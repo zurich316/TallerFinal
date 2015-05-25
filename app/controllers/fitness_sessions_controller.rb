@@ -5,7 +5,8 @@ class FitnessSessionsController < ApplicationController
   # GET /sessions
   # GET /sessions.json
   def index
-    @sessions = current_user.fitness_sessions
+    #@sessions = current_user.fitness_sessions
+    @sessions = FitnessSession.all
   end
 
   # GET /sessions/1
@@ -70,6 +71,6 @@ class FitnessSessionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def session_params
-      params.require(:session).permit(:user_id, :type_sessiongoer_id, :type_session_id, :burned_calories, :hearth_rate, :total_time, :time_started, :time_finished)
+      params.require(:fitness_session).permit(:user_id, :type_sessiongoer_id, :type_session_id, :burned_calories, :hearth_rate, :total_time, :time_started, :time_finished)
     end
 end
