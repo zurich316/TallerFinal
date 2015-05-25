@@ -16,31 +16,52 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-
-
- 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  
- 
-
-   
-    
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
-
 <body>
-
+  <div class="container">
+    <center>
+      <h2> Welcome! </h2>
+      <p class="lead"><strong><%= current_user.name %></strong>, this is your FiTrack dashboard. <br>
+      Let's the fitness journey begin.</p>
+    </center>
+     <hr class="featurette-divider" style="margin-top:17px; margin-bottom:17px;">
     
-<div id="page-content-wrapper">
-       
-        <div class="container" align="center" style="padding-top:25%;">
-          Welcome!<br>
-          <strong><%= current_user.name %></strong>, this is your FiTrack dashboard. <br>
-          Let's the fitness journey begin.
-      
+    <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          
+          <h3 class="featurette-heading">Jogging. <br><span class="text-muted">New experience.</span></h3>
+          <p class="lead">Now you can enjoy a new experience of jogging tracking. With FiTrack, you can track your jogging session every second.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block"   src="/assets/jogging3.jpg" width="100%" height="100%">
+        </div>
       </div>
-                
-</div>
+      <hr class="featurette-divider" style="margin-top:15px; margin-bottom:15px;">
 
+      <div class="row featurette">
+        
+        <div class="col-md-5 col-md-push-7">
+          <img class="featurette-image img-responsive center-block"   src="/assets/weight2.jpg" width="100%" height="100%">
+        </div>
+        <div class="col-md-7 col-md-pull-5">
+          <h3 class="featurette-heading">Weight lifting. <br><span class="text-muted">See for yourself.</span></h3>
+          <p class="lead">With FiTrack you can follow your gym progress. We have many features to help you keep track to your fitness development.</p>
+        </div>
+      </div>
+      <hr class="featurette-divider" style="margin-top:15px; margin-bottom:15px;">
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h3 class="featurette-heading">Cycling.<br> <span class="text-muted">Incredible features</span></h3>
+          <p class="lead">Each day is a new day to become better. Follow your cycling progress with FiTrack.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block"   src="/assets/cycling.jpg" width="100%" height="100%">
+        </div>
+      </div>
+      <hr class="featurette-divider" style="margin-top:15px; margin-bottom:15px;">
+
+      </div>
 </body>
 </html>
 

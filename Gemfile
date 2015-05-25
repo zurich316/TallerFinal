@@ -17,6 +17,7 @@ gem 'devise'
 gem 'rolify'
 gem 'authority'
 gem 'time_diff'
+gem 'nokogiri'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -43,6 +44,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'simplecov', :require => false, :group=> :test
   gem 'autotest-rails'
+  gem 'metric_fu'
+  gem 'mechanize', '~> 2.7.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   #gem 'spring'
 end

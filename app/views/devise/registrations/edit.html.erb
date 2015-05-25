@@ -2,10 +2,10 @@
 <title>Edit Profile | FiTrack</title>
 </head>
 <div class="container">
-  <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;"> Edit Profile </h1>
+  <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;"> Edit Information </h1>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
 
       <table >
         <col width="45%">
@@ -34,28 +34,6 @@
             <%= f.label :email %><br />
             <%= f.email_field :email,  :size =>"50" , :placeholder => 'your_email@domain.com'%>
           </div>
-           
-               <br>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding-left:30px;"> 
-          <div class="field">
-            <%= f.label :password %>
-            <% if @validatable %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
-            <%= f.password_field :password, autocomplete: "off", :size =>"50"%>
-          </div>
-           
-               <br>
-        </td>
-         <td style="padding-left:20px;"> 
-          <div class="field">
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off",:size =>"50"%>
-          </div>
-           
                <br>
         </td>
       </tr>
@@ -80,7 +58,7 @@
                <br>
           </td>
         </tr>
-      <tr>
+      
 
       <tr>
           <td style="padding-left:30px;">
@@ -96,16 +74,43 @@
              <div class="field">
                  <%= f.label :weight %><br />
                  <%= f.number_field :weight, in: 1.0..200.0, step: 0.5 %> Kg.
-
              </div>
              <br>
           </td>
         </tr>
+        <tr>
+          <td>
+            <div class="field" style="padding-left:30px;">
+              <%= f.label :new_password %><br /> <i>(Complete if you want to change your password)</i>
+              <%= f.password_field :password, autocomplete: "off" , :size=>'50'%>
+            </div>
+            <br>
+          </td>
+          <td>
+            <div class="field" style="padding-left:20px;">
+              
+              <%= f.label :confirm_new_password %><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "off" , :size=>'50'%>
+            </div>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left:30px;">
+             <div class="field">
+                <%= f.label :current_password %> <br><i>(we need your current password to confirm your changes)</i><br />
+                <%= f.password_field :current_password, autocomplete: "off", :size=>'50' %>
+                
+              </div>
+              <br>
+          </td>
+        </tr>
+      <tr>
         <td style="padding-left:30px;">
           <div class="actions">
-            <%= f.submit  "Sign up", :class => "btn btn-primary btn-sm"%>
-            &nbsp; <%= render "devise/shared/links" %>
-          </div>
+            <%= f.submit  "Update", :class => "btn btn-primary btn-sm"%>
+            &nbsp;<%= link_to "Back", :back ,:class=>'btn-sm'%>
+            </div>
            <br>
         </td>
       </tr>

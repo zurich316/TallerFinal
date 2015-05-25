@@ -7,7 +7,7 @@ class Band < ActiveRecord::Base
 	def valid_code_number?
 		#Validates if code has just alphanumeric characters.
 		unless self.code.scan(/[a-z\W]/).empty?
-	      errors.add(:code, "cannot have non-alphanumeric or lowcase characters")
+	      errors.add(:code, "cannot have non-alphanumeric or lowercase characters")
 	    end
 	end
 
