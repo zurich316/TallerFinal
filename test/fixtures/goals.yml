@@ -1,19 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 1
-  type: 
-  burned_calories: 1
-  hearth_rate: 1
-  total_time: 2015-05-03 22:19:32
-  time_started: 2015-05-03 22:19:32
-  time_finished: 2015-05-03 22:19:32
+  user_id:1
+  type_goal_id:1
+  type_goalgoer_id:1
+  time_started:2015-05-03 22:19:32
+  time_finished:2015-05-03 22:19:32
 
 two:
-  user_id: 1
-  type: 
-  burned_calories: 1
-  hearth_rate: 1
-  total_time: 2015-05-03 22:19:32
-  time_started: 2015-05-03 22:19:32
-  time_finished: 2015-05-03 22:19:32
+  user_id:1
+  type_goal_id:2
+  type_goalgoer_id:2
+  time_started:2015-05-03 22:19:32
+  time_finished:2015-05-03 22:19:32
+
+three:
+  user_id:1
+  type_goal_id:3
+  type_goalgoer_id:3
+  time_started:2015-05-03 22:19:32
+  time_finished:2015-05-03 22:19:32
+
+four:
+  user_id:2
+  type_goal_id:4
+  type_goalgoer_id:4
+  time_started:2015-05-03 22:19:32
+  time_finished:2015-05-03 22:19:32

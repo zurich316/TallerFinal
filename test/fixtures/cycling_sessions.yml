@@ -1,11 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  distance: 1
-  velocity: 1
-  fitness_session_id: 1
+  distance:1
+  velocity:1
+
 
 two:
-  distance: 1
-  velocity: 1
-  fitness_session_id: 1
+  distance:1
+  velocity:1

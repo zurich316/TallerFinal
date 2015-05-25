@@ -35,7 +35,7 @@ class GoalsControllerTest < ActionController::TestCase
   end
 
   test "should update goal" do
-    patch :update, id: @goal, goal: { burned_calories: @goal.burned_calories, hearth_rate: @goal.hearth_rate, time_finished: @goal.time_finished, time_started: @goal.time_started, total_time: @goal.total_time, type: @goal.type, user_id: @goal.user_id }
+    patch :update, id: @goal.id, goal: { burned_calories: @goal.burned_calories, hearth_rate: @goal.hearth_rate, time_finished: @goal.time_finished, time_started: @goal.time_started, total_time: @goal.total_time, type: @goal.type, user_id: @goal.user_id }
     assert_redirected_to goal_path(assigns(:goal))
   end
 
