@@ -26,14 +26,8 @@ class BandsController < ApplicationController
   def create
     @band = Band.new(band_params)
     if current_user.goals.count==0
-      if current_user.sex == "Male"
-        goals = [{frequency:"day",goal: steps_all,user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal: weight_all,user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal: calories_male,user_id:current_user.id,type_goal_id: 4}]
-       else
-        goals = [{frequency:"day",goal: steps_all,user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal: weight_all,user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal: calories_female,user_id:current_user.id,type_goal_id: 4}]
-            
-        
-       end
-        goals.each do |g|
+      
+        goals_automatics.each do |g|
               Goal.create(frequency: g[:frequency], goal: g[:goal], user_id: g[:user_id], type_goal_id: g[:type_goal_id])
 
       end
@@ -84,7 +78,16 @@ class BandsController < ApplicationController
     def band_params
       params.require(:band).permit(:code, :band_type_id, :user_id)
     end
-
+    def goals_automatics
+        if current_user.sex == "Male"
+        goals = [{frequency:"day",goal: steps_all,user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal: weight_all,user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal: calories_male,user_id:current_user.id,type_goal_id: 4}]
+       else
+        goals = [{frequency:"day",goal: steps_all,user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal: weight_all,user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal: calories_female,user_id:current_user.id,type_goal_id: 4}]
+            
+        
+       end
+       return goals
+    end
     def steps_all
 
 
