@@ -41,7 +41,12 @@
     <%= f.label :time_started %><br>
     <%= f.date_select :time_started %>
   </div>
-  
+   <div class="field">
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+        </div>
+          <div class="field">
+        <%= f.hidden_field :automatic_goal, :value => false%>
+        </div>
   
   
   <div class="field">

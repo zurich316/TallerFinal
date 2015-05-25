@@ -28,8 +28,7 @@ class BandsController < ApplicationController
     if current_user.goals.count==0
       
         goals_automatics.each do |g|
-              Goal.create(frequency: g[:frequency], goal: g[:goal], user_id: g[:user_id], type_goal_id: g[:type_goal_id])
-
+              Goal.create(frequency: g[:frequency], goal: g[:goal], user_id: g[:user_id], type_goal_id: g[:type_goal_id], automatic_goal: g[:automatic], time_started:Time.now, time_finished:Time.now)       
       end
    end
     respond_to do |format|
@@ -78,12 +77,10 @@ class BandsController < ApplicationController
       params.require(:band).permit(:code, :band_type_id, :user_id)
     end
     def goals_automatics
-        if current_user.sex == "Male"
-        goals = [{frequency:"day",goal: steps_all,user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal: weight_all,user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal: calories_male,user_id:current_user.id,type_goal_id: 4}]
+       if current_user.sex == "Male"
+        goals = [{frequency:"Daily",goal: steps_all,user_id:current_user.id,type_goal_id: 1,automatic:true},{frequency:"Daily",goal: sleep_all,user_id:current_user.id,type_goal_id: 2,automatic:true},{frequency:"Global",goal: weight_all,user_id:current_user.id,type_goal_id: 3,automatic:true},{frequency:"Daily",goal: calories_male,user_id:current_user.id,type_goal_id: 4,automatic:true}]
        else
-        goals = [{frequency:"day",goal: steps_all,user_id:current_user.id,type_goal_id: 1},{frequency:"day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2},{frequency:"day",goal: weight_all,user_id:current_user.id,type_goal_id: 3},{frequency:"day",goal: calories_female,user_id:current_user.id,type_goal_id: 4}]
-            
-        
+        goals = [{frequency:"Daily",goal: steps_all,user_id:current_user.id,type_goal_id: 1,automatic:true},{frequency:"Daily",goal: sleep_all,user_id:current_user.id,type_goal_id: 2,automatic:true},{frequency:"Global",goal: weight_all,user_id:current_user.id,type_goal_id: 3,automatic:true},{frequency:"Daily",goal: calories_female,user_id:current_user.id,type_goal_id: 4,automatic:true}]
        end
        return goals
     end

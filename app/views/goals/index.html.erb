@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>index_goals</title>
+    <title>Goals | FiTrack</title>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/bootstrap.min.css" rel="stylesheet">
@@ -31,25 +32,26 @@
 
     
 <div id="page-content-wrapper">
-       
-        <h1>GOALS</h1>
-        <div class="container marketing">
+<div class="container"> 
+      <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Goals</h1>
+      <br>
 
       <!-- Three columns of text below the carousel -->
 
       <div class="row">
         <% @goals.each do |tgoal| %>
       
-        <div class="col-lg-4">
+        <div class="col-lg-4" align="center">
         
           <img class="img-circle" src="<%=tgoal.type_goal.img%>" alt="Generic placeholder image" width="140" height="140">
           <!>
           <h2><td><%= tgoal.type_goal.tip%></td></h2>
-          <p>Goal:<%= tgoal.goal %></p>
-          <p>Frequency:<%= tgoal.frequency %></p>
+          <p><strong>Goal: </strong><%= tgoal.goal %></p>
+          <p><strong>Frecuency: </strong><%= tgoal.frequency %></p>
           <%= link_to 'Show', tgoal ,class:"btn btn-default"%>
-          
-          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-default" %>
+          <%if tgoal.automatic_goal ==false%>
+          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %>
+          <%end%>
         </div>
        
       
@@ -73,6 +75,9 @@
                 
 </div>
     
+
+</div>
+
 
 </body>
 </html>
