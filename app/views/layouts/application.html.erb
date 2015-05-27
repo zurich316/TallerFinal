@@ -119,7 +119,7 @@
                     <a href="/goals">Goals</a>
                 </li>
                 <li>
-                    <a href="/band_info">Daily Tracking</a>
+                    <a href="/">Daily Tracking</a>
                 </li>
                 <li>
                     <a href="#">Sleeping Tracking</a>
@@ -149,15 +149,10 @@
          });
     </script>
 
-    <%if current_page?(:controller => 'home', :action => 'index')%>    
-    <%= yield %>
-    </div>
     
-    <%else%>
       </div>
       <%= yield %>
     
-    <%end%>
  <%else%>
 
  <header>

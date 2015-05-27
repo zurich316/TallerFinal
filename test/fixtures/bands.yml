@@ -1,9 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  code:ASFASFASFSAV
-  user_id:1
-
+  code: 123456778899
 two:
-  code:123456778899
-   user_id:1
+  code: 123456778898

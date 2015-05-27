@@ -1,4 +1,5 @@
 <div id="page-content-wrapper">
+  <div class="container">
 <p id="notice"><%= notice %></p>
 
 
@@ -42,7 +43,9 @@
   <%= @session.time_finished %>
 </p>
 
-</div>
 
 <%= link_to 'Edit', edit_fitness_session_path(@session),class:"btn btn-default"%> |
 <%= link_to 'Back', fitness_sessions_path, class:"btn btn-default" %>
+
+</div>
+</div>

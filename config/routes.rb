@@ -1,14 +1,11 @@
 
 Rails.application.routes.draw do
+  resources :band_informations
   resources :fitness_sessions
   resources :bands
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
   resources :goals
-
-  get '/band_info'=>'band_infos#index'
-  get 'band_info/new'=>'band_infos#new'
-  resources :band_infos
   devise_for :users
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

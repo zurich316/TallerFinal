@@ -1,21 +1,15 @@
-require 'rubygems'
 require 'mechanize'
+require 'logger'
 
+@website = 'localhost:3000'
 
-inf = {"band_infos[steps]" => "123", "band_infos[calories]" => "122", "band_infos[lat]" => "34", "band_infos[long]" => "32"}
+agent = Mechanize.new
+agent.log = Logger.new 'mechanize.log'
 
-	agent = Mechanize.new
-	agent.post('http://localhost:3000/band_infos', inf)
-	result = JSON.parse agent
-	puts result
+agent.add_auth('http://localhost:3000','sergio@fitrack.com','12345678')
 
+data = {'band_information[steps]'=>'1000','band_information[user_id]'=>'1','band_information[band_id]'=>'2'}
+agent.post('http://localhost:3000/band_informations.json', data) do |page|
+   puts JSON.parse page.body
+end
 
-
-inf2 = {"band[code]" => "121212121212"}
-
-	agent = Mechanize.new
-	agent.get('http://localhost:3000/bands')
-	agent.page.links_with(:text => "Edit")
-	agent.post('http://localhost:3000/bands/{.id}/edit',)
-	result = JSON.parse agent
-	puts result

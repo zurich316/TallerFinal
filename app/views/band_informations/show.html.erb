@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Steps:</strong>
+  <%= @band_information.steps %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @band_information.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @band_information.long %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @band_information.user %>
+</p>
+
+<p>
+  <strong>Band:</strong>
+  <%= @band_information.band %>
+</p>
+
+<%= link_to 'Edit', edit_band_information_path(@band_information) %> |
+<%= link_to 'Back', band_informations_path %>

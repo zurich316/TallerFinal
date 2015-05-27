@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Band Informations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Steps</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th>User</th>
+      <th>Band</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @band_informations.each do |band_information| %>
+      <tr>
+        <td><%= band_information.steps %></td>
+        <td><%= band_information.lat %></td>
+        <td><%= band_information.long %></td>
+        <td><%= band_information.user %></td>
+        <td><%= band_information.band %></td>
+        <td><%= link_to 'Show', band_information %></td>
+        <td><%= link_to 'Edit', edit_band_information_path(band_information) %></td>
+        <td><%= link_to 'Destroy', band_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Band information', new_band_information_path %>

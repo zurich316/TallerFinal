@@ -1,4 +1,3 @@
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,21 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525145748) do
+ActiveRecord::Schema.define(version: 20150527192544) do
 
-  create_table "band_infos", force: :cascade do |t|
+  create_table "band_informations", force: :cascade do |t|
     t.integer  "steps"
-    t.integer  "calories"
-    t.integer  "lat"
-    t.integer  "long"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "lat"
+    t.decimal  "long"
     t.integer  "user_id"
     t.integer  "band_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "band_infos", ["band_id"], name: "index_band_infos_on_band_id"
-  add_index "band_infos", ["user_id"], name: "index_band_infos_on_user_id"
+  add_index "band_informations", ["band_id"], name: "index_band_informations_on_band_id"
+  add_index "band_informations", ["user_id"], name: "index_band_informations_on_user_id"
 
   create_table "band_typegoers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -90,6 +88,7 @@ ActiveRecord::Schema.define(version: 20150525145748) do
     t.integer  "goal"
     t.integer  "type_goal_id"
     t.integer  "type_goalgoer_id"
+    t.boolean  "automatic_goal"
   end
 
   add_index "goals", ["type_goal_id"], name: "index_goals_on_type_goal_id"

@@ -78,9 +78,9 @@ class BandsController < ApplicationController
     end
     def goals_automatics
        if current_user.sex == "Male"
-        goals = [{frequency:"Daily",goal: steps_all,user_id:current_user.id,type_goal_id: 1,automatic:true},{frequency:"Daily",goal: sleep_all,user_id:current_user.id,type_goal_id: 2,automatic:true},{frequency:"Global",goal: weight_all,user_id:current_user.id,type_goal_id: 3,automatic:true},{frequency:"Daily",goal: calories_male,user_id:current_user.id,type_goal_id: 4,automatic:true}]
+        goals = [{frequency:"Day",goal: steps_all,user_id:current_user.id,type_goal_id: 1,automatic:true},{frequency:"Day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2,automatic:true},{frequency:"Year",goal: weight_all,user_id:current_user.id,type_goal_id: 3,automatic:true},{frequency:"Day",goal: calories_male,user_id:current_user.id,type_goal_id: 4,automatic:true}]
        else
-        goals = [{frequency:"Daily",goal: steps_all,user_id:current_user.id,type_goal_id: 1,automatic:true},{frequency:"Daily",goal: sleep_all,user_id:current_user.id,type_goal_id: 2,automatic:true},{frequency:"Global",goal: weight_all,user_id:current_user.id,type_goal_id: 3,automatic:true},{frequency:"Daily",goal: calories_female,user_id:current_user.id,type_goal_id: 4,automatic:true}]
+        goals = [{frequency:"Day",goal: steps_all,user_id:current_user.id,type_goal_id: 1,automatic:true},{frequency:"Day",goal: sleep_all,user_id:current_user.id,type_goal_id: 2,automatic:true},{frequency:"Year",goal: weight_all,user_id:current_user.id,type_goal_id: 3,automatic:true},{frequency:"Day",goal: calories_female,user_id:current_user.id,type_goal_id: 4,automatic:true}]
        end
        return goals
     end

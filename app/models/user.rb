@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   	rolify
   	has_many :goals 
   	has_many :bands
-    has_many :band_infos
+    has_many :band_informations
     has_many :fitness_sessions   
   	# Include default devise modules. Others available are:
   	# :confirmable, :lockable, :timeoutable and :omniauthable

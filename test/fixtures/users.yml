@@ -5,13 +5,11 @@
 # below each fixture, per the syntax in the comments below
 #
 one: 
-   name:"Alvaro"
-   email:"amolina@gmail.com" 
-   last_name:"Molina" 
-   password:"password" 
-   password_confirmation:"password" 
-   weight:75
-   height:170
-   sex:"Male"
-   birthdate:"1994-05-03"
-
+   name: "Alvaro"
+   email: "amolina@gmail.com" 
+   last_name: "Molina" 
+   password: "password" 
+   password_confirmation: "password" 
+   weight: 75
+   height: 170
+   sex: "Male"
