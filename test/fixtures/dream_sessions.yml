@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_started: 2015-06-02 14:22:17
+  time_finished: 2015-06-02 14:22:17
+  user_id: 
+  band_id: 
+
+two:
+  time_started: 2015-06-02 14:22:17
+  time_finished: 2015-06-02 14:22:17
+  user_id: 
+  band_id: 

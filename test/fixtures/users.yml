@@ -8,8 +8,7 @@ one:
    name: "Alvaro"
    email: "amolina@gmail.com" 
    last_name: "Molina" 
-   password: "password" 
-   password_confirmation: "password" 
+   encrypted_password: "password" 
    weight: 75
    height: 170
    sex: "Male"

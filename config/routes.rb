@@ -1,5 +1,6 @@
 
 Rails.application.routes.draw do
+  resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions
   resources :bands

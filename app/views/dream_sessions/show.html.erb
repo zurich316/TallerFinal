@@ -1,0 +1,29 @@
+<title>Edit Band | FiTrack</title>
+<div id="page-content-wrapper">
+<div class="container"> 
+<p id="notice" align="center"><%= notice %></p>
+
+<p>
+  <strong>Time started:</strong>
+  <%= @dream_session.time_started %>
+</p>
+
+<p>
+  <strong>Time finished:</strong>
+  <%= @dream_session.time_finished %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @dream_session.user %>
+</p>
+
+<p>
+  <strong>Band:</strong>
+  <%= @dream_session.band %>
+</p>
+
+<%= link_to 'Edit', edit_dream_session_path(@dream_session) %> |
+<%= link_to 'Back', dream_sessions_path %>
+</div>
+</div>
