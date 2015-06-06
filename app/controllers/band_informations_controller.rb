@@ -4,7 +4,7 @@ class BandInformationsController < ApplicationController
   # GET /band_informations
   # GET /band_informations.json
   def index
-    @band_informations = BandInformation.all
+    @band_informations = current_user.bands.first.band_informations
   end
 
   # GET /band_informations/1
@@ -69,6 +69,6 @@ class BandInformationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def band_information_params
-      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id)
+      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories)
     end
 end

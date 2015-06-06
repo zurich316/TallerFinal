@@ -1,0 +1,38 @@
+
+<title>Edit Band | FiTrack</title>
+<div id="page-content-wrapper">
+<div class="container"> 
+<p id="notice" align="center"><%= notice %></p> 
+
+<table>
+  <thead>
+    <tr>
+      <th>Time started</th>
+      <th>Time finished</th>
+      <th>User</th>
+      <th>Band</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dream_sessions.each do |dream_session| %>
+      <tr>
+        <td><%= dream_session.time_started %></td>
+        <td><%= dream_session.time_finished %></td>
+        <td><%= dream_session.user %></td>
+        <td><%= dream_session.band %></td>
+        <td><%= link_to 'Show', dream_session %></td>
+        <td><%= link_to 'Edit', edit_dream_session_path(dream_session) %></td>
+        <td><%= link_to 'Destroy', dream_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dream session', new_dream_session_path %>
+
+</div>
+</div>

@@ -1,9 +1,8 @@
 
 Rails.application.routes.draw do
-
-
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
+  resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions
   resources :bands

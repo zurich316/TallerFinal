@@ -1,0 +1,27 @@
+<%= form_for(@dream_session) do |f| %>
+  <% if @dream_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dream_session.errors.count, "error") %> prohibited this dream_session from being saved:</h2>
+
+      <ul>
+      <% @dream_session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :user_id,:value => current_user.id  %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :band_id ,:value => current_user.bands.first.id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
