@@ -54,7 +54,13 @@
         <td><%= session.time_started %></td>
         <td><%= session.time_finished %></td>
         <td><%= link_to 'Show', session %></td>
-        <td><%= link_to 'Edit', edit_fitness_session_path(session) %></td>
+        <% if session.time_started == nil %>
+          <td><a href="/fitness_sessions/<%=session.id%>/start">Start</a></td>
+        <% elsif session.time_finished==nil %>
+          <td><a href="/fitness_sessions/<%=session.id%>/end">End</a></td>
+        <% else %>
+          <td>Finished</td>
+        <% end %>
         <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

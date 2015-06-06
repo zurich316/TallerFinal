@@ -20,6 +20,19 @@ class FitnessSessionsController < ApplicationController
     @session.time_started=DateTime.now
   end
 
+  def start
+    @sessions = current_user.fitness_sessions.find(params[:id])
+    @sessions.time_started=DateTime.now
+    @sessions.save
+    redirect_to '/fitness_sessions/',notice: ""
+  end
+
+  def end
+    @sessions = current_user.fitness_sessions.find(params[:id])
+    @sessions.time_finished=DateTime.now
+    @sessions.save
+    redirect_to '/fitness_sessions/',notice: ""
+  end
   # GET /sessions/1/edit
   def edit
   end
