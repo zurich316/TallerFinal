@@ -47,7 +47,9 @@
           <!>
           <h2><td><%= tgoal.type_goal.tip%></td></h2>
           <p><strong>Goal: </strong><%= tgoal.goal %></p>
+         
           <p><strong>Frecuency: </strong><%= tgoal.frequency %></p>
+          
           <%= link_to 'Show', tgoal ,class:"btn btn-default"%>
           <%if tgoal.automatic_goal ==false%>
           <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %>
