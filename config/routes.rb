@@ -3,11 +3,12 @@ Rails.application.routes.draw do
 
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
-  get 'dream_session/start_session' =>'dream_session#start_time'
-  get 'dream_session/finish_session' =>'dream_session#end_time'
+  get 'dream_sessions/:id/start_session' =>'dream_sessions#start_time'
+  get 'dream_sessions/:id/finish_session' =>'dream_sessions#end_time'
   
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
+
   resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions

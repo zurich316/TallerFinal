@@ -1,10 +1,10 @@
 
-<title>Edit Band | FiTrack</title>
+<title>Dream sessions | FiTrack</title>
 <div id="page-content-wrapper">
 <div class="container"> 
   <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Dream Sessions</h1>
 
-<p id="notice" align="center"><%= notice %></p> 
+<p id="notice" align="center" class="text-muted"><%= notice %></p> 
 <br>
 <table class="table talbe-striped">
   <col width="40%">
@@ -13,7 +13,7 @@
   <col width="20%">
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Id</th>
       <th>Time started</th>
       <th>Time finished</th>
       <th colspan="3"></th>
@@ -23,20 +23,20 @@
   <tbody>
     <% @dream_sessions.each do |dream_session| %>
       <tr>
-        <td><%= dream_session.title %></td>
+        <td><%= dream_session.id %></td>
         <% if dream_session.time_started == nil%>
           <td>&nbsp; Not started</td>
         <%else%>
-        <td><%= dream_session.time_started.to_formatted_s(:long_ordinal) %></td>
+          <td><%= dream_session.time_started.to_formatted_s(:long_ordinal) %></td>
         <%end%>
-        <% if dream_session.time_started == nil%>
+        <% if dream_session.time_finished == nil%>
           <td>&nbsp;  Not finished</td>
         <%else%>
         <td><%= dream_session.time_finished.to_formatted_s(:long_ordinal) %></td>
         <%end%>
 
-        <td><%= link_to 'Show', dream_session %>
-        <%= link_to 'Edit', edit_dream_session_path(dream_session) %>
+        <td>
+          <%= link_to 'Show', dream_session %>
         <%= link_to 'Destroy', dream_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

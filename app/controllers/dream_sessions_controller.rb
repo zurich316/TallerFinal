@@ -1,6 +1,6 @@
 class DreamSessionsController < ApplicationController
   before_action :set_dream_session, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user! 
   # GET /dream_sessions
   # GET /dream_sessions.json
   def index
@@ -62,10 +62,11 @@ class DreamSessionsController < ApplicationController
   end
 
   def start_time
+    @dream_session=DreamSession.find(params[:id])
     @dream_session.time_started=Time.now
     respond_to do |format|
       if @dream_session.save
-        format.html { redirect_to @dream_session, notice: 'Dream session was successfully created.' }
+        format.html { redirect_to @dream_session, notice: 'Dream session was successfully updated.' }
         format.json { render :show, status: :created, location: @dream_session }
       else
         format.html { render :new }
@@ -73,11 +74,13 @@ class DreamSessionsController < ApplicationController
       end
     end
   end 
+
   def end_time
+     @dream_session=DreamSession.find(params[:id])
     @dream_session.time_finished=Time.now
     respond_to do |format|
       if @dream_session.save
-        format.html { redirect_to @dream_session, notice: 'Dream session was successfully created.' }
+        format.html { redirect_to @dream_session, notice: 'Dream session was successfully updated.' }
         format.json { render :show, status: :created, location: @dream_session }
       else
         format.html { render :new }
