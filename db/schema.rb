@@ -1,4 +1,3 @@
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -69,7 +68,6 @@ ActiveRecord::Schema.define(version: 20150607152645) do
     t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.string   "title"
   end
 
   add_index "dream_sessions", ["user_id"], name: "index_dream_sessions_on_user_id"

@@ -9,6 +9,7 @@
           <strong>User:</strong>
           <p>
               <%= @session.user.name %>
+              <a href="/graf_sessions_results.html.erb ">results</a>
           </p>
           <p>
               <strong>Type session:</strong>
@@ -65,6 +66,8 @@
               <strong>Time finished:</strong>
               <%= @session.time_finished %>
             </p>
+
+
       <%else%>
            <h1>OPS session en progreso</h1> 
       <%end%>   

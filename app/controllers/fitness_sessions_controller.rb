@@ -19,6 +19,13 @@ class FitnessSessionsController < ApplicationController
   end
 
 
+  def graf_session_results
+    @results = BandInformation.all()
+
+  end
+  
+
+
   def session_results
     @session = FitnessSession.find(params[:id])
     information = BandInformation.all()
