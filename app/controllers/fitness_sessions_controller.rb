@@ -2,6 +2,10 @@ class FitnessSessionsController < ApplicationController
   before_action :set_session, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 
 
+
+  def results
+     @sessions = current_user.fitness_sessions
+  end
   # GET /sessions
   # GET /sessions.json
   def index
@@ -17,6 +21,13 @@ class FitnessSessionsController < ApplicationController
         session_results
     end
   end
+
+
+  def graf_session_results
+    @results = BandInformation.all()
+
+  end
+  
 
 
   def session_results

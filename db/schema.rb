@@ -12,7 +12,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607152645) do
 
   create_table "band_informations", force: :cascade do |t|
     t.integer  "steps"
@@ -69,7 +68,6 @@ ActiveRecord::Schema.define(version: 20150607152645) do
     t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.string   "title"
   end
 
   add_index "dream_sessions", ["user_id"], name: "index_dream_sessions_on_user_id"
