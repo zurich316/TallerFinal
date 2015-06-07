@@ -1,11 +1,15 @@
 
 Rails.application.routes.draw do
+
+  get 'user/welcome'=>'home#welcome'
+  get 'user/profile' => 'profile#show'
+  get 'dream_session/start_session' =>'dream_session#start_time'
+  get 'dream_session/finish_session' =>'dream_session#end_time'
+  
   resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions
   resources :bands
-  get 'user/welcome'=>'home#welcome'
-  get 'user/profile' => 'profile#show'
   resources :goals
   devise_for :users
   root 'home#index'

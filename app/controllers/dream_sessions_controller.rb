@@ -61,6 +61,31 @@ class DreamSessionsController < ApplicationController
     end
   end
 
+  def start_time
+    @dream_session.time_started=Time.now
+    respond_to do |format|
+      if @dream_session.save
+        format.html { redirect_to @dream_session, notice: 'Dream session was successfully created.' }
+        format.json { render :show, status: :created, location: @dream_session }
+      else
+        format.html { render :new }
+        format.json { render json: @dream_session.errors, status: :unprocessable_entity }
+      end
+    end
+  end 
+  def end_time
+    @dream_session.time_finished=Time.now
+    respond_to do |format|
+      if @dream_session.save
+        format.html { redirect_to @dream_session, notice: 'Dream session was successfully created.' }
+        format.json { render :show, status: :created, location: @dream_session }
+      else
+        format.html { render :new }
+        format.json { render json: @dream_session.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_dream_session
