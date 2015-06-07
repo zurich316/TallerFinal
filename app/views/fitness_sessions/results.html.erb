@@ -1,0 +1,5 @@
+<div class="container" style="margin-left=-15px">
+	<%= line_chart FitnessSession.group_by_hour(:created_at, "sum", "burned_calories") %>
+
+
+</div>
