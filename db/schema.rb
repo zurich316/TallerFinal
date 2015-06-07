@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607152216) do
+ActiveRecord::Schema.define(version: 20150607152645) do
 
   create_table "band_informations", force: :cascade do |t|
     t.integer  "steps"
@@ -100,6 +100,8 @@ ActiveRecord::Schema.define(version: 20150607152216) do
     t.integer  "type_goal_id"
     t.integer  "type_goalgoer_id"
     t.boolean  "automatic_goal"
+    t.integer  "progress"
+    t.boolean  "complete"
   end
 
   add_index "goals", ["type_goal_id"], name: "index_goals_on_type_goal_id"

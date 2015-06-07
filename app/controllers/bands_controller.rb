@@ -182,11 +182,11 @@ class BandsController < ApplicationController
 
   def years_calculate  # calcula la edad del usuario
 
-    year1=current_user.birthdate.year
-    year2= Time.now.year
-    year1=year2-year1
+    year1 = Time.diff(current_user.birthdate, Time.now)
+    
+    return year1[:year]
 
-    return year1
+
 
   end
  

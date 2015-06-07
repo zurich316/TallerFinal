@@ -2,6 +2,12 @@
 
  <link href="assets/bootstrap.min.css" rel="stylesheet" >
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <title>Goal | FiTrack</title>
     <div id="page-content-wrapper" style="margin-left:3%;">
@@ -25,7 +31,24 @@
               <%= @goal.goal %>
             </p>
 
+             <p>
+              <strong>Progress:</strong>
+              <%= @goal.progress %>
+            </p>
+             
+            
+              <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">COMPLETE</button>
 
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      Congratulations...
+                    </div>
+                  </div>
+                </div>
+
+                
+            
 
             <p>
               <strong>Time started:</strong>
@@ -48,3 +71,4 @@
 
     </div>
   </div>
+
