@@ -2109,3 +2109,57 @@ D, [2015-06-07T09:52:34.710411 #1411] DEBUG -- : response-header: date => Sun, 0
 D, [2015-06-07T09:52:34.710420 #1411] DEBUG -- : response-header: content-length => 178
 D, [2015-06-07T09:52:34.710430 #1411] DEBUG -- : response-header: connection => Keep-Alive
 D, [2015-06-07T09:52:34.710479 #1411] DEBUG -- : Read 178 bytes (178 total)
+D, [2015-06-07T09:53:34.711394 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.3724975950504&band_information%5Blat%5D=-66.14401423802008&band_information%5Bcalories%5D=4&band_information%5Bsteps%5D=26&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T09:53:34.712202 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T09:53:34.712242 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T09:53:34.712256 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T09:53:34.712267 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T09:53:34.712277 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T09:53:34.712287 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T09:53:34.712296 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T09:53:34.712306 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T09:53:34.712322 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T09:53:34.712333 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T09:53:34.712343 #1411] DEBUG -- : request-header: content-length => 217
+I, [2015-06-07T09:53:34.730049 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T09:53:34.730094 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T09:53:34.730109 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T09:53:34.730121 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T09:53:34.730132 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/7
+D, [2015-06-07T09:53:34.730144 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T09:53:34.730155 #1411] DEBUG -- : response-header: etag => W/"7f995ed99f568636269ef4392aedbcd4"
+D, [2015-06-07T09:53:34.730165 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T09:53:34.730175 #1411] DEBUG -- : response-header: x-request-id => d7f56ef9-d31d-4c59-b3d0-267af5bb83f6
+D, [2015-06-07T09:53:34.730185 #1411] DEBUG -- : response-header: x-runtime => 0.014342
+D, [2015-06-07T09:53:34.730203 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T09:53:34.730214 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 13:53:34 GMT
+D, [2015-06-07T09:53:34.730224 #1411] DEBUG -- : response-header: content-length => 177
+D, [2015-06-07T09:53:34.730233 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T09:53:34.730277 #1411] DEBUG -- : Read 177 bytes (177 total)
+D, [2015-06-07T09:54:34.733448 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.375693971655576&band_information%5Blat%5D=-66.14727341942076&band_information%5Bcalories%5D=1&band_information%5Bsteps%5D=4&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T09:54:34.734487 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T09:54:34.734523 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T09:54:34.734541 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T09:54:34.734576 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T09:54:34.734593 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T09:54:34.734606 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T09:54:34.734619 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T09:54:34.734631 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T09:54:34.734650 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T09:54:34.734664 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T09:54:34.734677 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T09:54:34.826981 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T09:54:34.827033 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T09:54:34.827048 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T09:54:34.827060 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T09:54:34.827070 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/8
+D, [2015-06-07T09:54:34.827081 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T09:54:34.827091 #1411] DEBUG -- : response-header: etag => W/"9cacd94703cc6acba73e1b32f04fcb2b"
+D, [2015-06-07T09:54:34.827101 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T09:54:34.827110 #1411] DEBUG -- : response-header: x-request-id => 95d97961-b3b7-4ee9-9ad1-8d5d57f16546
+D, [2015-06-07T09:54:34.827120 #1411] DEBUG -- : response-header: x-runtime => 0.088589
+D, [2015-06-07T09:54:34.827130 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T09:54:34.827140 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 13:54:34 GMT
+D, [2015-06-07T09:54:34.827149 #1411] DEBUG -- : response-header: content-length => 178
+D, [2015-06-07T09:54:34.827159 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T09:54:34.827203 #1411] DEBUG -- : Read 178 bytes (178 total)

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'dream_session/start_session' =>'dream_session#start_time'
   get 'dream_session/finish_session' =>'dream_session#end_time'
   
+  get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
+  get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
   resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions

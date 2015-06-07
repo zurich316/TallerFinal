@@ -6,8 +6,8 @@ class FitnessSession < ActiveRecord::Base
 	has_many :cycling_session 
 	has_many :weight_lifting_session
 
-	validates_presence_of :burned_calories, :hearth_rate
-	before_create :endTime
+	#validates_presence_of :burned_calories, :hearth_rate
+	
 
 	def endTime
 		self.time_finished=DateTime.now
