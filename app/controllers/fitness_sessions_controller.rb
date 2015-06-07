@@ -16,6 +16,42 @@ class FitnessSessionsController < ApplicationController
   # GET /sessions/1
   # GET /sessions/1.json
   def show
+    @session = FitnessSession.find(params[:id])
+    if @session.time_started != nil && @session.time_finished
+        session_results
+    end
+  end
+
+
+  def session_results
+    @session = FitnessSession.find(params[:id])
+    information = BandInformation.all()
+    @pasos = 0
+    @dist = 0
+    @cal = 0
+    information.each do |info|
+          time1 = @session.time_started.to_time
+          time2 = @session.time_finished.to_time
+          if info.created_at.to_time >= Time.parse("#{time1}") && info.created_at.to_time <= Time.parse("#{time2}")
+            @pasos = @pasos + info.steps
+            @cal = @cal + info.calories
+            @dist = @pasos
+          end
+    end
+  end
+
+  def session_results_cycling
+    @session = FitnessSession.find(params[:id])
+    information = BandInformation.all()
+    @dist = 0
+    information.each do |info|
+          time1 = @session.time_started.to_time
+          time2 = @session.time_finished.to_time
+          if info.created_at.to_time >= Time.parse("#{time1}") && info.created_at.to_time <= Time.parse("#{time2}")
+             @dist = @dist + info.steps
+          end
+    end
+
   end
 
   # GET /sessions/new
@@ -53,15 +89,16 @@ class FitnessSessionsController < ApplicationController
         JoggingSession.create(:fitness_session_id =>@session.id)
     end
 
-    respond_to do |format|
+    #respond_to do |format|
       if @session.save
-
-        format.html { redirect_to @session, notice: 'Session was successfully created.' }
-        format.json { render :show, status: :created, location: @session }
+         redirect_to '/fitness_sessions/',notice: ""
+        #format.html { redirect_to @session, notice: 'Session was successfully created.' }
+        #format.json { render :show, status: :created, location: @session }
       else
-        format.html { render :new }
-        format.json { render json: @session.errors, status: :unprocessable_entity }
-      end
+        #format.html { render :new }
+         redirect_to '/fitness_sessions/',notice: ""
+        #format.json { render json: @session.errors, status: :unprocessable_entity }
+      #end
     end
   end
 
@@ -83,10 +120,11 @@ class FitnessSessionsController < ApplicationController
   # DELETE /sessions/1.json
   def destroy
     @session.destroy
-    respond_to do |format|
-      format.html { redirect_to sessions_url, notice: 'Session was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to '/fitness_sessions/',notice: ""
+    #respond_to do |format|
+      #format.html { redirect_to sessions_url, notice: 'Session was successfully destroyed.' }
+      #format.json { head :no_content }
+    #end
   end
 
   private

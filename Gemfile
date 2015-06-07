@@ -39,6 +39,16 @@ gem "dateslices"
 
 gem 'gmaps4rails'
 
+
+#google maps
+gem "chartkick"
+gem "hightop" 
+gem "active_median"
+gem "dateslices"
+
+gem 'gmaps4rails'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
