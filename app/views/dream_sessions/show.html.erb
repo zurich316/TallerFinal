@@ -1,21 +1,71 @@
-<title>Edit Band | FiTrack</title>
+<title>Dream Session | FiTrack</title>
 <div id="page-content-wrapper">
 <div class="container"> 
 <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Dream Session</h1>
-<p id="notice" align="center"><%= notice %></p>
+<center>
+	<br>
+<p class="text-muted" id="notice" align="center" ><%= notice %></p>
+	
+	<div class="row">
+		<div class="col-md-3" style="">
+			<p class="text-muted" align="right">
+			<br><br><br><br>
+			<%if @dream_session.time_started==nil%>
+				<a class="btn btn-primary btn-md"href="/dream_sessions/<%=@dream_session.id%>/start_session">Start Session</a>
+			<%else%>
+				<h5 class="text-muted" align="right"><%= @dream_session.time_started.to_formatted_s(:long_ordinal) %></h5>
+			<%end%>
+			</p>
+		</div>
+		<div class="col-md-6">
+			
+			<div class="circle circle-border">
+		     <div class="circle-inner">
+		         <div class="score-text">
+		         	<%if @dream_session.time_started==nil%>
+		         	<p class='text-muted'style='font-size: 20px;'>
+			           	WAITING...
+			           </p>
+		         	<%elsif @dream_session.time_finished == nil%>
 
-<p>
-  <strong>Time started:</strong>
-  <%= @dream_session.time_started %>
-</p>
-
-<p>
-  <strong>Time finished:</strong>
-  <%= @dream_session.time_finished %>
-</p>
-
-
-<%= link_to 'Edit', edit_dream_session_path(@dream_session) %> |
-<%= link_to 'Back', dream_sessions_path %>
+			         	<% @diferencia=Time.diff(Time.now,@dream_session.time_started)%>
+			    		<p class='text-muted'>
+			           		<%= @diferencia[:hour]%>h. <%= @diferencia[:minute]%>m. <%= @diferencia[:second]%>s. 
+			           </p>
+			           <p class='text-muted'style='font-size: 12px;'>
+			           	TOTAL TIME
+			           </p>
+		           <%else%>
+			           <% @diferencia=Time.diff(@dream_session.time_finished,@dream_session.time_started)%>
+			    		<p class='text-muted'>
+			           		<%= @diferencia[:hour]%>h. <%= @diferencia[:minute]%>m. <%= @diferencia[:second]%>s.
+			           </p>
+			           <p class='text-muted'style='font-size: 12px;'>
+			           	TOTAL TIME
+			           </p>
+		           <%end%>
+		          </div>
+		     </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<p class="text-muted" align="left">
+				<br><br><br><br>
+			<%if @dream_session.time_started==nil%>
+				Not started
+			<%elsif @dream_session.time_finished == nil %>
+				<a class="btn btn-primary btn-md"href="/dream_sessions/<%=@dream_session.id%>/finish_session">Finish Session</a>
+			<%else%>
+			   <h5  class="text-muted"align="left"><%= @dream_session.time_finished.to_formatted_s(:long_ordinal) %></h5>
+			<%end%>
+			</p>
+		</div>
+	</div>
+	<br>
+	<div class='btn-group'>
+	<%= link_to 'Destroy', @dream_session, method: :delete, data: { confirm: 'Are you sure?' } , :class=>'btn btn-danger btn-sm'%>
+	<%= link_to 'Back', dream_sessions_path , :class=>'btn btn-default btn-sm'%>
+	</div>
+</center>
 </div>
 </div>

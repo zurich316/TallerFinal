@@ -1,10 +1,11 @@
 class BandInformationsController < ApplicationController
   before_action :set_band_information, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! 
 
   # GET /band_informations
   # GET /band_informations.json
   def index
-    @band_informations = current_user.bands.first.band_informations
+    @band_informations = current_user.bands.first.band_informations.order(created_at: :desc)
   end
 
   # GET /band_informations/1

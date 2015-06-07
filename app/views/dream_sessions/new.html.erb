@@ -1,9 +1,38 @@
 <title>New Dream Session | FiTrack</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+
 <div id="page-content-wrapper">
 <div class="container"> 
-	<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">New Dream Session</h1>
-<%= render 'form' %>
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">New Dream Session</h1>
+<center>
+	<img src="/assets/sleep.jpg" style="width:100%;"><br><br>
 
-<%= link_to 'Back', dream_sessions_path %>
+          <h3 style="color: #858585;">Start your FiTrack Dream Session now!</h3>
+          <h5 style="color: #858585;"> Just click below!</h5>
+          <br>
+<%= form_for(@dream_session) do |f| %>
+  <% if @dream_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dream_session.errors.count, "error") %> prohibited this dream_session from being saved:</h2>
+
+      <ul>
+      <% @dream_session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :user_id,:value => current_user.id  %>
+  </div>
+ 
+  <div class="actions btn-group">
+    <%= f.submit "Create Dream Session" , :class=>'btn btn-primary btn-sm'%>
+    &nbsp;
+	<%= link_to 'Back', dream_sessions_path, :class=>'btn btn-default btn-sm' %>
+  </div>
+<% end %>
+</center>
 </div>
 </div>
