@@ -3190,3 +3190,1027 @@ D, [2015-06-07T10:32:35.660643 #1411] DEBUG -- : response-header: date => Sun, 0
 D, [2015-06-07T10:32:35.660655 #1411] DEBUG -- : response-header: content-length => 179
 D, [2015-06-07T10:32:35.660664 #1411] DEBUG -- : response-header: connection => Keep-Alive
 D, [2015-06-07T10:32:35.660719 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:33:35.662772 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.3872055580365&band_information%5Blat%5D=-66.14947164407404&band_information%5Bcalories%5D=6&band_information%5Bsteps%5D=3&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:33:35.663854 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:33:35.663892 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:33:35.663911 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:33:35.663923 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:33:35.663935 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:33:35.663945 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:33:35.663955 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:33:35.663967 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:33:35.663981 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:33:35.663996 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:33:35.664006 #1411] DEBUG -- : request-header: content-length => 216
+I, [2015-06-07T10:33:35.682131 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:33:35.682169 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:33:35.682184 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:33:35.682196 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:33:35.682207 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/47
+D, [2015-06-07T10:33:35.682219 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:33:35.682229 #1411] DEBUG -- : response-header: etag => W/"a1ca0f7ee28e6704808f3cb41784345b"
+D, [2015-06-07T10:33:35.682243 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:33:35.682253 #1411] DEBUG -- : response-header: x-request-id => 15e2edd2-f2d0-4e07-af42-865e0082689e
+D, [2015-06-07T10:33:35.682264 #1411] DEBUG -- : response-header: x-runtime => 0.014777
+D, [2015-06-07T10:33:35.682274 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:33:35.682286 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:33:35 GMT
+D, [2015-06-07T10:33:35.682298 #1411] DEBUG -- : response-header: content-length => 177
+D, [2015-06-07T10:33:35.682307 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:33:35.682354 #1411] DEBUG -- : Read 177 bytes (177 total)
+D, [2015-06-07T10:34:35.686149 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.395845316009414&band_information%5Blat%5D=-66.15854374181659&band_information%5Bcalories%5D=1&band_information%5Bsteps%5D=2&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:34:35.686952 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:34:35.686979 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:34:35.686993 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:34:35.687004 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:34:35.687014 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:34:35.687024 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:34:35.687033 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:34:35.687061 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:34:35.687077 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:34:35.687088 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:34:35.687098 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:34:35.703767 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:34:35.703810 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:34:35.703824 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:34:35.703835 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:34:35.703845 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/48
+D, [2015-06-07T10:34:35.703854 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:34:35.703864 #1411] DEBUG -- : response-header: etag => W/"69b25fbc4e143bfeb87a1f4b72e9a25a"
+D, [2015-06-07T10:34:35.703873 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:34:35.703882 #1411] DEBUG -- : response-header: x-request-id => 0b6a93bb-d84a-44cf-a2e1-a15cc8a86066
+D, [2015-06-07T10:34:35.703891 #1411] DEBUG -- : response-header: x-runtime => 0.013257
+D, [2015-06-07T10:34:35.703900 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:34:35.703909 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:34:35 GMT
+D, [2015-06-07T10:34:35.703918 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:34:35.703927 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:34:35.703970 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:35:35.705854 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.377103680993212&band_information%5Blat%5D=-66.15065070877944&band_information%5Bcalories%5D=6&band_information%5Bsteps%5D=23&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:35:35.706664 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:35:35.706748 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:35:35.706763 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:35:35.706774 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:35:35.706785 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:35:35.706795 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:35:35.706805 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:35:35.706814 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:35:35.706829 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:35:35.706840 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:35:35.706849 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:35:35.724748 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:35:35.724795 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:35:35.724810 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:35:35.724822 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:35:35.724833 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/49
+D, [2015-06-07T10:35:35.724845 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:35:35.724856 #1411] DEBUG -- : response-header: etag => W/"830ca1e309482932383b137ce52b6e2b"
+D, [2015-06-07T10:35:35.724935 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:35:35.724948 #1411] DEBUG -- : response-header: x-request-id => 265b9234-922f-44ef-8bf0-82cbbc1993ac
+D, [2015-06-07T10:35:35.724959 #1411] DEBUG -- : response-header: x-runtime => 0.014500
+D, [2015-06-07T10:35:35.724969 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:35:35.724979 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:35:35 GMT
+D, [2015-06-07T10:35:35.724988 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:35:35.724998 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:35:35.725042 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:36:35.728127 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.386350272588214&band_information%5Blat%5D=-66.16168961516078&band_information%5Bcalories%5D=0&band_information%5Bsteps%5D=6&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:36:35.729025 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:36:35.729053 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:36:35.729066 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:36:35.729123 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:36:35.729149 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:36:35.729162 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:36:35.729173 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:36:35.729184 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:36:35.729201 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:36:35.729213 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:36:35.729232 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:36:35.746706 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:36:35.746753 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:36:35.746768 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:36:35.746780 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:36:35.746790 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/50
+D, [2015-06-07T10:36:35.746801 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:36:35.746811 #1411] DEBUG -- : response-header: etag => W/"da016a81c9940e5953becd8019d69450"
+D, [2015-06-07T10:36:35.746821 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:36:35.746831 #1411] DEBUG -- : response-header: x-request-id => 7e276ef4-0bd1-4ddb-a410-9286401f20b5
+D, [2015-06-07T10:36:35.746841 #1411] DEBUG -- : response-header: x-runtime => 0.013943
+D, [2015-06-07T10:36:35.746851 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:36:35.746860 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:36:35 GMT
+D, [2015-06-07T10:36:35.746870 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:36:35.746880 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:36:35.746956 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:37:35.748616 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.392427538764892&band_information%5Blat%5D=-66.1683047970039&band_information%5Bcalories%5D=1&band_information%5Bsteps%5D=14&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:37:35.749597 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:37:35.749648 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:37:35.749667 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:37:35.749681 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:37:35.749694 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:37:35.749706 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:37:35.749717 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:37:35.749728 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:37:35.749744 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:37:35.749757 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:37:35.749768 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:37:35.767971 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:37:35.768035 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:37:35.768066 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:37:35.768091 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:37:35.768115 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/51
+D, [2015-06-07T10:37:35.768139 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:37:35.768162 #1411] DEBUG -- : response-header: etag => W/"7096e45000d34358a0a738732ee50d1a"
+D, [2015-06-07T10:37:35.768185 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:37:35.768207 #1411] DEBUG -- : response-header: x-request-id => 3da70640-52a3-4a5d-8dea-795f12bbc643
+D, [2015-06-07T10:37:35.768230 #1411] DEBUG -- : response-header: x-runtime => 0.014450
+D, [2015-06-07T10:37:35.768254 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:37:35.768277 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:37:35 GMT
+D, [2015-06-07T10:37:35.768299 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:37:35.768322 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:37:35.768396 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:38:35.771746 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.369454067414683&band_information%5Blat%5D=-66.16872180948849&band_information%5Bcalories%5D=7&band_information%5Bsteps%5D=19&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:38:35.772602 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:38:35.772664 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:38:35.772679 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:38:35.772690 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:38:35.772701 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:38:35.772712 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:38:35.772722 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:38:35.772732 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:38:35.772746 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:38:35.772767 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:38:35.772777 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:38:35.793193 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:38:35.793269 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:38:35.793300 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:38:35.793327 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:38:35.793402 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/52
+D, [2015-06-07T10:38:35.793422 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:38:35.793442 #1411] DEBUG -- : response-header: etag => W/"33f68e0793c5290528bdfc066d16f40d"
+D, [2015-06-07T10:38:35.793462 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:38:35.793491 #1411] DEBUG -- : response-header: x-request-id => c873e9b4-ca78-4f25-9afe-11b4e688d5c0
+D, [2015-06-07T10:38:35.793525 #1411] DEBUG -- : response-header: x-runtime => 0.016828
+D, [2015-06-07T10:38:35.793540 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:38:35.793552 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:38:35 GMT
+D, [2015-06-07T10:38:35.793563 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:38:35.793573 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:38:35.793619 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:39:35.797508 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.382145151646007&band_information%5Blat%5D=-66.17748678153578&band_information%5Bcalories%5D=1&band_information%5Bsteps%5D=21&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:39:35.798364 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:39:35.798391 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:39:35.798405 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:39:35.798416 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:39:35.798427 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:39:35.798440 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:39:35.798451 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:39:35.798461 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:39:35.798475 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:39:35.798486 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:39:35.798524 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:39:35.827782 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:39:35.827827 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:39:35.827842 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:39:35.827853 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:39:35.827864 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/53
+D, [2015-06-07T10:39:35.827874 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:39:35.827885 #1411] DEBUG -- : response-header: etag => W/"58d5e67578092017fc4c6626f9e886da"
+D, [2015-06-07T10:39:35.827895 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:39:35.827905 #1411] DEBUG -- : response-header: x-request-id => 52d8c806-576c-4232-abe7-1c24d61a8037
+D, [2015-06-07T10:39:35.827914 #1411] DEBUG -- : response-header: x-runtime => 0.025769
+D, [2015-06-07T10:39:35.827924 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:39:35.827950 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:39:35 GMT
+D, [2015-06-07T10:39:35.827963 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:39:35.827972 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:39:35.828041 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:40:35.831310 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.399259049728425&band_information%5Blat%5D=-66.17456343802273&band_information%5Bcalories%5D=7&band_information%5Bsteps%5D=2&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:40:35.832176 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:40:35.832204 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:40:35.832218 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:40:35.832229 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:40:35.832240 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:40:35.832250 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:40:35.832260 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:40:35.832269 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:40:35.832283 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:40:35.832294 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:40:35.832304 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:40:35.850424 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:40:35.850464 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:40:35.850482 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:40:35.850495 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:40:35.850507 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/54
+D, [2015-06-07T10:40:35.850518 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:40:35.850529 #1411] DEBUG -- : response-header: etag => W/"bf5a66f5bc9ebc2f6ca20e36b8d05e92"
+D, [2015-06-07T10:40:35.850539 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:40:35.850550 #1411] DEBUG -- : response-header: x-request-id => b7c362f3-9d49-4c05-8073-dfbb187599c7
+D, [2015-06-07T10:40:35.850560 #1411] DEBUG -- : response-header: x-runtime => 0.014325
+D, [2015-06-07T10:40:35.850570 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:40:35.850581 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:40:35 GMT
+D, [2015-06-07T10:40:35.850591 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:40:35.850601 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:40:35.850643 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:41:35.855392 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.37592956214785&band_information%5Blat%5D=-66.14385821868953&band_information%5Bcalories%5D=5&band_information%5Bsteps%5D=2&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:41:35.856309 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:41:35.856352 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:41:35.856373 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:41:35.856386 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:41:35.856398 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:41:35.856427 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:41:35.856440 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:41:35.856450 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:41:35.856468 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:41:35.856482 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:41:35.856494 #1411] DEBUG -- : request-header: content-length => 217
+I, [2015-06-07T10:41:35.874839 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:41:35.874880 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:41:35.874895 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:41:35.874907 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:41:35.874919 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/55
+D, [2015-06-07T10:41:35.874956 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:41:35.874968 #1411] DEBUG -- : response-header: etag => W/"fc2fa1169952d6fdf820edcbba984e1f"
+D, [2015-06-07T10:41:35.874978 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:41:35.874989 #1411] DEBUG -- : response-header: x-request-id => 5cee0a05-9fe8-41bb-89ad-a31abdfd1ef7
+D, [2015-06-07T10:41:35.874999 #1411] DEBUG -- : response-header: x-runtime => 0.014611
+D, [2015-06-07T10:41:35.875009 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:41:35.875019 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:41:35 GMT
+D, [2015-06-07T10:41:35.875029 #1411] DEBUG -- : response-header: content-length => 178
+D, [2015-06-07T10:41:35.875038 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:41:35.875081 #1411] DEBUG -- : Read 178 bytes (178 total)
+D, [2015-06-07T10:42:35.878795 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.394574275844988&band_information%5Blat%5D=-66.14824163055124&band_information%5Bcalories%5D=15&band_information%5Bsteps%5D=12&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:42:35.879928 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:42:35.879964 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:42:35.879982 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:42:35.879996 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:42:35.880009 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:42:35.880022 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:42:35.880035 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:42:35.880047 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:42:35.880065 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:42:35.880109 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:42:35.880124 #1411] DEBUG -- : request-header: content-length => 220
+I, [2015-06-07T10:42:35.899033 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:42:35.899079 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:42:35.899098 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:42:35.899111 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:42:35.899123 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/56
+D, [2015-06-07T10:42:35.899150 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:42:35.899165 #1411] DEBUG -- : response-header: etag => W/"192986581af3ffd07240ede22f88a969"
+D, [2015-06-07T10:42:35.899176 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:42:35.899187 #1411] DEBUG -- : response-header: x-request-id => 4266eb18-9402-4e05-9c30-86e0e8980853
+D, [2015-06-07T10:42:35.899198 #1411] DEBUG -- : response-header: x-runtime => 0.014889
+D, [2015-06-07T10:42:35.899208 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:42:35.899219 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:42:35 GMT
+D, [2015-06-07T10:42:35.899229 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:42:35.899306 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:42:35.899354 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:43:35.900086 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.38951191557419&band_information%5Blat%5D=-66.14741964770953&band_information%5Bcalories%5D=7&band_information%5Bsteps%5D=23&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:43:35.900931 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:43:35.900959 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:43:35.900972 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:43:35.900983 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:43:35.900993 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:43:35.901003 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:43:35.901012 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:43:35.901021 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:43:35.901035 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:43:35.901046 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:43:35.901055 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:43:35.919830 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:43:35.919885 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:43:35.919899 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:43:35.919910 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:43:35.919921 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/57
+D, [2015-06-07T10:43:35.919931 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:43:35.919941 #1411] DEBUG -- : response-header: etag => W/"c92da7dd8fc4d01424701103ac9ceebb"
+D, [2015-06-07T10:43:35.919951 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:43:35.919960 #1411] DEBUG -- : response-header: x-request-id => 3a011df3-ffaf-4260-a4c2-709fb85cabb4
+D, [2015-06-07T10:43:35.919970 #1411] DEBUG -- : response-header: x-runtime => 0.015026
+D, [2015-06-07T10:43:35.919979 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:43:35.919989 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:43:35 GMT
+D, [2015-06-07T10:43:35.919998 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:43:35.920007 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:43:35.920049 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:44:35.922217 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.367225488852423&band_information%5Blat%5D=-66.17528255339937&band_information%5Bcalories%5D=9&band_information%5Bsteps%5D=22&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:44:35.923099 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:44:35.923128 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:44:35.923142 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:44:35.923153 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:44:35.923164 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:44:35.923174 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:44:35.923183 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:44:35.923193 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:44:35.923207 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:44:35.923218 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:44:35.923228 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:44:35.944350 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:44:35.944445 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:44:35.944463 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:44:35.944475 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:44:35.944486 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/58
+D, [2015-06-07T10:44:35.944497 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:44:35.944507 #1411] DEBUG -- : response-header: etag => W/"a8d00c36aeff3bf70a8b51fb5fbaeac4"
+D, [2015-06-07T10:44:35.944518 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:44:35.944528 #1411] DEBUG -- : response-header: x-request-id => 11ed4325-816a-4876-be8a-59a1614dc0e1
+D, [2015-06-07T10:44:35.944538 #1411] DEBUG -- : response-header: x-runtime => 0.016702
+D, [2015-06-07T10:44:35.944548 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:44:35.944559 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:44:35 GMT
+D, [2015-06-07T10:44:35.944569 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:44:35.944579 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:44:35.944621 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:45:35.946722 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.391080610925346&band_information%5Blat%5D=-66.15101885861897&band_information%5Bcalories%5D=5&band_information%5Bsteps%5D=30&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:45:35.947522 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:45:35.947550 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:45:35.947563 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:45:35.947574 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:45:35.947585 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:45:35.947595 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:45:35.947653 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:45:35.947667 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:45:35.947682 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:45:35.947693 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:45:35.947721 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:45:35.966881 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:45:35.966926 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:45:35.966941 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:45:35.966953 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:45:35.966963 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/59
+D, [2015-06-07T10:45:35.966974 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:45:35.966984 #1411] DEBUG -- : response-header: etag => W/"a5ed24d96765ac17bea858a54e1209ba"
+D, [2015-06-07T10:45:35.966994 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:45:35.967003 #1411] DEBUG -- : response-header: x-request-id => 49ceb53a-f633-46c2-aec9-af7ea008db6d
+D, [2015-06-07T10:45:35.967013 #1411] DEBUG -- : response-header: x-runtime => 0.015134
+D, [2015-06-07T10:45:35.967092 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:45:35.967103 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:45:35 GMT
+D, [2015-06-07T10:45:35.967113 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:45:35.967123 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:45:35.967165 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:46:35.970687 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.387134778236433&band_information%5Blat%5D=-66.17493624179663&band_information%5Bcalories%5D=3&band_information%5Bsteps%5D=25&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:46:35.971522 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:46:35.971551 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:46:35.971565 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:46:35.971576 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:46:35.971588 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:46:35.971598 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:46:35.971608 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:46:35.971618 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:46:35.971632 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:46:35.971643 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:46:35.971653 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:46:35.989478 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:46:35.989520 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:46:35.989536 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:46:35.989547 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:46:35.989558 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/60
+D, [2015-06-07T10:46:35.989569 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:46:35.989583 #1411] DEBUG -- : response-header: etag => W/"e5c87782e6acd43310e167e53dc2e731"
+D, [2015-06-07T10:46:35.989594 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:46:35.989604 #1411] DEBUG -- : response-header: x-request-id => 8fa7d4dc-ad15-4220-8ce6-033c57e3c4dd
+D, [2015-06-07T10:46:35.989629 #1411] DEBUG -- : response-header: x-runtime => 0.014148
+D, [2015-06-07T10:46:35.989642 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:46:35.989652 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:46:35 GMT
+D, [2015-06-07T10:46:35.989662 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:46:35.989671 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:46:35.989718 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:47:35.993859 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.367997756573164&band_information%5Blat%5D=-66.14755765344059&band_information%5Bcalories%5D=5&band_information%5Bsteps%5D=1&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:47:35.994710 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:47:35.994738 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:47:35.994751 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:47:35.994762 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:47:35.994773 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:47:35.994782 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:47:35.994792 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:47:35.994801 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:47:35.994815 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:47:35.994826 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:47:35.994835 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:47:36.013639 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:47:36.013682 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:47:36.013697 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:47:36.013708 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:47:36.013719 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/61
+D, [2015-06-07T10:47:36.013730 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:47:36.013740 #1411] DEBUG -- : response-header: etag => W/"50ff90fc5d6d309e9353bfaf6a01d573"
+D, [2015-06-07T10:47:36.013749 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:47:36.013759 #1411] DEBUG -- : response-header: x-request-id => b8bd16c4-e7f6-4537-b3f1-6724dcffb393
+D, [2015-06-07T10:47:36.013768 #1411] DEBUG -- : response-header: x-runtime => 0.014462
+D, [2015-06-07T10:47:36.013778 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:47:36.013787 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:47:36 GMT
+D, [2015-06-07T10:47:36.013796 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:47:36.013805 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:47:36.013847 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:48:36.018653 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.387495986590967&band_information%5Blat%5D=-66.14714884083638&band_information%5Bcalories%5D=0&band_information%5Bsteps%5D=27&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:48:36.019607 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:48:36.019639 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:48:36.019655 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:48:36.019731 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:48:36.019768 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:48:36.019783 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:48:36.019795 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:48:36.019806 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:48:36.019823 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:48:36.019836 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:48:36.019847 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:48:36.039036 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:48:36.039080 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:48:36.039095 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:48:36.039107 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:48:36.039118 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/62
+D, [2015-06-07T10:48:36.039128 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:48:36.039139 #1411] DEBUG -- : response-header: etag => W/"d701cf14a2d15a2596b09c5ee3523883"
+D, [2015-06-07T10:48:36.039207 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:48:36.039218 #1411] DEBUG -- : response-header: x-request-id => 6819dde5-21aa-4ced-b400-7cec913fcdc0
+D, [2015-06-07T10:48:36.039227 #1411] DEBUG -- : response-header: x-runtime => 0.015241
+D, [2015-06-07T10:48:36.039237 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:48:36.039247 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:48:36 GMT
+D, [2015-06-07T10:48:36.039256 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:48:36.039266 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:48:36.039307 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:49:36.043310 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.385065061634386&band_information%5Blat%5D=-66.1533102572552&band_information%5Bcalories%5D=0&band_information%5Bsteps%5D=0&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:49:36.044174 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:49:36.044203 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:49:36.044217 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:49:36.044228 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:49:36.044238 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:49:36.044248 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:49:36.044258 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:49:36.044267 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:49:36.044282 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:49:36.044293 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:49:36.044303 #1411] DEBUG -- : request-header: content-length => 217
+I, [2015-06-07T10:49:36.064085 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:49:36.064128 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:49:36.064143 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:49:36.064171 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:49:36.064184 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/63
+D, [2015-06-07T10:49:36.064195 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:49:36.064205 #1411] DEBUG -- : response-header: etag => W/"fd13524874cac2bf34b36ade76ccd18c"
+D, [2015-06-07T10:49:36.064214 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:49:36.064224 #1411] DEBUG -- : response-header: x-request-id => 26ce3e4a-beff-4d27-9600-6c772479f947
+D, [2015-06-07T10:49:36.064234 #1411] DEBUG -- : response-header: x-runtime => 0.015500
+D, [2015-06-07T10:49:36.064243 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:49:36.064253 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:49:36 GMT
+D, [2015-06-07T10:49:36.064263 #1411] DEBUG -- : response-header: content-length => 178
+D, [2015-06-07T10:49:36.064272 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:49:36.064316 #1411] DEBUG -- : Read 178 bytes (178 total)
+D, [2015-06-07T10:50:36.067533 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.392604407286772&band_information%5Blat%5D=-66.1655340507079&band_information%5Bcalories%5D=4&band_information%5Bsteps%5D=19&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:50:36.069096 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:50:36.069163 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:50:36.069191 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:50:36.069214 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:50:36.069235 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:50:36.069256 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:50:36.069275 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:50:36.069294 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:50:36.069331 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:50:36.069353 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:50:36.069373 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:50:36.089623 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:50:36.089668 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:50:36.089683 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:50:36.089694 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:50:36.089704 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/64
+D, [2015-06-07T10:50:36.089726 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:50:36.089737 #1411] DEBUG -- : response-header: etag => W/"0ba8088c5a95578ab55d90ef71aebbdc"
+D, [2015-06-07T10:50:36.089747 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:50:36.089757 #1411] DEBUG -- : response-header: x-request-id => 420af449-17d8-4ed6-8113-bd096a95323d
+D, [2015-06-07T10:50:36.089766 #1411] DEBUG -- : response-header: x-runtime => 0.015659
+D, [2015-06-07T10:50:36.089786 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:50:36.089796 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:50:36 GMT
+D, [2015-06-07T10:50:36.089805 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:50:36.089814 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:50:36.089881 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:51:36.092309 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.381172687769414&band_information%5Blat%5D=-66.16919848584605&band_information%5Bcalories%5D=5&band_information%5Bsteps%5D=25&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:51:36.093151 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:51:36.093179 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:51:36.093193 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:51:36.093204 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:51:36.093214 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:51:36.093224 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:51:36.093233 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:51:36.093242 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:51:36.093256 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:51:36.093267 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:51:36.093276 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:51:36.111352 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:51:36.111395 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:51:36.111410 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:51:36.111422 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:51:36.111432 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/65
+D, [2015-06-07T10:51:36.111443 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:51:36.111484 #1411] DEBUG -- : response-header: etag => W/"02620c6011d3dd754b9104ea29084ccd"
+D, [2015-06-07T10:51:36.111495 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:51:36.111504 #1411] DEBUG -- : response-header: x-request-id => ee667a62-b7dd-4b78-9194-43784c305822
+D, [2015-06-07T10:51:36.111514 #1411] DEBUG -- : response-header: x-runtime => 0.014517
+D, [2015-06-07T10:51:36.111524 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:51:36.111534 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:51:36 GMT
+D, [2015-06-07T10:51:36.111543 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:51:36.111553 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:51:36.111597 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:52:36.115544 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.368128855018163&band_information%5Blat%5D=-66.16116907296482&band_information%5Bcalories%5D=11&band_information%5Bsteps%5D=23&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:52:36.116424 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:52:36.116450 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:52:36.116464 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:52:36.116474 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:52:36.116485 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:52:36.116495 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:52:36.116504 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:52:36.116513 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:52:36.116547 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:52:36.116560 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:52:36.116596 #1411] DEBUG -- : request-header: content-length => 220
+I, [2015-06-07T10:52:36.135451 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:52:36.135492 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:52:36.135507 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:52:36.135519 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:52:36.135531 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/66
+D, [2015-06-07T10:52:36.135542 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:52:36.135552 #1411] DEBUG -- : response-header: etag => W/"e4a871a5787e733a26f0c93315a773f5"
+D, [2015-06-07T10:52:36.135562 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:52:36.135573 #1411] DEBUG -- : response-header: x-request-id => d40c6b1e-1793-4fb1-9200-0413ee7d160e
+D, [2015-06-07T10:52:36.135582 #1411] DEBUG -- : response-header: x-runtime => 0.015181
+D, [2015-06-07T10:52:36.135592 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:52:36.135602 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:52:36 GMT
+D, [2015-06-07T10:52:36.135612 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:52:36.135622 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:52:36.135720 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:53:36.139951 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.36941351566713&band_information%5Blat%5D=-66.1532148942848&band_information%5Bcalories%5D=4&band_information%5Bsteps%5D=23&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:53:36.141068 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:53:36.141102 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:53:36.141117 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:53:36.141130 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:53:36.141146 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:53:36.141158 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:53:36.141168 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:53:36.141178 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:53:36.141193 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:53:36.141205 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:53:36.141216 #1411] DEBUG -- : request-header: content-length => 217
+I, [2015-06-07T10:53:36.166062 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:53:36.166107 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:53:36.166126 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:53:36.166141 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:53:36.166155 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/67
+D, [2015-06-07T10:53:36.166168 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:53:36.166182 #1411] DEBUG -- : response-header: etag => W/"cc8058a0231097febb245cebe898d72c"
+D, [2015-06-07T10:53:36.166210 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:53:36.166225 #1411] DEBUG -- : response-header: x-request-id => 03a671ab-d57a-4f01-b465-b3651bf0df6a
+D, [2015-06-07T10:53:36.166238 #1411] DEBUG -- : response-header: x-runtime => 0.020799
+D, [2015-06-07T10:53:36.166250 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:53:36.166264 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:53:36 GMT
+D, [2015-06-07T10:53:36.166286 #1411] DEBUG -- : response-header: content-length => 178
+D, [2015-06-07T10:53:36.166343 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:53:36.166467 #1411] DEBUG -- : Read 0 bytes (0 total)
+D, [2015-06-07T10:53:36.166520 #1411] DEBUG -- : Read 178 bytes (178 total)
+D, [2015-06-07T10:54:36.170468 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.377027552680477&band_information%5Blat%5D=-66.17962106592506&band_information%5Bcalories%5D=15&band_information%5Bsteps%5D=29&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:54:36.171282 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:54:36.171309 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:54:36.171323 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:54:36.171334 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:54:36.171344 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:54:36.171354 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:54:36.171363 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:54:36.171372 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:54:36.171386 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:54:36.171397 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:54:36.171406 #1411] DEBUG -- : request-header: content-length => 220
+I, [2015-06-07T10:54:36.188453 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:54:36.188530 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:54:36.188547 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:54:36.188559 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:54:36.188570 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/68
+D, [2015-06-07T10:54:36.188580 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:54:36.188591 #1411] DEBUG -- : response-header: etag => W/"cc63b33756ff1222a234fff2a9807c00"
+D, [2015-06-07T10:54:36.188601 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:54:36.188611 #1411] DEBUG -- : response-header: x-request-id => 242c530c-3039-4a1c-a828-e9ea322b1ba6
+D, [2015-06-07T10:54:36.188621 #1411] DEBUG -- : response-header: x-runtime => 0.013707
+D, [2015-06-07T10:54:36.188640 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:54:36.188650 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:54:36 GMT
+D, [2015-06-07T10:54:36.188660 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:54:36.188669 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:54:36.188712 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T10:55:36.193473 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.38277849002657&band_information%5Blat%5D=-66.15161252716973&band_information%5Bcalories%5D=0&band_information%5Bsteps%5D=26&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:55:36.194310 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:55:36.194337 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:55:36.194351 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:55:36.194362 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:55:36.194373 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:55:36.194383 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:55:36.194393 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:55:36.194453 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:55:36.194468 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:55:36.194479 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:55:36.194489 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:55:36.212719 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:55:36.212762 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:55:36.212776 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:55:36.212787 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:55:36.212797 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/69
+D, [2015-06-07T10:55:36.212807 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:55:36.212817 #1411] DEBUG -- : response-header: etag => W/"498e7f17c45bec716a6154c6dde8fae1"
+D, [2015-06-07T10:55:36.212827 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:55:36.212847 #1411] DEBUG -- : response-header: x-request-id => 217782b6-6ea5-489c-aed2-e04fea6d955c
+D, [2015-06-07T10:55:36.212857 #1411] DEBUG -- : response-header: x-runtime => 0.014261
+D, [2015-06-07T10:55:36.212892 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:55:36.212903 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:55:36 GMT
+D, [2015-06-07T10:55:36.212913 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:55:36.212923 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:55:36.212964 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:56:36.216351 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.3726250961997&band_information%5Blat%5D=-66.1629020816175&band_information%5Bcalories%5D=2&band_information%5Bsteps%5D=24&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:56:36.217189 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:56:36.217216 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:56:36.217230 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:56:36.217241 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:56:36.217252 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:56:36.217262 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:56:36.217272 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:56:36.217281 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:56:36.217295 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:56:36.217306 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:56:36.217315 #1411] DEBUG -- : request-header: content-length => 216
+I, [2015-06-07T10:56:36.234939 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:56:36.234985 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:56:36.235002 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:56:36.235015 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:56:36.235027 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/70
+D, [2015-06-07T10:56:36.235038 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:56:36.235061 #1411] DEBUG -- : response-header: etag => W/"a12e90a0304cf329ba14f48ec09e0bbd"
+D, [2015-06-07T10:56:36.235072 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:56:36.235083 #1411] DEBUG -- : response-header: x-request-id => 478fa8a0-31f1-4d1d-bbfc-bf09c25279cc
+D, [2015-06-07T10:56:36.235094 #1411] DEBUG -- : response-header: x-runtime => 0.014060
+D, [2015-06-07T10:56:36.235105 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:56:36.235116 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:56:36 GMT
+D, [2015-06-07T10:56:36.235136 #1411] DEBUG -- : response-header: content-length => 177
+D, [2015-06-07T10:56:36.235146 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:56:36.235191 #1411] DEBUG -- : Read 177 bytes (177 total)
+D, [2015-06-07T10:57:36.238064 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.37035843591982&band_information%5Blat%5D=-66.16769960263284&band_information%5Bcalories%5D=11&band_information%5Bsteps%5D=29&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:57:36.238949 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:57:36.238976 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:57:36.238990 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:57:36.239001 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:57:36.239011 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:57:36.239021 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:57:36.239030 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:57:36.239040 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:57:36.239054 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:57:36.239065 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:57:36.239075 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T10:57:36.256238 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:57:36.256281 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:57:36.256296 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:57:36.256307 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:57:36.256317 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/71
+D, [2015-06-07T10:57:36.256327 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:57:36.256352 #1411] DEBUG -- : response-header: etag => W/"b59860fcaac7adc64221c74edaf7b2af"
+D, [2015-06-07T10:57:36.256363 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:57:36.256373 #1411] DEBUG -- : response-header: x-request-id => c46e7ba6-2785-4e82-95a2-8edfd6b19bb4
+D, [2015-06-07T10:57:36.256383 #1411] DEBUG -- : response-header: x-runtime => 0.013645
+D, [2015-06-07T10:57:36.256393 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:57:36.256418 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:57:36 GMT
+D, [2015-06-07T10:57:36.256440 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:57:36.256449 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:57:36.256492 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:58:36.260100 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.369915151925998&band_information%5Blat%5D=-66.14012931831833&band_information%5Bcalories%5D=1&band_information%5Bsteps%5D=9&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:58:36.260973 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:58:36.261003 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:58:36.261017 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:58:36.261090 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:58:36.261102 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:58:36.261112 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:58:36.261122 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:58:36.261132 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:58:36.261146 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:58:36.261157 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:58:36.261167 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T10:58:36.279105 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:58:36.279162 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:58:36.279178 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:58:36.279190 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:58:36.279201 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/72
+D, [2015-06-07T10:58:36.279212 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:58:36.279232 #1411] DEBUG -- : response-header: etag => W/"468e970b0749d556a89f275e4c004bf2"
+D, [2015-06-07T10:58:36.279243 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:58:36.279253 #1411] DEBUG -- : response-header: x-request-id => a71ed874-70f2-4ff9-9e59-c0bdf13ad92f
+D, [2015-06-07T10:58:36.279346 #1411] DEBUG -- : response-header: x-runtime => 0.014382
+D, [2015-06-07T10:58:36.279357 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:58:36.279367 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:58:36 GMT
+D, [2015-06-07T10:58:36.279377 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T10:58:36.279387 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:58:36.279439 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T10:59:36.282560 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.385530054298062&band_information%5Blat%5D=-66.17342002922413&band_information%5Bcalories%5D=11&band_information%5Bsteps%5D=11&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T10:59:36.283487 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T10:59:36.283529 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T10:59:36.283545 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T10:59:36.283557 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T10:59:36.283569 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T10:59:36.283602 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T10:59:36.283615 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T10:59:36.283626 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T10:59:36.283643 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T10:59:36.283657 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T10:59:36.283669 #1411] DEBUG -- : request-header: content-length => 220
+I, [2015-06-07T10:59:36.301265 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T10:59:36.301310 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T10:59:36.301325 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T10:59:36.301338 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T10:59:36.301349 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/73
+D, [2015-06-07T10:59:36.301361 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T10:59:36.301372 #1411] DEBUG -- : response-header: etag => W/"7ca589ca9bb26716ffa969a4ceec3ce9"
+D, [2015-06-07T10:59:36.301383 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T10:59:36.301393 #1411] DEBUG -- : response-header: x-request-id => d253d895-56f7-4b0f-b53f-6ca43c6eae38
+D, [2015-06-07T10:59:36.301404 #1411] DEBUG -- : response-header: x-runtime => 0.013839
+D, [2015-06-07T10:59:36.301414 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T10:59:36.301425 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 14:59:36 GMT
+D, [2015-06-07T10:59:36.301436 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T10:59:36.301446 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T10:59:36.301491 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T11:00:36.304794 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.388760879196433&band_information%5Blat%5D=-66.17778116000213&band_information%5Bcalories%5D=9&band_information%5Bsteps%5D=19&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:00:36.305682 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:00:36.305710 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:00:36.305724 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:00:36.305735 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:00:36.305746 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:00:36.305756 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:00:36.305765 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T11:00:36.305775 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:00:36.305790 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T11:00:36.305801 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:00:36.305810 #1411] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T11:00:36.323633 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T11:00:36.323677 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:00:36.323692 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:00:36.323703 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:00:36.323713 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/74
+D, [2015-06-07T11:00:36.323742 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:00:36.323755 #1411] DEBUG -- : response-header: etag => W/"b734cf5143b2729924dc8060bb00846e"
+D, [2015-06-07T11:00:36.323765 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T11:00:36.323775 #1411] DEBUG -- : response-header: x-request-id => 750c613f-77f1-461e-a3c5-464d6f52e203
+D, [2015-06-07T11:00:36.323784 #1411] DEBUG -- : response-header: x-runtime => 0.014116
+D, [2015-06-07T11:00:36.323794 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:00:36.323804 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:00:36 GMT
+D, [2015-06-07T11:00:36.323813 #1411] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T11:00:36.323823 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:00:36.323867 #1411] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T11:01:36.328594 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.3861679800992&band_information%5Blat%5D=-66.16227526255024&band_information%5Bcalories%5D=12&band_information%5Bsteps%5D=10&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:01:36.329425 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:01:36.329453 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:01:36.329466 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:01:36.329477 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:01:36.329487 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:01:36.329497 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:01:36.329507 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T11:01:36.329516 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:01:36.329530 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T11:01:36.329541 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:01:36.329551 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:01:36.347049 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T11:01:36.347106 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:01:36.347130 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:01:36.347142 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:01:36.347152 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/75
+D, [2015-06-07T11:01:36.347163 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:01:36.347173 #1411] DEBUG -- : response-header: etag => W/"38ff82240bf5511aa27d4dc4c867f2c7"
+D, [2015-06-07T11:01:36.347183 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T11:01:36.347194 #1411] DEBUG -- : response-header: x-request-id => da3acf65-cbe9-4aa7-9484-45ca8e68799b
+D, [2015-06-07T11:01:36.347203 #1411] DEBUG -- : response-header: x-runtime => 0.014080
+D, [2015-06-07T11:01:36.347213 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:01:36.347223 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:01:36 GMT
+D, [2015-06-07T11:01:36.347233 #1411] DEBUG -- : response-header: content-length => 178
+D, [2015-06-07T11:01:36.347243 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:01:36.347286 #1411] DEBUG -- : Read 178 bytes (178 total)
+D, [2015-06-07T11:02:36.350792 #1411] DEBUG -- : query: "band_information%5Blong%5D=-17.397411649922386&band_information%5Blat%5D=-66.14989805231299&band_information%5Bcalories%5D=2&band_information%5Bsteps%5D=8&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:02:36.351832 #1411]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:02:36.351896 #1411] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:02:36.351911 #1411] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:02:36.351922 #1411] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:02:36.351933 #1411] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:02:36.351944 #1411] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:02:36.351954 #1411] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T11:02:36.351964 #1411] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:02:36.351979 #1411] DEBUG -- : request-header: referer => http://localhost:3000/band_informations.json
+D, [2015-06-07T11:02:36.351990 #1411] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:02:36.352001 #1411] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:02:36.371331 #1411]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T11:02:36.371377 #1411] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:02:36.371392 #1411] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:02:36.371404 #1411] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:02:36.371414 #1411] DEBUG -- : response-header: location => http://localhost:3000/band_informations/76
+D, [2015-06-07T11:02:36.371425 #1411] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:02:36.371435 #1411] DEBUG -- : response-header: etag => W/"555000bd82ffb3828ca2474ed3277a59"
+D, [2015-06-07T11:02:36.371445 #1411] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T11:02:36.371455 #1411] DEBUG -- : response-header: x-request-id => 9c0f81d5-d25b-4b4c-a916-4848ad7b1ab5
+D, [2015-06-07T11:02:36.371465 #1411] DEBUG -- : response-header: x-runtime => 0.015610
+D, [2015-06-07T11:02:36.371475 #1411] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:02:36.371484 #1411] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:02:36 GMT
+D, [2015-06-07T11:02:36.371495 #1411] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T11:02:36.371504 #1411] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:02:36.371548 #1411] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T11:19:00.286327 #1566] DEBUG -- : query: "band_information%5Blong%5D=-17.380271627503173&band_information%5Blat%5D=-66.16318644977872&band_information%5Bcalories%5D=4&band_information%5Bsteps%5D=13&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:19:00.287099 #1566]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:19:00.287129 #1566] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:19:00.287143 #1566] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:19:00.287154 #1566] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:19:00.287165 #1566] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:19:00.287176 #1566] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:19:00.287185 #1566] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:19:00.287195 #1566] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:19:00.287205 #1566] DEBUG -- : request-header: content-length => 219
+D, [2015-06-07T11:23:20.031342 #1836] DEBUG -- : query: "band_information%5Blong%5D=-17.374994141140856&band_information%5Blat%5D=-66.15437937533179&band_information%5Bcalories%5D=5&band_information%5Bsteps%5D=6&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:23:20.032148 #1836]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:23:20.032178 #1836] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:23:20.032192 #1836] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:23:20.032204 #1836] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:23:20.032215 #1836] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:23:20.032226 #1836] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:23:20.032236 #1836] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:23:20.032246 #1836] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:23:20.032258 #1836] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:23:20.303537 #1836]  INFO -- : status: Net::HTTPInternalServerError 1.1 500 Internal Server Error 
+D, [2015-06-07T11:23:20.303582 #1836] DEBUG -- : response-header: content-type => text/html; charset=utf-8
+D, [2015-06-07T11:23:20.303596 #1836] DEBUG -- : response-header: content-length => 60829
+D, [2015-06-07T11:23:20.303611 #1836] DEBUG -- : response-header: x-request-id => 13f29bcd-84f4-4c2e-ad95-633bc3cb8031
+D, [2015-06-07T11:23:20.303622 #1836] DEBUG -- : response-header: x-runtime => 0.254243
+D, [2015-06-07T11:23:20.303632 #1836] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:23:20.303642 #1836] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:23:20 GMT
+D, [2015-06-07T11:23:20.303651 #1836] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:23:20.303753 #1836] DEBUG -- : Read 16101 bytes (16101 total)
+D, [2015-06-07T11:23:20.303822 #1836] DEBUG -- : Read 16384 bytes (32485 total)
+D, [2015-06-07T11:23:20.303873 #1836] DEBUG -- : Read 16384 bytes (48869 total)
+D, [2015-06-07T11:23:20.303908 #1836] DEBUG -- : Read 11960 bytes (60829 total)
+D, [2015-06-07T11:23:28.585856 #1837] DEBUG -- : query: "band_information%5Blong%5D=-17.398945693683284&band_information%5Blat%5D=-66.15842218104729&band_information%5Bcalories%5D=0&band_information%5Bsteps%5D=7&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:23:28.586707 #1837]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:23:28.586739 #1837] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:23:28.586754 #1837] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:23:28.586765 #1837] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:23:28.586776 #1837] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:23:28.586787 #1837] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:23:28.586797 #1837] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:23:28.586807 #1837] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:23:28.586820 #1837] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:23:28.778386 #1837]  INFO -- : status: Net::HTTPInternalServerError 1.1 500 Internal Server Error 
+D, [2015-06-07T11:23:28.778434 #1837] DEBUG -- : response-header: content-type => text/html; charset=utf-8
+D, [2015-06-07T11:23:28.778452 #1837] DEBUG -- : response-header: content-length => 60829
+D, [2015-06-07T11:23:28.778465 #1837] DEBUG -- : response-header: x-request-id => 4777c29e-2ccd-4e2e-9592-b91ecd66e9b6
+D, [2015-06-07T11:23:28.778477 #1837] DEBUG -- : response-header: x-runtime => 0.188092
+D, [2015-06-07T11:23:28.778507 #1837] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:23:28.778521 #1837] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:23:28 GMT
+D, [2015-06-07T11:23:28.778532 #1837] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:23:28.778645 #1837] DEBUG -- : Read 16101 bytes (16101 total)
+D, [2015-06-07T11:23:28.778727 #1837] DEBUG -- : Read 16384 bytes (32485 total)
+D, [2015-06-07T11:23:28.778829 #1837] DEBUG -- : Read 16384 bytes (48869 total)
+D, [2015-06-07T11:23:28.778869 #1837] DEBUG -- : Read 11960 bytes (60829 total)
+D, [2015-06-07T11:25:00.535649 #1839] DEBUG -- : query: "band_information%5Blong%5D=-17.371379183974316&band_information%5Blat%5D=-66.14009779406254&band_information%5Bcalories%5D=4&band_information%5Bsteps%5D=29&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:25:00.536398 #1839]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:25:00.536426 #1839] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:25:00.536440 #1839] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:25:00.536451 #1839] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:25:00.536466 #1839] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:25:00.536476 #1839] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:25:00.536489 #1839] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:25:00.536500 #1839] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:25:00.536510 #1839] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T11:25:00.675383 #1839]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T11:25:00.675431 #1839] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:25:00.675450 #1839] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:25:00.675463 #1839] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:25:00.675476 #1839] DEBUG -- : response-header: location => http://localhost:3000/band_informations/77
+D, [2015-06-07T11:25:00.675489 #1839] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:25:00.675501 #1839] DEBUG -- : response-header: etag => W/"2d190c726e1580ebeb6ecdc6679e690d"
+D, [2015-06-07T11:25:00.675513 #1839] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T11:25:00.675524 #1839] DEBUG -- : response-header: x-request-id => bde0ed19-35ae-4712-9344-81676f5aa767
+D, [2015-06-07T11:25:00.675535 #1839] DEBUG -- : response-header: x-runtime => 0.135069
+D, [2015-06-07T11:25:00.675547 #1839] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:25:00.675558 #1839] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:25:00 GMT
+D, [2015-06-07T11:25:00.675588 #1839] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T11:25:00.675599 #1839] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:25:00.675610 #1839] DEBUG -- : response-header: set-cookie => request_method=POST; path=/
+D, [2015-06-07T11:25:00.675702 #1839] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T11:25:00.678310 #1839] DEBUG -- : saved cookie: request_method=POST
+D, [2015-06-07T11:25:12.182915 #1840] DEBUG -- : query: "band_information%5Blong%5D=-17.374836223755143&band_information%5Blat%5D=-66.17366777923638&band_information%5Bcalories%5D=5&band_information%5Bsteps%5D=3&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:25:12.183678 #1840]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:25:12.183707 #1840] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:25:12.183720 #1840] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:25:12.183749 #1840] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:25:12.183765 #1840] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:25:12.183775 #1840] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:25:12.183785 #1840] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:25:12.183795 #1840] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:25:12.183805 #1840] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:25:12.203188 #1840]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T11:25:12.203232 #1840] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:25:12.203247 #1840] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:25:12.203262 #1840] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:25:12.203273 #1840] DEBUG -- : response-header: location => http://localhost:3000/band_informations/78
+D, [2015-06-07T11:25:12.203283 #1840] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:25:12.203294 #1840] DEBUG -- : response-header: etag => W/"befebd23872d1e1de6aaef6b47253801"
+D, [2015-06-07T11:25:12.203303 #1840] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T11:25:12.203313 #1840] DEBUG -- : response-header: x-request-id => 02edb9f5-ea44-4d00-974f-34da3aca2215
+D, [2015-06-07T11:25:12.203323 #1840] DEBUG -- : response-header: x-runtime => 0.015440
+D, [2015-06-07T11:25:12.203332 #1840] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:25:12.203358 #1840] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:25:12 GMT
+D, [2015-06-07T11:25:12.203370 #1840] DEBUG -- : response-header: content-length => 179
+D, [2015-06-07T11:25:12.203380 #1840] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:25:12.203390 #1840] DEBUG -- : response-header: set-cookie => request_method=POST; path=/
+D, [2015-06-07T11:25:12.203474 #1840] DEBUG -- : Read 179 bytes (179 total)
+D, [2015-06-07T11:25:12.205181 #1840] DEBUG -- : saved cookie: request_method=POST
+D, [2015-06-07T11:28:15.363396 #1843] DEBUG -- : query: "band_information%5Blong%5D=-17.379051712901358&band_information%5Blat%5D=-66.14167817852268&band_information%5Bcalories%5D=8&band_information%5Bsteps%5D=8&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:28:15.364145 #1843]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:28:15.364174 #1843] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:28:15.364188 #1843] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:28:15.364199 #1843] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:28:15.364211 #1843] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:28:15.364221 #1843] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:28:15.364231 #1843] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:28:15.364241 #1843] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:28:15.364269 #1843] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:28:15.454365 #1843]  INFO -- : status: Net::HTTPUnauthorized 1.1 401 Unauthorized 
+D, [2015-06-07T11:28:15.454411 #1843] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:28:15.454426 #1843] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:28:15.454438 #1843] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:28:15.454448 #1843] DEBUG -- : response-header: www-authenticate => Basic realm="Application"
+D, [2015-06-07T11:28:15.454472 #1843] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:28:15.454484 #1843] DEBUG -- : response-header: cache-control => no-cache
+D, [2015-06-07T11:28:15.454497 #1843] DEBUG -- : response-header: x-request-id => 4cb6a7fe-f336-4926-ac13-f4e534704a9c
+D, [2015-06-07T11:28:15.454507 #1843] DEBUG -- : response-header: x-runtime => 0.086322
+D, [2015-06-07T11:28:15.454517 #1843] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:28:15.454527 #1843] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:28:15 GMT
+D, [2015-06-07T11:28:15.454536 #1843] DEBUG -- : response-header: content-length => 61
+D, [2015-06-07T11:28:15.454545 #1843] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:28:15.454554 #1843] DEBUG -- : response-header: set-cookie => request_method=POST; path=/
+D, [2015-06-07T11:28:15.454639 #1843] DEBUG -- : Read 61 bytes (61 total)
+D, [2015-06-07T11:28:15.456361 #1843] DEBUG -- : saved cookie: request_method=POST
+I, [2015-06-07T11:28:15.456868 #1843]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:28:15.456894 #1843] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:28:15.456907 #1843] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:28:15.456918 #1843] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:28:15.456933 #1843] DEBUG -- : request-header: authorization => Basic YWRtaW5AZml0cmFjay5jb206MTIzNDU2Nzg=
+D, [2015-06-07T11:28:15.456960 #1843] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:28:15.456972 #1843] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:28:15.456982 #1843] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T11:28:15.456992 #1843] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:28:15.457002 #1843] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:28:15.457011 #1843] DEBUG -- : request-header: content-length => 218
+I, [2015-06-07T11:28:15.467229 #1843]  INFO -- : status: Net::HTTPUnauthorized 1.1 401 Unauthorized 
+D, [2015-06-07T11:28:15.467274 #1843] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:28:15.467290 #1843] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:28:15.467301 #1843] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:28:15.467312 #1843] DEBUG -- : response-header: www-authenticate => Basic realm="Application"
+D, [2015-06-07T11:28:15.467322 #1843] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:28:15.467332 #1843] DEBUG -- : response-header: cache-control => no-cache
+D, [2015-06-07T11:28:15.467343 #1843] DEBUG -- : response-header: x-request-id => 337d0d66-0a32-4684-a116-b7e138a8b2d1
+D, [2015-06-07T11:28:15.467352 #1843] DEBUG -- : response-header: x-runtime => 0.008035
+D, [2015-06-07T11:28:15.467362 #1843] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:28:15.467372 #1843] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:28:15 GMT
+D, [2015-06-07T11:28:15.467382 #1843] DEBUG -- : response-header: content-length => 38
+D, [2015-06-07T11:28:15.467391 #1843] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:28:15.467440 #1843] DEBUG -- : Read 38 bytes (38 total)
+D, [2015-06-07T11:28:21.002512 #1844] DEBUG -- : query: "band_information%5Blong%5D=-17.398820417432134&band_information%5Blat%5D=-66.17328366499183&band_information%5Bcalories%5D=9&band_information%5Bsteps%5D=18&band_information%5Buser_id%5D=1&band_information%5Bband_id%5D=1"
+I, [2015-06-07T11:28:21.003336 #1844]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:28:21.003374 #1844] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:28:21.003408 #1844] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:28:21.003427 #1844] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:28:21.003441 #1844] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:28:21.003453 #1844] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:28:21.003465 #1844] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:28:21.003476 #1844] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:28:21.003488 #1844] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T11:28:21.012811 #1844]  INFO -- : status: Net::HTTPUnauthorized 1.1 401 Unauthorized 
+D, [2015-06-07T11:28:21.012860 #1844] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:28:21.012879 #1844] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:28:21.012894 #1844] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:28:21.012907 #1844] DEBUG -- : response-header: www-authenticate => Basic realm="Application"
+D, [2015-06-07T11:28:21.012923 #1844] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:28:21.012955 #1844] DEBUG -- : response-header: cache-control => no-cache
+D, [2015-06-07T11:28:21.012968 #1844] DEBUG -- : response-header: x-request-id => acb8f7cf-3ade-48d3-b365-0a4077801058
+D, [2015-06-07T11:28:21.012979 #1844] DEBUG -- : response-header: x-runtime => 0.005403
+D, [2015-06-07T11:28:21.012991 #1844] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:28:21.013002 #1844] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:28:21 GMT
+D, [2015-06-07T11:28:21.013014 #1844] DEBUG -- : response-header: content-length => 61
+D, [2015-06-07T11:28:21.013027 #1844] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:28:21.013039 #1844] DEBUG -- : response-header: set-cookie => request_method=POST; path=/
+D, [2015-06-07T11:28:21.013129 #1844] DEBUG -- : Read 61 bytes (61 total)
+D, [2015-06-07T11:28:21.015124 #1844] DEBUG -- : saved cookie: request_method=POST
+I, [2015-06-07T11:28:21.015704 #1844]  INFO -- : Net::HTTP::Post: /band_informations.json
+D, [2015-06-07T11:28:21.015731 #1844] DEBUG -- : request-header: accept-encoding => gzip,deflate,identity
+D, [2015-06-07T11:28:21.015747 #1844] DEBUG -- : request-header: accept => */*
+D, [2015-06-07T11:28:21.015760 #1844] DEBUG -- : request-header: user-agent => Mechanize/2.7.3 Ruby/2.2.0p0 (http://github.com/sparklemotion/mechanize/)
+D, [2015-06-07T11:28:21.015773 #1844] DEBUG -- : request-header: authorization => Basic c2VyZ2lvQGZpdHJhY2suY29tOjEyMzQ1Njc4
+D, [2015-06-07T11:28:21.015785 #1844] DEBUG -- : request-header: accept-charset => ISO-8859-1,utf-8;q=0.7,*;q=0.7
+D, [2015-06-07T11:28:21.015797 #1844] DEBUG -- : request-header: accept-language => en-us,en;q=0.5
+D, [2015-06-07T11:28:21.015808 #1844] DEBUG -- : request-header: cookie => request_method=POST
+D, [2015-06-07T11:28:21.015820 #1844] DEBUG -- : request-header: host => localhost:3000
+D, [2015-06-07T11:28:21.015831 #1844] DEBUG -- : request-header: content-type => application/x-www-form-urlencoded
+D, [2015-06-07T11:28:21.015842 #1844] DEBUG -- : request-header: content-length => 219
+I, [2015-06-07T11:28:21.114283 #1844]  INFO -- : status: Net::HTTPCreated 1.1 201 Created 
+D, [2015-06-07T11:28:21.114328 #1844] DEBUG -- : response-header: x-frame-options => SAMEORIGIN
+D, [2015-06-07T11:28:21.114346 #1844] DEBUG -- : response-header: x-xss-protection => 1; mode=block
+D, [2015-06-07T11:28:21.114360 #1844] DEBUG -- : response-header: x-content-type-options => nosniff
+D, [2015-06-07T11:28:21.114372 #1844] DEBUG -- : response-header: location => http://localhost:3000/band_informations/79
+D, [2015-06-07T11:28:21.114385 #1844] DEBUG -- : response-header: content-type => application/json; charset=utf-8
+D, [2015-06-07T11:28:21.114409 #1844] DEBUG -- : response-header: etag => W/"414ce8c47468604afe6b52d6c24a1af1"
+D, [2015-06-07T11:28:21.114423 #1844] DEBUG -- : response-header: cache-control => max-age=0, private, must-revalidate
+D, [2015-06-07T11:28:21.114435 #1844] DEBUG -- : response-header: x-request-id => c6b6147e-3674-4a80-9e43-599799765754
+D, [2015-06-07T11:28:21.114446 #1844] DEBUG -- : response-header: x-runtime => 0.096214
+D, [2015-06-07T11:28:21.114458 #1844] DEBUG -- : response-header: server => WEBrick/1.3.1 (Ruby/2.2.0/2014-12-25)
+D, [2015-06-07T11:28:21.114469 #1844] DEBUG -- : response-header: date => Sun, 07 Jun 2015 15:28:21 GMT
+D, [2015-06-07T11:28:21.114480 #1844] DEBUG -- : response-header: content-length => 180
+D, [2015-06-07T11:28:21.114491 #1844] DEBUG -- : response-header: connection => Keep-Alive
+D, [2015-06-07T11:28:21.114502 #1844] DEBUG -- : response-header: set-cookie => _taller_project_session=bEthL0VGTkhxNk1yQWJ2V1hGazJkcHBHZThoYkw1VFBMSElOdnpybTNuL2RiNTFrcDRTdHpNZ21qUHFqMmFOVHZHek1nelZKOHd0ci9SaEE2QjlOS3c9PS0tWi9UMG15d2oxaTVoNnZUZnpIUzIrdz09--831cc635c7b28d52138f1525fd4277a84e01c900; path=/; HttpOnly
+D, [2015-06-07T11:28:21.114557 #1844] DEBUG -- : Read 180 bytes (180 total)
+D, [2015-06-07T11:28:21.114867 #1844] DEBUG -- : saved cookie: _taller_project_session=bEthL0VGTkhxNk1yQWJ2V1hGazJkcHBHZThoYkw1VFBMSElOdnpybTNuL2RiNTFrcDRTdHpNZ21qUHFqMmFOVHZHek1nelZKOHd0ci9SaEE2QjlOS3c9PS0tWi9UMG15d2oxaTVoNnZUZnpIUzIrdz09--831cc635c7b28d52138f1525fd4277a84e01c900
