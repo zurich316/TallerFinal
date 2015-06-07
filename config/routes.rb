@@ -1,6 +1,6 @@
 
 Rails.application.routes.draw do
-
+  get '/daily_tracking' => 'band_informations#home'
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
   get 'dream_sessions/:id/start_session' =>'dream_sessions#start_time'
