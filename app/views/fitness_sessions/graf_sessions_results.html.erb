@@ -1,4 +1,4 @@
 
 
 
-<%= line_chart @results.group_by_minute(:created_at, "sum", "value") %>
+<%= line_chart BandInformation.group_by_hour(:created_at => @session.time_started..@session.time_finished)%>

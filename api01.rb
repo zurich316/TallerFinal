@@ -6,7 +6,8 @@ require 'logger'
 agent = Mechanize.new
 agent.log = Logger.new 'mechanize.log'
 #Log in con la cuenta sergio@fitrack.com y password: 12345678
-agent.add_auth('http://localhost:3000','carlos05.ale@gmail.com','051994alejo')
+agent.add_auth('http://localhost:3000','jeyson.mirabal@gmail.com','12345678')
+#agent.add_auth('http://localhost:3000','sergio@fitrack.com','12345678')
 
 flag=0
 while flag<=180 do	

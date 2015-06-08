@@ -5,6 +5,7 @@ class FitnessSessionsController < ApplicationController
 
   def results
      @sessions = current_user.fitness_sessions
+     @user=current_user
   end
   # GET /sessions
   # GET /sessions.json
@@ -24,31 +25,35 @@ class FitnessSessionsController < ApplicationController
 
 
   def graf_session_results
-    @results = BandInformation.all()
-
+    #@results = BandInformation.all()
+    #@resuls = current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+    #session_results
+   # @t1 = @session.time_started.to_time
+    #@t2 = @session.time_finished.to_time
   end
   
 
 
   def session_results
     @session = FitnessSession.find(params[:id])
-    information = BandInformation.all()
+    @information = BandInformation.where('created_at >= ? AND created_at <= ?',@session.time_started,@session.time_finished)
     @pasos = 0
     @dist = 0
     @cal = 0
-    information.each do |info|
-          time1 = @session.time_started.to_time
-          time2 = @session.time_finished.to_time
-          if info.created_at.to_time >= Time.parse("#{time1}") && info.created_at.to_time <= Time.parse("#{time2}")
+    @time1 = @session.time_started.to_time
+    @time2 = @session.time_finished.to_time
+     
+     @hash = Gmaps4rails.build_markers(@information) do |infor, marker|
+        marker.lat infor.long
+        marker.lng infor.lat
+     end
+  
+    @information.each do |info|
+          
             @pasos = @pasos + info.steps
             @cal = @cal + info.calories
             @dist = @pasos
-            @hash = Gmaps4rails.build_markers(info) do |info, marker|
-             marker.lat info.long
-             marker.lng info.lat
-            end
-      end
-    end
+    end        
   end
 
   def session_results_cycling
@@ -149,3 +154,4 @@ class FitnessSessionsController < ApplicationController
       params.require(:fitness_session).permit(:user_id, :type_sessiongoer_id, :type_session_id, :burned_calories, :hearth_rate, :total_time, :time_started, :time_finished)
     end
 end
+
