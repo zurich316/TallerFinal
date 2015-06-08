@@ -17,6 +17,8 @@ get '/daily_tracking/daily_comp' => 'band_informations#daily_comp'
   get 'fitness_sessions/results'=>'fitness_sessions#results'
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
+  get 'fitness_sessions/:id/graf_sessions_results'=>'fitness_sessions#graf_sessions_results'
+
   get 'alarms/:id/turn_on'=>'alarms#turn_on'
   get 'alarms/:id/turn_off'=>'alarms#turn_off'
   resources :dream_sessions

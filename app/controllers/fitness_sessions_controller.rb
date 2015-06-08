@@ -37,6 +37,7 @@ class FitnessSessionsController < ApplicationController
     @pasos = 0
     @dist = 0
     @cal = 0
+   # @inf = []
     information.each do |info|
           time1 = @session.time_started.to_time
           time2 = @session.time_finished.to_time
@@ -47,8 +48,11 @@ class FitnessSessionsController < ApplicationController
             @hash = Gmaps4rails.build_markers(info) do |info, marker|
              marker.lat info.long
              marker.lng info.lat
-            end
-      end
+             #@inf << info
+          end
+    end
+
+             
     end
   end
 
