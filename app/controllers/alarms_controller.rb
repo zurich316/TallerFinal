@@ -4,7 +4,7 @@ class AlarmsController < ApplicationController
   # GET /alarms
   # GET /alarms.json
   def index
-    @alarms = Alarm.all
+    @alarms = current_user.alarms
   end
 
   # GET /alarms/1
