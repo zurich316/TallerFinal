@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   get '/daily_tracking/options' => 'band_informations#options'
   get '/daily_tracking/today_work' => 'band_informations#today_work'
 
+<<<<<<< HEAD
   get '/daily_tracking/daily_comp' => 'band_informations#daily_comp'
   get '/daily_tracking/weekly_comp' => 'band_informations#weekly_comp'
   get '/daily_tracking/monthly_comp' => 'band_informations#monthly_comp'
   
+=======
+  resources :alarms
+>>>>>>> d1cf82aa9fe124a56506a702080506c5e30aae51
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
   get 'dream_sessions/:id/start_session' =>'dream_sessions#start_time'
@@ -17,7 +21,8 @@ Rails.application.routes.draw do
   get 'fitness_sessions/results'=>'fitness_sessions#results'
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
-
+  get 'alarms/:id/turn_on'=>'alarms#turn_on'
+  get 'alarms/:id/turn_off'=>'alarms#turn_off'
   resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions

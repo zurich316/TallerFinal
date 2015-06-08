@@ -1,6 +1,11 @@
 <div class="container" style="margin-left=-15px">
 	<h1 class="page-header">Burned calories</h1>
-	<%= line_chart FitnessSession.group_by_hour(:created_at, "sum", "burned_calories") %>
+
+	<h3 class="page-header">Steps</h3>
+	<%= line_chart BandInformation.group_by_minute(:created_at, "sum", "steps") %>
+
+	<h3 class="page-header">Calories</h3>
+	<%= line_chart BandInformation.group_by_minute(:created_at, "sum", "calories") %>
 
 
 </div>
