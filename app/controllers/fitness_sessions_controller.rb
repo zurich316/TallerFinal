@@ -43,7 +43,11 @@ class FitnessSessionsController < ApplicationController
             @pasos = @pasos + info.steps
             @cal = @cal + info.calories
             @dist = @pasos
-          end
+            @hash = Gmaps4rails.build_markers(info) do |info, marker|
+             marker.lat info.long
+             marker.lng info.lat
+            end
+      end
     end
   end
 

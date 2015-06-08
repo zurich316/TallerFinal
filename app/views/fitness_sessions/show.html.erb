@@ -67,6 +67,10 @@
               <%= @session.time_finished %>
             </p>
 
+            <div style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
 
       <%else%>
            <h1>OPS session en progreso</h1> 
@@ -79,4 +83,18 @@
 <%= link_to 'Back', fitness_sessions_path, class:"btn btn-default" %>
 
 </div>
+
+
 </div>
+
+
+<script type="text/javascript">
+  
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+  
+</script>
