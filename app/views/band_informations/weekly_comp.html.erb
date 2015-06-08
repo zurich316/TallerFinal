@@ -1,0 +1,21 @@
+<title>Weekly Progress | FiTrack</title>
+<div id="page-content-wrapper">
+<div class="container"> 
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Weekly Progress</h1>
+
+<center>
+<p class="text-muted">
+  <h2>Everyday counts!</h2>
+  Here is what you've done month!<br>
+  Keep rocking!<br>
+</p>
+
+  <div class="container" style="width:90%; margin-left:5%;margin-right:5%;">
+    <h4>Steps</h4>
+    <%= line_chart @data.group_by_week(:created_at,'sum',:steps),:library => {:colors => ['c80000']}%>
+    <h4>Calories</h4>
+    <%= line_chart @data.group_by_week(:created_at,'sum',:calories)%>
+  </div>
+</center>
+</div>
+</div>
