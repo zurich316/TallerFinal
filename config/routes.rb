@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
 
+  resources :alarms
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
   get 'dream_sessions/:id/start_session' =>'dream_sessions#start_time'
@@ -8,7 +9,8 @@ Rails.application.routes.draw do
   get 'fitness_sessions/results'=>'fitness_sessions#results'
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
-
+  get 'alarms/:id/turn_on'=>'alarms#turn_on'
+  get 'alarms/:id/turn_off'=>'alarms#turn_off'
   resources :dream_sessions
   resources :band_informations
   resources :fitness_sessions

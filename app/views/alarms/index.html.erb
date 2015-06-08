@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+
+<div id="page-content-wrapper" style="margin-left:3%;">
+  <div class="container"> 
+<h1>Listing Alarms</h1>
+
+<table>
+    <% @alarms.each do |alarm| %>
+      <tr>
+        <td><%= alarm.time.strftime("%H:%M") %><br>(
+        <% if (alarm.monday) %>
+            Monday,
+          <% end %>
+        <% if (alarm.tuesday) %>
+            Tuesday,
+           <% end %>
+       <% if (alarm.wednesday) %>
+            Wednesday,
+           <% end %>
+         <% if (alarm.thursday) %>
+            Thursday,
+           <% end %>
+         <% if (alarm.friday) %>
+            Frisday,
+           <% end %>
+         <% if (alarm.saturday) %>
+            Saturday,
+           <% end %>
+        <% if (alarm.sunday) %>
+            Sunday
+           <% end %>
+           ) &nbsp;</td>
+
+        <td><%= alarm.message %>&nbsp;</td>
+
+        <td><%if (alarm.turn==true) %>
+                ON
+            <% elsif (alarm.turn==false) %>
+              OFF
+              <%end %>
+        </td>
+        <%if alarm.turn==false%>
+        <td><a href="/alarms/<%=alarm.id%>/turn_on" class="btn btn-default navbar-btn" >On</a>&nbsp;</td>
+        <% else %>
+        <td><a href="/alarms/<%=alarm.id%>/turn_off" class='btn btn-danger btn-sm'>Off</a>&nbsp;</td>
+        <%end%>
+        <td><%= link_to 'Show', alarm ,class:"btn btn-default navbar-btn"%></td>
+                <td><%= link_to 'Edit', edit_alarm_path(alarm), class:"btn btn-default navbar-btn"%></td>
+        <td><%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-default navbar-btn" %></td>
+      </tr>
+    <% end %>
+
+</table>
+
+<br>
+
+<%= link_to 'New Alarm', new_alarm_path %>
+    </div>
+</div>

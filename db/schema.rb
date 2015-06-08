@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607152645) do
+ActiveRecord::Schema.define(version: 20150608012221) do
+
+  create_table "alarms", force: :cascade do |t|
+    t.time     "time"
+    t.boolean  "monday"
+    t.boolean  "tuesday"
+    t.boolean  "wednesday"
+    t.boolean  "thursday"
+    t.boolean  "friday"
+    t.boolean  "saturday"
+    t.boolean  "sunday"
+    t.string   "message"
+    t.boolean  "turn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "alarms", ["user_id"], name: "index_alarms_on_user_id"
 
   create_table "band_informations", force: :cascade do |t|
     t.integer  "steps"
