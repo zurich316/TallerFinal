@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'fitness_sessions/results'=>'fitness_sessions#results'
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'
+  get 'fitness_sessions/:id/graf_sessions_results'=>'fitness_sessions#graf_sessions_results'
 
   resources :dream_sessions
   resources :band_informations

@@ -1,4 +1,12 @@
 
 
 
-<%= line_chart @results.group_by_minute(:created_at, "sum", "value") %>
+
+
+
+<%= line_chart @results.map{|res|
+    {data: res.steps.group_by_hour(:created_at,"","steps")}
+} %>
+
+
+<%= line_chart Feat.group(:goal_id).group_by_week(:created_at).count %>
