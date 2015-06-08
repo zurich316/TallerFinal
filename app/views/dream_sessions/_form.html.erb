@@ -15,8 +15,9 @@
     <%= f.hidden_field :user_id,:value => current_user.id  %>
   </div>
 
- 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create Record', :class=>"btn btn-primary btn-sm" %>
+      &nbsp;
+      <%= link_to 'Back', dream_sessions_path %>
   </div>
 <% end %>

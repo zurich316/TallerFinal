@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
     has_many :band_informations
     has_many :fitness_sessions   
     has_many :dream_sessions
+    has_many :alarms
   	# Include default devise modules. Others available are:
   	# :confirmable, :lockable, :timeoutable and :omniauthable
   	devise :database_authenticatable, :registerable,
