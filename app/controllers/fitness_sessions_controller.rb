@@ -5,6 +5,7 @@ class FitnessSessionsController < ApplicationController
 
   def results
      @sessions = current_user.fitness_sessions
+     @user=current_user
   end
   # GET /sessions
   # GET /sessions.json
