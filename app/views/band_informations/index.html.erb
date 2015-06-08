@@ -1,15 +1,28 @@
+<title>Band Information Records | FiTrack</title>
+<div id="page-content-wrapper">
+<div class="container"> 
+
+<div class='row' style="border-bottom: 1px solid #A6AAA9; color: #000000;">
+  <div class='col-md-8'>
+  <h1>
+    Band Information Records
+  </h1>
+  </div>
+  <div class='col-md-4' align='right'>
+    <h1>
+    <%= link_to '+', new_band_information_path,:class=> 'btn btn-default btn-sm',:align=>'rigth'%>
+  </h1>
+  </div>
+</div>
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Band Informations</h1>
-
-<table>
+<table class='table table-striped'>
   <thead>
     <tr>
+      <th>Calories</th>
       <th>Steps</th>
-      <th>Lat</th>
       <th>Long</th>
-      <th>User</th>
-      <th>Band</th>
+      <th>Lat</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,19 +30,25 @@
   <tbody>
     <% @band_informations.each do |band_information| %>
       <tr>
+
+        <td><%= band_information.calories %></td>
         <td><%= band_information.steps %></td>
-        <td><%= band_information.lat %></td>
         <td><%= band_information.long %></td>
-        <td><%= band_information.user_id%></td>
-        <td><%= band_information.band_id %></td>
-        <td><%= link_to 'Show', band_information %></td>
-        <td><%= link_to 'Edit', edit_band_information_path(band_information) %></td>
-        <td><%= link_to 'Destroy', band_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= band_information.lat %></td>
+        <td>
+          <div class="btn-group">
+            <%= link_to 'Show', band_information, :class => 'btn btn-primary btn-xs' %>
+            <%= link_to 'Edit', edit_band_information_path(band_information) , :class => 'btn btn-default btn-xs'%>
+            <%= link_to 'Destroy', band_information, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-danger btn-xs'%>
+          </div>
+        </td>
+        </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Band information', new_band_information_path %>
+
+</div>
+</div>

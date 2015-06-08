@@ -1,11 +1,14 @@
 
 Rails.application.routes.draw do
+  get '/daily_tracking' => 'band_informations#home'
+  get '/daily_tracking/options' => 'band_informations#options'
 
   resources :alarms
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
   get 'dream_sessions/:id/start_session' =>'dream_sessions#start_time'
   get 'dream_sessions/:id/finish_session' =>'dream_sessions#end_time'
+
   get 'fitness_sessions/results'=>'fitness_sessions#results'
   get 'fitness_sessions/:id/start'=>'fitness_sessions#start'
   get 'fitness_sessions/:id/end'=>'fitness_sessions#end'

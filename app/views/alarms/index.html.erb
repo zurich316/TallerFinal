@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+<title>Alarms</title>
 
 <div id="page-content-wrapper" style="margin-left:3%;">
   <div class="container"> 
-<h1>Listing Alarms</h1>
+<h1>Current Alarms</h1>
 
 <table>
     <% @alarms.each do |alarm| %>
@@ -32,7 +32,7 @@
            <% end %>
            ) &nbsp;</td>
 
-        <td><%= alarm.message %>&nbsp;</td>
+        <td><%= alarm.message %>&nbsp;&nbsp;&nbsp;</td>
 
         <td><%if (alarm.turn==true) %>
                 ON
@@ -41,9 +41,9 @@
               <%end %>
         </td>
         <%if alarm.turn==false%>
-        <td><a href="/alarms/<%=alarm.id%>/turn_on" class="btn btn-default navbar-btn" >On</a>&nbsp;</td>
+        <td>&nbsp;<a href="/alarms/<%=alarm.id%>/turn_on" class="btn btn-default navbar-btn" >On</a>&nbsp;</td>
         <% else %>
-        <td><a href="/alarms/<%=alarm.id%>/turn_off" class='btn btn-danger btn-sm'>Off</a>&nbsp;</td>
+        <td>&nbsp;&nbsp;<a href="/alarms/<%=alarm.id%>/turn_off" class='btn btn-danger btn-sm'>Off</a></td>
         <%end%>
         <td><%= link_to 'Show', alarm ,class:"btn btn-default navbar-btn"%></td>
                 <td><%= link_to 'Edit', edit_alarm_path(alarm), class:"btn btn-default navbar-btn"%></td>

@@ -33,7 +33,7 @@
 			           		<%= @diferencia[:hour]%>h. <%= @diferencia[:minute]%>m. <%= @diferencia[:second]%>s. 
 			           </p>
 			           <p class='text-muted'style='font-size: 12px;'>
-			           	TOTAL TIME
+			           	TIME UNTIL NOW...
 			           </p>
 		           <%else%>
 			           <% @diferencia=Time.diff(@dream_session.time_finished,@dream_session.time_started)%>

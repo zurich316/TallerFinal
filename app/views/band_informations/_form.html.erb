@@ -11,15 +11,17 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= f.label :calories %><br>
+    <%= f.number_field :calories %>
+  </div>
   <div class="field">
     <%= f.label :steps %><br>
     <%= f.number_field :steps %>
   </div>
   
-  <div class="field">
-    <%= f.label :calories %><br>
-    <%= f.number_field :calories %>
-  </div>
+
   <div class="field">
     <%= f.label :lat %><br>
     <%= f.number_field :lat %>
@@ -36,6 +38,9 @@
     <%= f.hidden_field :band_id , :value => current_user.bands.first.id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+  <div class='btn-group'>
+      <%= f.submit 'Create', :class=>'btn btn-primary btn-sm'%>
+      <%= link_to 'Back', band_informations_path , :class=>'btn btn-default btn-sm'%>
+  </div>
   </div>
 <% end %>

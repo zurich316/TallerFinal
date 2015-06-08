@@ -2,6 +2,11 @@ class BandInformationsController < ApplicationController
   before_action :set_band_information, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 
 
+  def home
+  end
+
+  def options
+  end
   # GET /band_informations
   # GET /band_informations.json
   def index
