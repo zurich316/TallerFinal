@@ -1,6 +1,16 @@
 <div class="container" style="margin-left=-15px">
 	<h1 class="page-header">Burned calories</h1>
 
+	<%= line_chart FitnessSession.where("user_id LIKE ?",@user.id).group_by_hour(:created_at, "sum", "burned_calories") %>
+	<h1 class="page-header">Jogging/steps(day)</h1>
+	<%= line_chart JoggingSession.group_by_day(:created_at, "sum", "steps") %>
+	<h1 class="page-header">Cycling/distance(day)</h1>
+	<%= line_chart CyclingSession.group_by_day(:created_at, "sum", "distance") %>
+<!--	<#%= line_chart JoggingSession.where("fitness_session_id LIKE ?",@sessions.find(6).id ).group_by_minute(:created_at, "sum", "steps") %>
+	<#%= line_chart CyclingSession.where("fitness_session_id LIKE ?",@sessions.find(1).id ).group_by_minute(:created_at, "sum", "distance") %>
+-->
+
+
 	<h3 class="page-header">Steps</h3>
 	<%= line_chart BandInformation.group_by_minute(:created_at, "sum", "steps") %>
 

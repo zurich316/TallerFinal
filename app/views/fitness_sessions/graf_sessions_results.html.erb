@@ -1,6 +1,4 @@
 
 
 
-
-
-<%= line_chart BandInformation.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day).group_by_minute(:created_at).sum(:steps) %>
+<%= line_chart BandInformation.group_by_hour(:created_at => @session.time_started..@session.time_finished)%>
