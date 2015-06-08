@@ -105,9 +105,15 @@
         
           <br>
         <div style="width:90%; margin-left:5%;margin-right:5%;">
-        <h4>Grafic Result</h4>
+        <h4>Grafic Result Steps</h4>
         <%= line_chart BandInformation.where('created_at >= ? AND created_at <= ?',@time1,@time2).group_by_minute(:created_at,'sum',:steps)%>
         </div>  
+
+        <div style="width:90%; margin-left:5%;margin-right:5%;">
+        <h4>Grafic Result Calories</h4>
+        <%= line_chart BandInformation.where('created_at >= ? AND created_at <= ?',@time1,@time2).group_by_minute(:created_at,'sum',:calories)%>
+        </div> 
+ 
         <%= link_to 'Back', fitness_sessions_path, class:"btn btn-default" %>
       <%else%>
       
