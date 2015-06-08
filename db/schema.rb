@@ -11,6 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20150608012221) do
+
   create_table "alarms", force: :cascade do |t|
     t.time     "time"
     t.boolean  "monday"
