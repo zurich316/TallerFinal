@@ -6,7 +6,7 @@ class GoalsController < ApplicationController
   def index
 
     @goals = current_user.goals
-    
+
   end
 
   # GET /goals/1
@@ -104,11 +104,23 @@ class GoalsController < ApplicationController
         @goal.progress = @goal.progress + one.calories
        end
     end
+    def calculate_dream(one)
+       if @goal.type_goal.tip == "Dream"
+         @goal.progress = @goal.goal
+       end
+    end
+    def calculate_weight(one)
+       if @goal.type_goal.tip == "Weight"
+         @goal.progress = current_user.weight
+       end
+    end
 
     def calculate_day(one)
       if @goal.frequency=="Day" && @goal.created_at.month == one.created_at.month && @goal.created_at.day == one.created_at.day && @goal.created_at.year == one.created_at.year
        calculate_calories(one)
       calculate_steps(one)
+      calculate_dream(one)
+      calculate_weight(one)
       end 
     end
 
@@ -116,6 +128,8 @@ class GoalsController < ApplicationController
       if @goal.frequency=="Month" && @goal.created_at.month == one.created_at.month && @goal.created_at.year == one.created_at.year
       calculate_calories(one)
       calculate_steps(one)
+      calculate_dream(one)
+      calculate_weight(one)
       end 
     end
 
@@ -123,6 +137,8 @@ class GoalsController < ApplicationController
       if @goal.frequency=="Year" && @goal.created_at.year == one.created_at.year
        calculate_calories(one)
       calculate_steps(one)
+      calculate_dream(one)
+      calculate_weight(one)
       end 
     end
 

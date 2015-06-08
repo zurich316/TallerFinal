@@ -3,49 +3,98 @@
 <p id="notice"><%= notice %></p>
 
 
-<p>
-  <strong>User:</strong>
-  <%= @session.user.name %>
-</p>
+<%if @session.time_started != nil%>
 
-<p>
-  <strong>Type sessiongoer:</strong>
-  <%= @session.type_sessiongoer_id %>
-</p>
+      <%if @session.time_finished!=nil%>
+          <strong>User:</strong>
+          <p>
+              <%= @session.user.name %>
+              <a href="/graf_sessions_results.html.erb ">results</a>
+          </p>
+          <p>
+              <strong>Type session:</strong>
+              <%= @session.type_session.tipo %>
+          </p>
 
-<p>
-  <strong>Type session:</strong>
-  <%= @session.type_session.tipo %>
-</p>
 
-<p>
-  <strong>Burned calories:</strong>
-  <%= @session.burned_calories %>
-</p>
+          <%if @session.type_session.tipo == "Jogging"%>
 
-<p>
-  <strong>Hearth rate:</strong>
-  <%= @session.hearth_rate %>
-</p>
+              <p>
+                <strong>Burned calories:</strong>
+                <%= @cal %>
+              </p>
 
-<p>
-  <strong>Total time:</strong>
-  <%= @session.total_time %>
-</p>
+              <p>
+                <strong>steps:</strong>
+                <%= @pasos%>
+              </p>
 
-<p>
-  <strong>Time started:</strong>
-  <%= @session.time_started %>
-</p>
+              <p>
+                <strong>Distancia:</strong>
+                <%= @dist%> M
+              </p>
+          <%end%>
+          <%if @session.type_session.tipo == "Cycling"%>
 
-<p>
-  <strong>Time finished:</strong>
-  <%= @session.time_finished %>
-</p>
+              <p>
+                <strong>Burned calories:</strong>
+                <%= @cal %>
+              </p>
 
+              <p>
+                <strong>Distancia:</strong>
+                <%= @dist%> M
+              </p>
+          <%end%>
+
+           <%if @session.type_session.tipo == "Weight Lifting"%>
+               <p>
+                  <strong>Calories:</strong>
+                  <%= @cal%> 
+              </p>
+             
+
+          <%end%>
+
+      
+            <p>
+              <strong>Time started:</strong>
+              <%= @session.time_started %>
+            </p>
+
+            <p>
+              <strong>Time finished:</strong>
+              <%= @session.time_finished %>
+            </p>
+
+            <div style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+
+      <%else%>
+           <h1>OPS session en progreso</h1> 
+      <%end%>   
+<%else%>
+     <h1>OPS no se ha iniciado la session</h1>    
+<%end%>
 
 <%= link_to 'Edit', edit_fitness_session_path(@session),class:"btn btn-default"%> |
 <%= link_to 'Back', fitness_sessions_path, class:"btn btn-default" %>
 
 </div>
+
+
 </div>
+
+
+<script type="text/javascript">
+  
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+  
+</script>

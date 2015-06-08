@@ -39,6 +39,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+#google maps
+gem "chartkick"
+gem "hightop" 
+gem "active_median"
+gem "dateslices"
+
+gem 'gmaps4rails'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

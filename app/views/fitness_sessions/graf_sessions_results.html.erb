@@ -1,0 +1,4 @@
+
+
+
+<%= line_chart @results.group_by_minute(:created_at, "sum", "value") %>
