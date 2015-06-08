@@ -3,9 +3,56 @@
 <div class="container"> 
 <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Edit Band Information Record</h1>
 
-<%= render 'form' %>
+<%= form_for(@band_information) do |f| %>
+  <% if @band_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@band_information.errors.count, "error") %> prohibited this band_information from being saved:</h2>
 
-<%= link_to 'Show', @band_information %> |
-<%= link_to 'Back', band_informations_path %>
+      <ul>
+      <% @band_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :calories %><br>
+    <%= f.number_field :calories %>
+  </div>
+  <div class="field">
+    <%= f.label :steps %><br>
+    <%= f.number_field :steps %>
+  </div>
+  
+
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.number_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :long %><br>
+    <%= f.number_field :long %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :user_id,:value => current_user.id %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :band_id , :value => current_user.bands.first.id %>
+  </div>
+  <br>
+  <div class="actions">
+  	<div class='btn-group'>
+    <%= f.submit 'Save changes', :class=>'btn btn-primary btn-sm'%>
+	
+	<%= link_to 'Back', band_informations_path , :class=>'btn btn-default btn-sm'%>
+	<%= link_to 'Destroy', @band_information, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-danger btn-sm'%>
+  	</div>
+  </div>
+<% end %>
+
+
 </div>
 </div>

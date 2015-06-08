@@ -4,6 +4,9 @@ class BandInformationsController < ApplicationController
 
   def home
   end
+
+  def options
+  end
   # GET /band_informations
   # GET /band_informations.json
   def index
