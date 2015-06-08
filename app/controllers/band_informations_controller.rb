@@ -2,6 +2,29 @@ class BandInformationsController < ApplicationController
   before_action :set_band_information, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 
 
+  def home
+  end
+
+  def options
+  end
+
+  def today_work
+    @today=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+  end
+
+  def daily_comp
+    @data=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_week, Time.now.end_of_week)
+  end
+
+  def weekly_comp
+    @data=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_month, Time.now.end_of_month)
+  
+  end
+
+  def monthly_comp
+    @data=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_year, Time.now.end_of_year)
+  
+  end
   # GET /band_informations
   # GET /band_informations.json
   def index

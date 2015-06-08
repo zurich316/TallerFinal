@@ -7,15 +7,17 @@
 <p id="notice" align="center" class="text-muted"><%= notice %></p> 
 <br>
 <table class="table talbe-striped">
-  <col width="40%">
   <col width="20%">
-  <col width="20%">
-  <col width="20%">
+  <col width="25%">
+  <col width="25%">
+  <col width="15%">
+  <col width="15%">
   <thead>
     <tr>
       <th>Id</th>
       <th>Time started</th>
       <th>Time finished</th>
+      <th>Total time </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,28 +26,49 @@
     <% @dream_sessions.each do |dream_session| %>
       <tr>
         <td><%= dream_session.id %></td>
-        <% if dream_session.time_started == nil%>
-          <td>&nbsp; Not started</td>
-        <%else%>
-          <td><%= dream_session.time_started.to_formatted_s(:long_ordinal) %></td>
-        <%end%>
-        <% if dream_session.time_finished == nil%>
-          <td>&nbsp;  Not finished</td>
-        <%else%>
-        <td><%= dream_session.time_finished.to_formatted_s(:long_ordinal) %></td>
-        <%end%>
-
         <td>
-          <%= link_to 'Show', dream_session %>
-        <%= link_to 'Destroy', dream_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <%if dream_session.time_started==nil%>
+            <a class="btn btn-primary btn-xs"href="/dream_sessions/<%=dream_session.id%>/start_session">Start Session</a>
+          <%else%>
+            <%= dream_session.time_started.to_formatted_s(:long_ordinal) %>
+          <%end%>
+        </td>
+        <td>
+          <%if dream_session.time_started==nil%>
+            Not started
+          <%elsif dream_session.time_finished == nil %>
+            <a class="btn btn-primary btn-xs"href="/dream_sessions/<%=dream_session.id%>/finish_session">Finish Session</a>
+          <%else%>
+             <%= dream_session.time_finished.to_formatted_s(:long_ordinal) %>
+          <%end%>
+        </td>
+        <td>
+          <%if dream_session.time_started==nil%>
+              
+                  WAITING...
+              <%elsif dream_session.time_finished == nil%>
+
+                <% @diferencia=Time.diff(Time.now,dream_session.time_started)%>
+                    <%= @diferencia[:hour]%>h. <%= @diferencia[:minute]%>m. <%= @diferencia[:second]%>s. 
+               <%else%>
+                 <% @diferencia=Time.diff(dream_session.time_finished,dream_session.time_started)%>
+                    <%= @diferencia[:hour]%>h. <%= @diferencia[:minute]%>m. <%= @diferencia[:second]%>s.
+                
+               <%end%>
+        </td>
+        <td>
+          <div class='btn-group'>
+              <%= link_to 'Show', dream_session ,:class => 'btn btn-default btn-xs'%>
+               <%= link_to 'Destroy', dream_session, method: :delete, data: { confirm: 'Are you sure?' } ,:class => 'btn btn-danger btn-xs'%></td>
+          </div>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Dream session', new_dream_session_path %>
-
+<center>
+  <%= link_to 'New Dream Session', new_dream_session_path ,:class => 'btn btn-primary btn-sm'%>
+</center>
 </div>
 </div>
