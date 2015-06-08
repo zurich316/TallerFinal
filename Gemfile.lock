@@ -111,11 +111,8 @@ GEM
       sexp_processor (~> 4.4)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
-<<<<<<< HEAD
     gmaps4rails (2.0.3)
-=======
     gmaps4rails (2.1.2)
->>>>>>> 2190743201c3e645451f189acf379fa4bcac8d4d
     hightop (0.1.2)
       activerecord
     hirb (0.7.3)

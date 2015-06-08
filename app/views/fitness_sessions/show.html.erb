@@ -67,6 +67,10 @@
               <%= @session.time_finished %>
             </p>
 
+            <div style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
 
       <%else%>
            <h1>OPS session en progreso</h1> 
@@ -79,9 +83,7 @@
 <%= link_to 'Back', fitness_sessions_path, class:"btn btn-default" %>
 
 </div>
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
+
 
 </div>
 
