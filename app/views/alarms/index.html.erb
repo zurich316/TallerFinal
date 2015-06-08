@@ -48,6 +48,15 @@
         <td><%= link_to 'Show', alarm ,class:"btn btn-default navbar-btn"%></td>
                 <td><%= link_to 'Edit', edit_alarm_path(alarm), class:"btn btn-default navbar-btn"%></td>
         <td><%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-default navbar-btn" %></td>
+
+        <% scheduler = Rufus::Scheduler.new %>
+         <%scheduler.every '5s' do %>
+            <%if (alarm.turn ==true && alarm.time.hour ==Time.now.hour && alarm.time.min == Time.now.min)%>
+              <%= javascript_tag 'alert("hello world!")'%>
+         <% end%>
+         <%end%>
+         <%= flash_messages %> 
+
       </tr>
     <% end %>
 

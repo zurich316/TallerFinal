@@ -22,7 +22,8 @@ gem "chartkick"
 gem "hightop" 
 gem "active_median"
 gem "dateslices"
-
+gem 'rufus-scheduler'
+gem 'popup'
 gem 'gmaps4rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
