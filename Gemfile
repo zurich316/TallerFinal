@@ -22,7 +22,8 @@ gem "chartkick"
 gem "hightop" 
 gem "active_median"
 gem "dateslices"
-
+gem 'rufus-scheduler'
+gem 'popup'
 gem 'gmaps4rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,12 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
 
 #google maps
-gem "chartkick"
-gem "hightop" 
-gem "active_median"
-gem "dateslices"
 
-gem 'gmaps4rails'
 
 
 # Use Capistrano for deployment
