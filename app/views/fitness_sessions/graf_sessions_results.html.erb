@@ -3,10 +3,4 @@
 
 
 
-
-<%= line_chart @results.map{|res|
-    {data: res.steps.group_by_hour(:created_at,"","steps")}
-} %>
-
-
-<%= line_chart Feat.group(:goal_id).group_by_week(:created_at).count %>
+<%= line_chart BandInformation.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day).group_by_minute(:created_at).sum(:steps) %>
