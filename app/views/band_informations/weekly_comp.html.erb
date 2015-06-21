@@ -16,7 +16,7 @@
     <h4>Calories</h4>
     <%= line_chart @data.group_by_week(:registered_date,'sum',:calories)%>
     <h4>Heart Rate</h4>
-    <%= line_chart @data.group_by_week(:registered_date,'avg',:heart_rate)%>
+    <%= line_chart @data.group_by_week(:registered_date,'avg',:heart_rate),:library => {:colors => ['00FF66']}%>
   </div>
 </center>
 </div>
