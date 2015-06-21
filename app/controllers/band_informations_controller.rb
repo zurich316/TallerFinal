@@ -9,26 +9,26 @@ class BandInformationsController < ApplicationController
   end
 
   def today_work
-    @today=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+    @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
   end
 
   def daily_comp
-    @data=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_week, Time.now.end_of_week)
+    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_week, Time.now.end_of_week)
   end
 
   def weekly_comp
-    @data=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_month, Time.now.end_of_month)
+    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_month, Time.now.end_of_month)
   
   end
 
   def monthly_comp
-    @data=current_user.bands.first.band_informations.where('created_at BETWEEN ? AND ?',Time.now.beginning_of_year, Time.now.end_of_year)
+    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_year, Time.now.end_of_year)
   
   end
   # GET /band_informations
   # GET /band_informations.json
   def index
-    @band_informations = current_user.bands.first.band_informations.order(created_at: :desc)
+    @band_informations = current_user.bands.first.band_informations.order(registered_date: :desc)
   end
 
   # GET /band_informations/1
@@ -93,6 +93,6 @@ class BandInformationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def band_information_params
-      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories)
+      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories, :registered_date,:heart_rate)
     end
 end

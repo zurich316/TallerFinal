@@ -12,9 +12,11 @@
 
   <div class="container" style="width:90%; margin-left:5%;margin-right:5%;">
     <h4>Steps</h4>
-    <%= line_chart @data.group_by_week(:created_at,'sum',:steps),:library => {:colors => ['c80000']}%>
+    <%= line_chart @data.group_by_week(:registered_date,'sum',:steps),:library => {:colors => ['c80000']}%>
     <h4>Calories</h4>
-    <%= line_chart @data.group_by_week(:created_at,'sum',:calories)%>
+    <%= line_chart @data.group_by_week(:registered_date,'sum',:calories)%>
+    <h4>Heart Rate</h4>
+    <%= line_chart @data.group_by_week(:registered_date,'avg',:heart_rate)%>
   </div>
 </center>
 </div>
