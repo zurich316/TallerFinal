@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621021909) do
+ActiveRecord::Schema.define(version: 20150621143522) do
 
   create_table "alarms", force: :cascade do |t|
     t.time     "time"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20150621021909) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "calories"
-    t.date     "registered_date"
+    t.datetime "registered_date"
     t.integer  "heart_rate"
   end
 
