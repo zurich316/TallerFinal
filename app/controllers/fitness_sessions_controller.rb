@@ -36,10 +36,11 @@ class FitnessSessionsController < ApplicationController
 
   def session_results
     @session = FitnessSession.find(params[:id])
-    @information = BandInformation.where('created_at >= ? AND created_at <= ?',@session.time_started,@session.time_finished)
+    @information = BandInformation.where('registered_date >= ? AND registered_date <= ?',@session.time_started,@session.time_finished)
     @pasos = 0
     @dist = 0
     @cal = 0
+    @rt = 0
     @time1 = @session.time_started.to_time
     @time2 = @session.time_finished.to_time
      
@@ -53,8 +54,11 @@ class FitnessSessionsController < ApplicationController
             @pasos = @pasos + info.steps
             @cal = @cal + info.calories
             @dist = @pasos
-    end        
+            @rt += info.heart_rate
+    end 
+    @rt = @rt/@information.count()
   end
+
 
 
   # GET /sessions/new

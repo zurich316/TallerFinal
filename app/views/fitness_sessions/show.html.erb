@@ -34,6 +34,7 @@
                     <th>Burned Calories</th>
                     <th>Steps</th>
                     <th>Distancia</th>
+                    <th>Heart Rate Prom.</th>
                   </tr>
                 </thead>
 
@@ -43,6 +44,7 @@
                       <td><%= @cal %></td>
                       <td> <%= @pasos%></td>
                       <td><%= @dist%> M</td>
+                      <td><%= @rt%></td>
                     </tr>
                 </tbody>
           </table>        
@@ -54,6 +56,7 @@
                       <tr>
                         <th>Burned calories</th>
                         <th>Distancia</th>
+                        <th>Heart Rate Prom.</th>
                       </tr>
                     </thead>
 
@@ -62,6 +65,7 @@
                           
                           <td><%= @cal %></td>
                           <td><%= @dist%> Mts.</td>
+                          <td><%= @rt%></td>
                         </tr>
                     </tbody>
             </table>  
@@ -71,6 +75,7 @@
               <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th>Heart Rate Prom.</th>
                         <th>Burned Calories</th>
                       </tr>
                     </thead>
@@ -78,6 +83,7 @@
                     <tbody>
                         <tr>
                           <td><%= @cal %></td>
+                          <td><%= @rt%></td>
                         </tr>
                     </tbody>
               </table>  
@@ -94,6 +100,7 @@
 
                     <tbody>
                         <tr>
+
                           <td><%= @session.time_started %></td>
                           <td><%= @session.time_finished %></td>
                         </tr>
@@ -105,12 +112,12 @@
           
               <div style="width:90%; margin-left:5%;margin-right:5%;">
               <h4>Burned Calories</h4>
-              <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:calories)%>
+              <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:calories),:library => {:colors => ['c80000']}%>
               </div> 
 
               <div style="width:90%; margin-left:5%;margin-right:5%;">
               <h4>Steps</h4>
-              <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:steps)%>
+              <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:steps),:library => {:colors => ['841AA1']}%>
               </div> 
 
               <div style="width:90%; margin-left:5%;margin-right:5%;">
@@ -121,7 +128,7 @@
           <%elsif @session.type_session.tipo == "Cycling"%>
                  <div style="width:90%; margin-left:5%;margin-right:5%;">
                 <h4>Burned Calories</h4>
-                <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:calories)%>
+                <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:calories),:library => {:colors => ['c80000']}%>
                 </div>
 
                 <div style="width:90%; margin-left:5%;margin-right:5%;">
@@ -132,13 +139,13 @@
             <%else%> 
                <div style="width:90%; margin-left:5%;margin-right:5%;">
                 <h4>Burned Calories</h4>
-                <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:calories)%>
+                <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:calories),:library => {:colors => ['c80000']}%>
                 </div> 
                
           <%end%>
               <div style="width:90%; margin-left:5%;margin-right:5%;">
               <h4>Heart Rate</h4>
-              <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:heart_rate)%>
+              <%= line_chart BandInformation.where('registered_date >= ? AND registered_date <= ?',@time1,@time2).group_by_minute(:registered_date,'sum',:heart_rate),:library => {:colors => ['31B03A']}%>
               </div>
 
         </div>
