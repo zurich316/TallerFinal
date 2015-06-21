@@ -15,8 +15,9 @@ while flag<=180 do
 	calories=Random.new.rand(0..50)
 	long=Random.new.rand(-17.399343..-17.366742)
 	lat=Random.new.rand(-66.180571..-66.136969)
+	hr = Random.new.rand(60..250)
 	#Asociamos los datos de la banda a la cuenta de usuario 1 (sergio@fitrack.com) y a su banda asociada con id 1.
-	data = {'band_information[long]'=>long,'band_information[lat]'=>lat,'band_information[calories]'=>calories,'band_information[steps]'=>steps,'band_information[registered-date]'=>Time.now,'band_information[user_id]'=>'1','band_information[band_id]'=>'1'}
+	data = {'band_information[long]'=>long,'band_information[lat]'=>lat,'band_information[calories]'=>calories,'band_information[steps]'=>steps,'band_information[registered-date]'=>Time.now, 'band_information[heart_rate]'=>hr,'band_information[user_id]'=>'1','band_information[band_id]'=>'1'}
 	agent.post('http://localhost:3000/band_informations.json', data) do |page|
 	   puts page.body
 	end
