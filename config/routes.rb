@@ -1,10 +1,11 @@
 
 Rails.application.routes.draw do
   
+  root 'home#index'
   get '/daily_tracking' => 'band_informations#home'
   get '/daily_tracking/options' => 'band_informations#options'
   get '/daily_tracking/today_work' => 'band_informations#today_work'
-get '/daily_tracking/daily_comp' => 'band_informations#daily_comp'
+  get '/daily_tracking/daily_comp' => 'band_informations#daily_comp'
   get '/daily_tracking/weekly_comp' => 'band_informations#weekly_comp'
   get '/daily_tracking/monthly_comp' => 'band_informations#monthly_comp'
   
@@ -27,7 +28,6 @@ get '/daily_tracking/daily_comp' => 'band_informations#daily_comp'
   resources :bands
   resources :goals
   devise_for :users
-  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
