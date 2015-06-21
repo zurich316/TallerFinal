@@ -5,7 +5,6 @@ if ENV['RAILS_ENV'] == 'test'
 end
 #!/usr/bin/env ruby
 begin
-  load File.expand_path("../spring", __FILE__)
   require 'metric_fu'
   
 rescue LoadError
