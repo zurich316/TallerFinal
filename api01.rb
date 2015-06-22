@@ -13,12 +13,7 @@ psw = gets.chomp
 agent.add_auth('http://fitrackucb.herokuapp.com',user,psw)
 
 
-Pusher.url = "http://90b3bfd4d3713a081765:def286f353288afd72b7@api.pusherapp.com/apps/126255"
-channel='test_channel1'
-message = CGI.escape_html 'Please, associate a band to see your fitness work'
-Pusher[channel].trigger('new_notification', {
-  message: message
-})
+
 
 bands = JSON.parse agent.get('http://fitrackucb.herokuapp.com/bands.json').body
 if bands.size == 1
@@ -42,8 +37,12 @@ flag=0
 		sleep(60)
 	end
 else
-	message = {:channel => '/messages/new', :data => 'Please, associate a band to register data in the app.'}  
-    uri = URI.parse("http://localhost:9292/faye")  
-    Net::HTTP.post_form(uri ,:message => message.to_json)
+	Pusher.url = "http://90b3bfd4d3713a081765:def286f353288afd72b7@api.pusherapp.com/apps/126255"
+	channel='test_channel'+agent.get('http://fitrackucb.herokuapp.com/bands/new').form_with(:method => 'POST').field_with(:name => 'band[user_id]').value
+		message = CGI.escape_html 'Please, associate a band to see your fitness work'
+		Pusher[channel].trigger('new_notification', {
+		  message: message
+		})
+	
 end
 	
