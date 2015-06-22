@@ -144,12 +144,41 @@
                 </li>
                 <a id='no_band'class="btn btn-primary sweet-5" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-5']);" style="display:none;">Try It</a>
                 </div>
+
+
             </ul>
          </div>
 
-        
+          <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+         <script src="html5-realtime-push-notifications/lib/gritter/js/jquery.gritter.min.js"></script>
+         <link href="html5-realtime-push-notifications/lib/gritter/css/jquery.gritter.css"rel="stylesheet" type="text/css" />
+         <script src="//js.pusher.com/2.2/pusher.min.js"></script>
+         <script src="html5-realtime-push-notifications/PusherNotifier.js"></script>
       
+
+
         <script src="js/bootstrap.min.js"></script>
+
+       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+      <section class="notification"></section>
+          <script>
+
+            Pusher.log = function(message) {
+              if (window.console && window.console.log) {
+                window.console.log(message);
+              }
+            };
+            toastr.options.closeButton = true;
+            var pusher = new Pusher('90b3bfd4d3713a081765');
+            var channel = pusher.subscribe('test_channel'+<%=current_user.id.to_s%>);
+            channel.bind('new_notification', function(notification){
+                  var message = notification.message;
+                  toastr.error(message)
+              });
+          </script>
+
  <script>
 
 document.querySelector('.sweet-5').onclick = function(){

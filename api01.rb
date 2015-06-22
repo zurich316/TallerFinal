@@ -1,7 +1,7 @@
 require 'mechanize'
 require 'logger'
-
-@website = 'fitrackucb.herokuapp.com'
+require 'pusher'
+require 'cgi'
 
 agent = Mechanize.new
 agent.log = Logger.new 'mechanize.log'
@@ -12,6 +12,13 @@ psw = gets.chomp
 #Log in con la cuenta user and psw
 agent.add_auth('http://fitrackucb.herokuapp.com',user,psw)
 
+
+Pusher.url = "http://90b3bfd4d3713a081765:def286f353288afd72b7@api.pusherapp.com/apps/126255"
+channel='test_channel1'
+message = CGI.escape_html 'Please, associate a band to see your fitness work'
+Pusher[channel].trigger('new_notification', {
+  message: message
+})
 
 bands = JSON.parse agent.get('http://fitrackucb.herokuapp.com/bands.json').body
 if bands.size == 1
