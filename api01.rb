@@ -6,8 +6,8 @@ require 'logger'
 agent = Mechanize.new
 agent.log = Logger.new 'mechanize.log'
 #Log in con la cuenta sergio@fitrack.com y password: 12345678
-agent.add_auth('http://localhost:3000','jeyson.mirabal@gmail.com','12345678')
-#agent.add_auth('http://localhost:3000','sergio@fitrack.com','12345678')
+#agent.add_auth('http://localhost:3000','jeyson.mirabal@gmail.com','12345678')
+agent.add_auth('http://localhost:3000','sergio@fitrack.com','12345678')
 
 flag=0
 while flag<=180 do	
@@ -25,4 +25,6 @@ while flag<=180 do
 	puts flag
 	flag+=1
 	sleep(60)
+	cmd= `curl http://localhost:9292/faye -d 'message={"channel":"/messages/new", "data":"hello"}'`
+	value= %x[#{cmd}]
 end
