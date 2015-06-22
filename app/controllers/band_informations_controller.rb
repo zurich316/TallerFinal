@@ -9,7 +9,16 @@ class BandInformationsController < ApplicationController
   end
 
   def today_work
+
     @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+  end
+
+  def custom
+    if params[:custom]==nil
+      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+    else
+      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',params[:custom][:initial_date], params[:custom][:final_date])
+    end
   end
 
   def daily_comp
@@ -93,6 +102,9 @@ class BandInformationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def band_information_params
-      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories, :registered_date,:heart_rate)
+      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories, :registered_date, :heart_rate)
+    end
+    def custom_params
+      params.require(:custom).permit(:initial_date, :final_date)
     end
 end
