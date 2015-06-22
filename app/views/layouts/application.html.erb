@@ -142,6 +142,7 @@
                 <li>
                     <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %> 
                 </li>
+                <a id='no_band'class="btn btn-primary sweet-5" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-5']);" style="display:none;">Try It</a>
                 </div>
             </ul>
          </div>
@@ -149,7 +150,20 @@
         
       
         <script src="js/bootstrap.min.js"></script>
-        <script>
+ <script>
+
+document.querySelector('.sweet-5').onclick = function(){
+        swal({
+          title: "Attention",
+          text: "Please, associate a band to register your fitness work",
+          type: "warning",
+          confirmButtonClass: 'btn btn-danger btn-sm',
+          confirmButtonText: 'OK',
+          closeOnConfirm: false
+        });
+      };
+
+
 
        $("#menu-toggle").click(function(e) {
         e.preventDefault();
