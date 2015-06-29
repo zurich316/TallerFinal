@@ -1,66 +1,88 @@
-<p id="notice"><%= notice %></p>
-<title>Alarms</title>
+
+<title>Alarms | FiTrack</title>
 
 <div id="page-content-wrapper" style="margin-left:3%;">
   <div class="container"> 
-<h1>Current Alarms</h1>
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Current Alarms</h1>
+<p id="notice"><%= notice %></p>
+<table class="table table-striped">
 
-<table>
-    <% @alarms.each do |alarm| %>
+  <col width="30%">
+  <col width="10%">
+  <col width="20%">
+  <col width="10%">
+  <col width="30%">
+    <thead>
+    <tr>
+      <th>Message</th>
+      <th>Time</th>
+      <th>Scheluded days</th>
+      <th>Status</th>
+      <th>Options</th>
+      
+    </tr>
+
+  </thead>
+  <tbody>
+  <% @alarms.each do |alarm| %>
+    
       <tr>
-        <td><%= alarm.time.strftime("%H:%M") %><br>(
+        <td><i><%= alarm.message %></i></td>
+
+        <td>
+          <%= alarm.time.strftime("%H:%M") %></td>
+        <td>
+          <p style="font-size:10px;">|
         <% if (alarm.monday) %>
-            Monday,
+            Monday | 
           <% end %>
         <% if (alarm.tuesday) %>
-            Tuesday,
+            Tuesday | 
            <% end %>
        <% if (alarm.wednesday) %>
-            Wednesday,
+            Wednesday | 
            <% end %>
          <% if (alarm.thursday) %>
-            Thursday,
+            Thursday | 
            <% end %>
          <% if (alarm.friday) %>
-            Frisday,
+            Frisday | 
            <% end %>
          <% if (alarm.saturday) %>
-            Saturday,
+            Saturday | 
            <% end %>
         <% if (alarm.sunday) %>
-            Sunday
+            Sunday |
            <% end %>
-           ) &nbsp;</td>
-
-        <td><%= alarm.message %>&nbsp;&nbsp;&nbsp;</td>
-
+           </td>
+         </p>
+        </td>
+        
         <td><%if (alarm.turn==true) %>
-                ON
+                <strong>ON</strong>
             <% elsif (alarm.turn==false) %>
-              OFF
+              <strong>OFF</strong>
               <%end %>
         </td>
-        <%if alarm.turn==false%>
-        <td>&nbsp;<a href="/alarms/<%=alarm.id%>/turn_on" class="btn btn-default navbar-btn" >On</a>&nbsp;</td>
+        <td>
+      <div class="btn btn-group">
+       <%if alarm.turn==false%>
+        <a href="/alarms/<%=alarm.id%>/turn_on" class="btn btn-success btn-sm">On</a>
         <% else %>
-        <td>&nbsp;&nbsp;<a href="/alarms/<%=alarm.id%>/turn_off" class='btn btn-danger btn-sm'>Off</a></td>
+        <a href="/alarms/<%=alarm.id%>/turn_off" class='btn btn-danger btn-sm'>Off</a>
         <%end%>
-        <td><%= link_to 'Show', alarm ,class:"btn btn-default navbar-btn"%></td>
-                <td><%= link_to 'Edit', edit_alarm_path(alarm), class:"btn btn-default navbar-btn"%></td>
-        <td><%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-default navbar-btn" %></td>
+        
 
+          <%= link_to 'Show', alarm ,class:"btn btn-default  btn-sm"%>
+          <%= link_to 'Edit', edit_alarm_path(alarm), class:"btn btn-primary btn-sm"%>
+        <%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %>
+      </div>
+    </td>
         <!--<%# scheduler = Rufus::Scheduler.new %>-->
         <!-- <%#scheduler.every '5s' do %>  -->
-          <%=Time.now%>
-          <%tim=Time.now%>
-           <%if (alarm.turn ==true && alarm.time.hour == tim.hour )%> 
-              <%= javascript_tag 'alert("<%alarm.message&>")'%>
-            <%end%>
-         <%= flash_messages %> 
-
       </tr>
     <% end %>
-
+</tbody>
 </table>
 
 <br>

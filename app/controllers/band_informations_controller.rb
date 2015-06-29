@@ -9,15 +9,16 @@ class BandInformationsController < ApplicationController
   end
 
   def today_work
-
     @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
   end
 
   def custom
-    if params[:custom]==nil
+    if params["custom"]==nil
       @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
     else
-      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',params[:custom][:initial_date], params[:custom][:final_date])
+      @initial= Time.new params["custom"]["initial_date(1i)"].to_i, params["custom"]["initial_date(2i)"].to_i, params["custom"]["initial_date(3i)"].to_i
+      @final= Time.new params["custom"]["final_date(1i)"].to_i, params["custom"]["final_date(2i)"].to_i, params["custom"]["final_date(3i)"].to_i
+      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',@initial.beginning_of_day, @final.end_of_day)
     end
   end
 
@@ -105,6 +106,6 @@ class BandInformationsController < ApplicationController
       params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories, :registered_date, :heart_rate)
     end
     def custom_params
-      params.require(:custom).permit(:initial_date, :final_date)
+      params.require("custom").permit(:initial_date, :final_date)
     end
 end
