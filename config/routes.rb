@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :alarms
   get 'user/welcome'=>'home#welcome'
   get 'user/profile' => 'profile#show'
+  get 'user/simulation' => 'profile#simulation'
+  get 'user/download' => 'profile#download', as: :download
   get 'dream_sessions/:id/start_session' =>'dream_sessions#start_time'
   get 'dream_sessions/:id/finish_session' =>'dream_sessions#end_time'
 
