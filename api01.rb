@@ -23,8 +23,8 @@ def alarm?(x)
 	else
 		false
 	end	
-		
 end
+
 
 agent = Mechanize.new
 agent.log = Logger.new 'mechanize.log'
@@ -55,6 +55,7 @@ if bands.size == 1
 		data = {'band_information[long]'=>long,'band_information[lat]'=>lat,'band_information[calories]'=>calories,'band_information[steps]'=>steps,'band_information[registered_date]'=>date, 'band_information[heart_rate]'=>hr,'band_information[user_id]'=>user_id,'band_information[band_id]'=>band_id}
 		agent.post('http://localhost:3000/band_informations.json', data) 
 		puts flag
+		puts hr
 		flag+=1
 		alarms= JSON.parse agent.get('http://localhost:3000/alarms.json').body
 		alarms.each do |alarm|

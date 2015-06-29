@@ -59,7 +59,6 @@ class BandInformationsController < ApplicationController
   # POST /band_informations.json
   def create
     @band_information = BandInformation.new(band_information_params)
-
     respond_to do |format|
       if @band_information.save
         format.html { redirect_to @band_information, notice: 'Band information was successfully created.' }
