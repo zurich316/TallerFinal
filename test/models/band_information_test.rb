@@ -48,7 +48,14 @@ class BandInformationTest < ActiveSupport::TestCase
     assert_equal(false, @user18.alarma?, 'No alarm' )
     assert_equal(false, @user19.alarma?, 'No alarm' )
     assert_equal(false, @user20.alarma?, 'No alarm' )
-  
+  end
+
+  test "Push alarm" do
+  	assert_equal({}, @user9.heart_rate_high, 'Heart rate alarm' )
+  end
+
+  test "No push alarm" do
+	assert_equal(nil, @user11.heart_rate_high, 'No alarm' )
   end
 
   # test "the truth" do
