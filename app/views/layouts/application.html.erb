@@ -175,6 +175,14 @@
                   var message = notification.message;
                   toastr.error(message)
               });
+
+            var pusher = new Pusher('90b3bfd4d3713a081765');
+            var channel = pusher.subscribe('test_channel'+<%=current_user.id.to_s%>);
+            channel.bind('alarm', function(notification){
+                  var message = notification.message;
+                  var titulo = notification.titulo;
+                  toastr["info"](message,titulo)
+              });
           </script>
 
  <script>
