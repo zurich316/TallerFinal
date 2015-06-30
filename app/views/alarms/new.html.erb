@@ -1,9 +1,71 @@
-<h1>New Alarm</h1>
-<div id="page-content-wrapper">
-<div class="container"> 
-<%= render 'form' %>
+<title>New Alarm | FiTrack</title>
 
-<%= link_to 'Back', alarms_path %>
+<div id="page-content-wrapper" style="margin-left:3%;">
+  <div class="container"> 
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">New Alarm</h1>
+<%= form_for(@alarm) do |f| %>
+  <% if @alarm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alarm.errors.count, "error") %> prohibited this alarm from being saved:</h2>
+
+      <ul>
+      <% @alarm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   
+  <div class="field">
+    <table class="table table-striped">
+      <thead>
+        <th><%= f.label :monday %></th>
+        <th><%= f.label :tuesday %></th>
+        <th><%= f.label :wednesday %></th>
+        <th><%= f.label :thursday %></th>
+        <th><%= f.label :friday %></th>
+        <th><%= f.label :saturday %></th>
+        <th><%= f.label :sunday %></th>
+      </thead>  
+      <tbody>
+          <td><%= f.check_box :monday %></td> 
+          <td><%= f.check_box :tuesday %></td> 
+          <td><%= f.check_box :wednesday %></td>
+          <td><%= f.check_box :thursday %></td>
+          <td><%= f.check_box :friday %></td>
+          <td><%= f.check_box :saturday %></td>
+          <td><%= f.check_box :sunday %></td>
+      </tbody>
+  
+  <br>
+</table>
+</div>
+<div class="field" align="center">
+    <%= f.label :time %><br>
+    <%= f.time_select :time, :default => Time.now%>
+  </div>
+  <br>
+<div class="field"align="center">
+    <%= f.label :message %><br>
+    <%= f.text_field :message, size:'50' %>
+  </div>
+  <br>
+  <div class="field" align="center">
+    <i><%= f.label :do_you_want_to_turn_this_alarm_on? %></i><br>
+    <%= f.check_box :turn , ({checked: true}) %>
+  </div>
+  <div class="field" align="center">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+  <br>
+  <div class="actions" align="center">
+  	<div class="btn btn-group">
+    <%= f.submit 'Create',class:'btn btn-primary btn-sm'%>
+	<%= link_to 'Back', alarms_path, class:'btn btn-default btn-sm'%>
+</div>
+  </div>
+<% end %>
 </div>
 </div>
 <script type="text/javascript">

@@ -39,4 +39,8 @@ class User < ActiveRecord::Base
     		self.add_role :user
     	end
   end
+
+  def age
+    Time.diff(Time.now,self.birthdate)[:year]
+  end
 end

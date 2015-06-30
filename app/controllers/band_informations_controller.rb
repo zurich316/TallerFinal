@@ -12,6 +12,16 @@ class BandInformationsController < ApplicationController
     @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
   end
 
+  def custom
+    if params["custom"]==nil
+      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+    else
+      @initial= Time.new params["custom"]["initial_date(1i)"].to_i, params["custom"]["initial_date(2i)"].to_i, params["custom"]["initial_date(3i)"].to_i
+      @final= Time.new params["custom"]["final_date(1i)"].to_i, params["custom"]["final_date(2i)"].to_i, params["custom"]["final_date(3i)"].to_i
+      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',@initial.beginning_of_day, @final.end_of_day)
+    end
+  end
+
   def daily_comp
     @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_week, Time.now.end_of_week)
   end
@@ -49,7 +59,6 @@ class BandInformationsController < ApplicationController
   # POST /band_informations.json
   def create
     @band_information = BandInformation.new(band_information_params)
-
     respond_to do |format|
       if @band_information.save
         format.html { redirect_to @band_information, notice: 'Band information was successfully created.' }
@@ -93,6 +102,9 @@ class BandInformationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def band_information_params
-      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories, :registered_date,:heart_rate)
+      params.require(:band_information).permit(:steps, :lat, :long, :user_id, :band_id,:calories, :registered_date, :heart_rate)
+    end
+    def custom_params
+      params.require("custom").permit(:initial_date, :final_date)
     end
 end

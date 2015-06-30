@@ -1,0 +1,48 @@
+<head>
+<title>Simulation | FiTrack</title>
+</head>
+<div class="container">
+  <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;"> Simulation</h1>
+  <br>
+    <p class="text-muted">
+      <center>
+      Since our app simulates the use of a fitness band like<br>
+      <b>Microsoft Band or FitBit Charge HR,</b><br> 
+      we would like you to experience how it would be to use one of these<br>
+      <b>fitness bands.</b> <br><br>
+
+      That's why we leave here an API so you can simulate that you have a fitness band.<br>
+      This API will help you use alarms through the use of the app. Please,
+      <br>
+      follow the next steps.<br>
+       </center>
+    </p>  
+    <div class="container">
+      <p class="text-muted" text-align="justify">
+      <ol>
+        <li>First of all, you need to install Ruby on Rails. You can download it <a href="http://rubyonrails.org/">here.</a><br></li>
+        <li>You need to install some important gems. You will do this by using the command "gem install gem_name":</li>
+        <br>
+        <center>
+            <b>
+              gem install 'mechanize'<br>
+              gem install 'logger'<br>
+              gem install 'cgi'<br>
+              gem install 'time_diff'<br>
+              gem install 'nokogiri'<br>
+              gem install 'pusher'<br>
+              gem install 'sinatra'<br><br>
+            </b>
+        </center>
+        <i>Note: If the command doesn't give you response, please use the command "sudo gem install gem_name". This way you can use the super user option.</i>
+        <br><br>
+        <li>Now that we have the gems we will use, just click on the button bellow and the API will be downloaded. Open the .zip file and then you can run the app. To run it use the command <b>"ruby api01.rb"</b> from the folder where you saved the file.</li>
+        <br>
+        <center><%= link_to "<button class='btn btn-primary btn-sm'>Download API</button>".html_safe ,:action => :download %>
+</center>
+      </ol>
+     </p>
+    </div>
+</div>
+<br>
+<br><br>

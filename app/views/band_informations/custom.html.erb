@@ -1,0 +1,49 @@
+<title>Custom Dates | FiTrack</title>
+<div id="page-content-wrapper">
+<div class="container"> 
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Daily Progress</h1>
+
+<center>
+<p class="text-muted">
+  <h2>Everyday counts!</h2>
+  Here you can custom dates to see your progress!<br>
+  Keep rocking!<br><br>
+</p>
+<center>
+<div class="row" style="width: 70%">
+<%= form_for :custom do |f| %>
+<div class="col-sm-6">
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :initial_date, :start_year=>1900,:end_year=>Time.now.year, :required => true%>
+  </div>
+</div>
+<div class="col-sm-6">
+  <div class="field">
+    <%= f.label :final_date %><br>
+    <%= f.date_select :final_date, :start_year=>1900,:end_year=>Time.now.year , :required => true%>
+  </div>
+</div>
+</div>
+
+  <div class="actions">
+  <div class='btn-group'>
+    <br>
+      <%= f.submit 'Check progress', :class=>'btn btn-primary btn-sm'%>
+      <%= link_to 'Back', '/daily_tracking/options' , :class=>'btn btn-default btn-sm'%>
+  </div>
+  </div>
+<% end %>
+
+</center>
+  <div class="container" style="width:90%; margin-left:5%;margin-right:5%;">
+    <h4>Steps</h4>
+    <%= line_chart @data.group_by_hour(:registered_date,'sum',:steps),:library => {:colors => ['c80000']}%>
+    <h4>Calories</h4>
+    <%= line_chart @data.group_by_hour(:registered_date,'sum',:calories)%>
+    <h4>Heart Rate</h4>
+    <%= line_chart @data.group_by_hour(:registered_date,'avg',:heart_rate),:library => {:colors => ['00FF66']}%>
+  </div>
+</center>
+</div>
+</div>

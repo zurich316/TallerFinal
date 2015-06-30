@@ -24,6 +24,7 @@ module TallerProject
     config.serve_static_assets = true
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths << Rails.root.join("app", "assets", "downloads")
     config.to_prepare do
         Devise::SessionsController.layout "application"
      end

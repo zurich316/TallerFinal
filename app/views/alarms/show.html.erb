@@ -1,57 +1,105 @@
+
+<title>Alarm | FiTrack</title>
+<div id="page-content-wrapper" style="margin-left:3%;">
+  <div class="container"> 
+<h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Alarm | <%=@alarm.message%></h1>
 <p id="notice"><%= notice %></p>
-<div id="page-content-wrapper">
-<div class="container"> 
-<p>
-  <strong>Time:</strong>
-  <%= @alarm.time %>
+<br>
+<center>
+  <p class='text-muted' align="center">
+  Alarm was set for ... <br>
 </p>
-
-<p>
-  <strong>Monday:</strong>
-  <%= @alarm.monday %>
-</p>
-
-<p>
-  <strong>Tuesday:</strong>
-  <%= @alarm.tuesday %>
-</p>
-
-<p>
-  <strong>Wednesday:</strong>
-  <%= @alarm.wednesday %>
-</p>
-
-<p>
-  <strong>Thursday:</strong>
-  <%= @alarm.thursday %>
-</p>
-
-<p>
-  <strong>Friday:</strong>
-  <%= @alarm.friday %>
-</p>
-
-<p>
-  <strong>Saturday:</strong>
-  <%= @alarm.saturday %>
-</p>
-
-<p>
-  <strong>Sunday:</strong>
-  <%= @alarm.sunday %>
-</p>
-
-<p>
-  <strong>Message:</strong>
-  <%= @alarm.message %>
-</p>
-
-<p>
-  <strong>Turn:</strong>
-  <%= @alarm.turn %>
-</p>
-
-<%= link_to 'Edit', edit_alarm_path(@alarm) %> |
-<%= link_to 'Back', alarms_path %>
+<div class="row">
+      <div class="col-md-4">
+        &nbsp;<br>
+      </div>  
+      <div class="col-md-4">
+      <div class="circle circle-border" style="border: solid 1px #238AE2; background-color:#fff;'">
+               <div class="circle-inner" >
+                   <div class="score-text">
+                    <p class='text-muted'style='font-size: 25px; color:#238AE2;'>
+                        <%= @alarm.time.strftime('%H:%M')%><br>
+                       </p>
+                    </div>
+               </div>
+            </div>
+      </div>
+      </div>
+      <div class="col-md-4">
+        &nbsp;<br>
+      </div>
 </div>
+</center>
+<div class="row">
+  <div class="col-md-3">&nbsp;
+  </div>
+  <div class="col-md-6">
+      <p class='text-muted' align="center">
+
+    scheduled for ...<br>
+  </p>
+    <center>
+    <div class="btn btn-group">
+    <%if @alarm.monday%>
+      <button class="btn btn-default btn-xs">Mon</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Mon</button>
+    <%end%>
+  <%if @alarm.tuesday%>
+      <button class="btn btn-default btn-xs">Tue</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Tue</button>
+    <%end%>
+    <%if @alarm.wednesday%>
+      <button class="btn btn-default btn-xs">Wed</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Wed</button>
+    <%end%>
+    <%if @alarm.thursday%>
+      <button class="btn btn-default btn-xs">Thu</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Thu</button>
+    <%end%>
+    <%if @alarm.friday%>
+      <button class="btn btn-default btn-xs">Fri</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Fri</button>
+    <%end%>
+    <%if @alarm.saturday%>
+      <button class="btn btn-default btn-xs">Sat</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Sat</button>
+    <%end%>
+    <%if @alarm.sunday%>
+      <button class="btn btn-default btn-xs">Sun</button>
+    <%else%>
+      <button class="btn btn-default btn-xs" disabled>Sun</button>
+    <%end%>
+    </div>
+    <br>
+    </center>
+    <p class='text-muted' align="center">
+      and it is ... <br>
+    </p>
+    <center>
+      <%if @alarm.turn %>
+         <button class="btn btn-success btn-sm" >ON</button>
+      <%else%>
+         <button class="btn btn-danger btn-sm">OFF</button>
+      <%end%>
+    </center>
+  </div>
+  <div class="col-md-3"> &nbsp;</div>
+</div>
+<br>
+<center>
+<div class="btn btn-group">
+    
+    <%= link_to 'Edit', edit_alarm_path(@alarm) , class:'btn btn-primary btn-sm'%>
+    <%= link_to 'Back', alarms_path , class:'btn btn-default btn-sm'%>
+    </div>
+    </center>
+
+</div>
+
 </div>

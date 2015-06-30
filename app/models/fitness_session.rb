@@ -9,8 +9,4 @@ class FitnessSession < ActiveRecord::Base
 	#validates_presence_of :burned_calories, :hearth_rate
 	
 
-	def endTime
-		self.time_finished=DateTime.now
-	end
-
 end

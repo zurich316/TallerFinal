@@ -11,42 +11,50 @@
     </div>
   <% end %>
 
-   <div class="field">
+   
+  <div class="field">
+    <table class="table table-striped">
+      <thead>
+        <th><%= f.label :monday %></th>
+        <th><%= f.label :tuesday %></th>
+        <th><%= f.label :wednesday %></th>
+        <th><%= f.label :thursday %></th>
+        <th><%= f.label :friday %></th>
+        <th><%= f.label :saturday %></th>
+        <th><%= f.label :sunday %></th>
+      </thead>  
+      <tbody>
+          <td><%= f.check_box :monday %></td> 
+          <td><%= f.check_box :tuesday %></td> 
+          <td><%= f.check_box :wednesday %></td>
+          <td><%= f.check_box :thursday %></td>
+          <td><%= f.check_box :friday %></td>
+          <td><%= f.check_box :saturday %></td>
+          <td><%= f.check_box :sunday %></td>
+      </tbody>
+  
+  <br>
+</table>
+</div>
+<div class="field" align="center">
     <%= f.label :time %><br>
     <%= f.time_select :time %>
   </div>
-  <div class="field">
-    <%= f.label :monday %>
-    <%= f.check_box :monday %>
-    <br>
-    <%= f.label :tuesday %>
-    <%= f.check_box :tuesday %>
   <br>
-    <%= f.label :wednesday %>
-    <%= f.check_box :wednesday %>
-<br>
-    <%= f.label :thursday %>
-    <%= f.check_box :thursday %>
-<br>
-    <%= f.label :friday %>
-    <%= f.check_box :friday %>
-<br>
-    <%= f.label :saturday %>
-    <%= f.check_box :saturday %>
-<br>
-    <%= f.label :sunday %>
-    <%= f.check_box :sunday %>
-  <br>
+<div class="field"align="center">
     <%= f.label :message %><br>
-    <%= f.text_field :message %>
-  <div class="field">
+    <%= f.text_field :message, size:'50' %>
+  </div>
+  <br>
+  <div class="field" align="center">
     <%= f.label :turn %><br>
     <%= f.check_box :turn %>
   </div>
-  <div class="field">
+  <div class="field" align="center">
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <br>
+  <div class="actions" align="center">
+    <%= f.submit 'Update',class:'btn btn-primary btn-sm'%>
   </div>
 <% end %>

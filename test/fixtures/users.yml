@@ -6,9 +6,138 @@
 #
 one: 
    name: "Alvaro"
-   email: "amolina@gmail.com" 
+   email: "amolina@fitrack.com" 
    last_name: "Molina" 
    encrypted_password: "password" 
    weight: 75
    height: 170
+   birthdate: 1994-12-16 00:00:00
    sex: "Male"
+   id: 1
+
+
+two: 
+   name: "Sergio"
+   email: "sergio@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 2020-12-16 00:00:00
+   sex: "Male"
+
+three: 
+   name: "Jeyson"
+   email: "jeyson@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 2014-12-16 00:00:00
+   sex: "Male"
+
+four: 
+   name: "Pedro"
+   email: "pedro@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1992-12-16 00:00:00
+   sex: "Male"
+   id: 4
+
+
+five: 
+   name: "Pedro"
+   email: "pedro1@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1982-12-16 00:00:00
+   sex: "Male"
+   id: 5
+
+six: 
+   name: "Pedro"
+   email: "pedro2@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1977-12-16 00:00:00
+   sex: "Male"
+   id: 6
+
+
+seven: 
+   name: "Pedro"
+   email: "pedro3@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1972-12-16 00:00:00
+   sex: "Male"
+   id: 7
+
+
+eight: 
+   name: "Pedro"
+   email: "pedro4@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1967-12-16 00:00:00
+   sex: "Male"
+   id: 8
+
+
+nine: 
+   name: "Pedro"
+   email: "pedro5@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1962-12-16 00:00:00
+   sex: "Male"
+   id: 9
+
+
+ten: 
+   name: "Pedro"
+   email: "pedro6@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1957-12-16 00:00:00
+   sex: "Male"
+   id: 10
+
+
+eleven: 
+   name: "Pedro"
+   email: "pedro7@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1952-12-16 00:00:00
+   sex: "Male"
+   id: 11
+
+
+twelve: 
+   name: "Pedro"
+   email: "pedro8@gmail.com" 
+   last_name: "Molina" 
+   encrypted_password: "password" 
+   weight: 75
+   height: 170
+   birthdate: 1940-12-16 00:00:00
+   sex: "Male"
+   id: 12
