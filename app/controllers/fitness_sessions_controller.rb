@@ -11,7 +11,6 @@ class FitnessSessionsController < ApplicationController
   # GET /sessions.json
   def index
     @sessions = current_user.fitness_sessions
-    #@sessions = FitnessSession.all
   end
 
   # GET /sessions/1
