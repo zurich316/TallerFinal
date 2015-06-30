@@ -6,7 +6,7 @@ class Goal < ActiveRecord::Base
 	validates_presence_of :frequency, :goal
 
 
-	
+
 	def calculate_steps(one)
        if @goal.type_goal.tip == "Steps"
          @goal.progress = @goal.progress + one.steps
@@ -26,6 +26,13 @@ class Goal < ActiveRecord::Base
        if @goal.type_goal.tip == "Weight"
          @goal.progress = User.find(self.user_id).weight
        end
+    end
+
+    def calculate_heart_rate
+      @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day).average(:heart_rate)
+      if @goal.type_goal.tip == "Heart Rate"
+      @goal.progress = @today
+      end
     end
 
     def calculate_day(one)
