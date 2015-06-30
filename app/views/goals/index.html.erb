@@ -74,38 +74,28 @@
          
           <p><strong>Frecuency: </strong><%= tgoal.frequency %></p>
           
-          <%= link_to 'Show', tgoal ,class:"btn btn-default"%>
+          <%= link_to 'Show', tgoal ,class:"btn btn-default btn-xs"%>
           <%if tgoal.automatic_goal ==false%>
-          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %>
+          <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-xs" %>
           <%end%>
-
-          <%if tgoal.completed==true%>
-            <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button">compartir</a>
+          
+          <%if tgoal.complete==true%>
+            <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+have+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div></a>
           <%end%>
-
-         <!-- <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
-        </div>-->
-       
         </div>
       <% end %>
-
-    
-          <br>
-
-               
-                  
-                
-
-
                 <!--<%= link_to 'New Goal', new_goal_path %>-->
                 
 </div>
-     <%= link_to 'New Goal', new_goal_path, class:"btn btn-default btn-lg" %>
-     <p class="pull-right"><a href="#">Back to top</a></p>
-
+<br><center>
+  <div class="btn btn-group" align='center'>
+     <%= link_to 'New Goal', new_goal_path, class:"btn btn-primary btn-sm" %>
+     <button class='btn btn-default btn-sm'><a href="#">Back to top</a></button>
+    </p>
 </div>
+</center>
 
-
+<br><br>
 </body>
 </html>
 
