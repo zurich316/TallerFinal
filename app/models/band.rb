@@ -19,9 +19,9 @@ class Band < ActiveRecord::Base
 		sexo = User.find(self.user_id).sex
 
        if sexo == "Male"
-        goals = [{frequency:"Day",goal: steps_all,user_id:self.user_id,type_goal_id: 1,automatic:true},{frequency:"Day",goal: sleep_all,user_id:self.user_id,type_goal_id: 2,automatic:true},{frequency:"Year",goal: weight_all,user_id:self.user_id,type_goal_id: 3,automatic:true},{frequency:"Day",goal: calories_male,user_id:self.user_id,type_goal_id: 4,automatic:true}]
+        goals = [{frequency:"Day",goal: steps_all,user_id:self.user_id,type_goal_id: 1,automatic:true},{frequency:"Day",goal: sleep_all,user_id:self.user_id,type_goal_id: 2,automatic:true},{frequency:"Year",goal: weight_all,user_id:self.user_id,type_goal_id: 3,automatic:true},{frequency:"Day",goal: calories_male,user_id:self.user_id,type_goal_id: 4,automatic:true},{frequency:"Day",goal: heart_rate,user_id:self.user_id,type_goal_id: 5,automatic:true}]
        else
-        goals = [{frequency:"Day",goal: steps_all,user_id:self.user_id,type_goal_id: 1,automatic:true},{frequency:"Day",goal: sleep_all,user_id:self.user_id,type_goal_id: 2,automatic:true},{frequency:"Year",goal: weight_all,user_id:self.user_id,type_goal_id: 3,automatic:true},{frequency:"Day",goal: calories_female,user_id:self.user_id,type_goal_id: 4,automatic:true}]
+        goals = [{frequency:"Day",goal: steps_all,user_id:self.user_id,type_goal_id: 1,automatic:true},{frequency:"Day",goal: sleep_all,user_id:self.user_id,type_goal_id: 2,automatic:true},{frequency:"Year",goal: weight_all,user_id:self.user_id,type_goal_id: 3,automatic:true},{frequency:"Day",goal: calories_female,user_id:self.user_id,type_goal_id: 4,automatic:true},{frequency:"Day",goal: heart_rate,user_id:self.user_id,type_goal_id: 5,automatic:true}]
        end
        return goals
     end
@@ -130,6 +130,31 @@ class Band < ActiveRecord::Base
 
 
 
+  end
+  def heart_rate
+  	edad=User.find(self.user_id).age
+  	hrr=0
+  	if (edad<=20)
+  		hrr=135
+  	elsif(edad>=21 && edad<=30 )
+  		hrr=129
+  	elsif(edad>=31 && edad<=35 )
+  		hrr=125
+  	elsif(edad>=36 && edad<=40 )
+  		hrr=122
+  	elsif(edad>=41 && edad<=45 )
+  		hrr=119
+  	elsif(edad>=46 && edad<=50 )
+  		hrr=115
+  	elsif(edad>=51 && edad<=55 )
+  		hrr=112
+  	elsif(edad>=56 && edad<=60 )
+  		hrr=108
+  	elsif(edad>=61 && edad<=69 )
+  		hrr=105
+  	else(edad>=70)
+  		hrr=102
+  	end
   end
 
 end

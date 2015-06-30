@@ -89,6 +89,13 @@ class GoalsController < ApplicationController
       end
     end
 
+    def calculate_heart_rate
+      @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day).average(:heart_rate)
+      if @goal.type_goal.tip == "Heart Rate"
+      @goal.progress = @today
+      end
+    end
+
     
     
 

@@ -5,6 +5,8 @@ class Goal < ActiveRecord::Base
 	belongs_to :type_goalgoer
 	validates_presence_of :frequency, :goal
 
+
+	
 	def calculate_steps(one)
        if @goal.type_goal.tip == "Steps"
          @goal.progress = @goal.progress + one.steps
@@ -54,7 +56,7 @@ class Goal < ActiveRecord::Base
     end
 
     def complete_goal
-      if @goal.progress == @goal.goal
+      if @goal.progress >= @goal.goal
         @goal.complete == true
       else 
         @goal.complete == false
