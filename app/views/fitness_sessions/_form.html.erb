@@ -11,14 +11,13 @@
     </div>
   <% end %>
 
-
+<center>
   <div class="field">
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
 
-<div class="col-lg-4">
   <div class="field">
-   <%= f.label :type_session %><br />
+   <%= f.label :select_the_exercise_you_will_be_doing %><br />
 <%= f.collection_select :type_session_id ,TypeSession.all, :id ,:tipo,:style =>"width:80px; font-size:14px;"%>
   </div>
 <!--
@@ -39,15 +38,10 @@
     <%= f.datetime_select :time_started %>
   </div>
 -->
-<br>
-  <div class="actions">
-     <%= f.submit :New_Session,class:"btn btn-success btn-lg"%>
+<br> 
+<div class="actions btn-group">
+     <%= f.submit 'New Session',class:"btn btn-primary btn-sm"%>
+     <%= link_to 'Back', fitness_sessions_path, :class=>'btn btn-default btn-sm' %>
   </div>
-</div>
-
-
-
-
-  
-
+</center>
 <% end %>
