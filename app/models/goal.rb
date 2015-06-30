@@ -8,28 +8,28 @@ class Goal < ActiveRecord::Base
 
 	
 	def calculate_steps(one)
-       if @goal.type_goal.tip == "Steps"
-         @goal.progress = @goal.progress + one.steps
+       if self.type_goal.tip == "Steps"
+         self.progress = self.progress + one.steps
        end
     end
     def calculate_calories(one)
-       if @goal.type_goal.tip == "Calories"
-        @goal.progress = @goal.progress + one.calories
+       if self.type_goal.tip == "Calories"
+        self.progress = self.progress + one.calories
        end
     end
     def calculate_dream(one)
-       if @goal.type_goal.tip == "Dream"
-         @goal.progress = @goal.goal
+       if self.type_goal.tip == "Dream"
+         self.progress = self.goal
        end
     end
     def calculate_weight(one)
-       if @goal.type_goal.tip == "Weight"
-         @goal.progress = User.find(self.user_id).weight
+       if self.type_goal.tip == "Weight"
+         self.progress = User.find(self.user_id).weight
        end
     end
 
     def calculate_day(one)
-      if @goal.frequency=="Day" && @goal.created_at.month == one.created_at.month && @goal.created_at.day == one.created_at.day && @goal.created_at.year == one.created_at.year
+      if self.frequency=="Day" && Time.now.month == one.registered_date.month && Time.now.day == one.registered_date.day && Time.now.year == one.registered_date.year
        calculate_calories(one)
       calculate_steps(one)
       calculate_dream(one)
@@ -38,7 +38,7 @@ class Goal < ActiveRecord::Base
     end
 
     def calculate_month(one)
-      if @goal.frequency=="Month" && @goal.created_at.month == one.created_at.month && @goal.created_at.year == one.created_at.year
+      if self.frequency=="Month" && Time.now.month == one.registered_date.month && Time.now.year == one.registered_date.year
       calculate_calories(one)
       calculate_steps(one)
       calculate_dream(one)
@@ -47,7 +47,7 @@ class Goal < ActiveRecord::Base
     end
 
     def calculate_year(one)
-      if @goal.frequency=="Year" && @goal.created_at.year == one.created_at.year
+      if self.frequency=="Year" && Time.now.year == one.registered_date.year
        calculate_calories(one)
       calculate_steps(one)
       calculate_dream(one)
@@ -56,10 +56,10 @@ class Goal < ActiveRecord::Base
     end
 
     def complete_goal
-      if @goal.progress >= @goal.goal
-        @goal.complete == true
+      if self.progress >= self.goal
+        self.complete == true
       else 
-        @goal.complete == false
+        self.complete == false
 
       end
     end

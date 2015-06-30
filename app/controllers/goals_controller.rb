@@ -78,7 +78,7 @@ class GoalsController < ApplicationController
 
     def calculate_progress
       @goal = Goal.find(params[:id])
-      info = BandInformation.all()
+      info = current_user.band_informations.all()
       @goal.progress=0
       info.each do |one|
 
