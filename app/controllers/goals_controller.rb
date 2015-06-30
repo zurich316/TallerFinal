@@ -82,74 +82,14 @@ class GoalsController < ApplicationController
       @goal.progress=0
       info.each do |one|
 
-        calculate_day(one)
-        calculate_month(one)
-        calculate_year(one)
-        complete_goal
-
-       
-       
-      
-
+        @goal.calculate_day(one)
+        @goal.calculate_month(one)
+        @goal.calculate_year(one)
+        @goal.complete_goal
       end
     end
 
-    def calculate_steps(one)
-       if @goal.type_goal.tip == "Steps"
-         @goal.progress = @goal.progress + one.steps
-       end
-    end
-    def calculate_calories(one)
-       if @goal.type_goal.tip == "Calories"
-        @goal.progress = @goal.progress + one.calories
-       end
-    end
-    def calculate_dream(one)
-       if @goal.type_goal.tip == "Dream"
-         @goal.progress = @goal.goal
-       end
-    end
-    def calculate_weight(one)
-       if @goal.type_goal.tip == "Weight"
-         @goal.progress = current_user.weight
-       end
-    end
-
-    def calculate_day(one)
-      if @goal.frequency=="Day" && @goal.created_at.month == one.created_at.month && @goal.created_at.day == one.created_at.day && @goal.created_at.year == one.created_at.year
-       calculate_calories(one)
-      calculate_steps(one)
-      calculate_dream(one)
-      calculate_weight(one)
-      end 
-    end
-
-    def calculate_month(one)
-      if @goal.frequency=="Month" && @goal.created_at.month == one.created_at.month && @goal.created_at.year == one.created_at.year
-      calculate_calories(one)
-      calculate_steps(one)
-      calculate_dream(one)
-      calculate_weight(one)
-      end 
-    end
-
-    def calculate_year(one)
-      if @goal.frequency=="Year" && @goal.created_at.year == one.created_at.year
-       calculate_calories(one)
-      calculate_steps(one)
-      calculate_dream(one)
-      calculate_weight(one)
-      end 
-    end
-
-    def complete_goal
-      if @goal.progress == @goal.goal
-        @goal.complete == true
-      else 
-        @goal.complete == false
-
-      end
-    end
+    
     
 
 end

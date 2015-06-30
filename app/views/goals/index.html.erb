@@ -79,7 +79,7 @@
           <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %>
           <%end%>
 
-          <%if tgoal.completed==true%>
+          <%if tgoal.complete==true%>
             <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button">compartir</a>
           <%end%>
 
