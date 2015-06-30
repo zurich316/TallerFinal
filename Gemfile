@@ -43,7 +43,7 @@ gem 'sinatra'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'puma'
+  #gem 'puma'
 end
 
 # Use Capistrano for deployment
