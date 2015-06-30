@@ -1,3 +1,4 @@
+#Type Goal tests
 require 'test_helper'
 
 class TypeGoalTest < ActiveSupport::TestCase

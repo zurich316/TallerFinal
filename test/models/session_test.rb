@@ -1,3 +1,4 @@
+#Fitness Sessions test
 require 'test_helper'
 
 class SessionTest < ActiveSupport::TestCase

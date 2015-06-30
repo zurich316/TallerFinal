@@ -4,21 +4,21 @@ require 'pusher'
 require 'cgi'
 require 'time'
 
-def alarm?(x)
+def alarm?(alarma)
 	right_now=Time.now
-	if (right_now.monday? && x["monday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	if (right_now.monday? && alarma["monday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif(right_now.tuesday? && x["tuesday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif(right_now.tuesday? && alarma["tuesday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.wednesday? && x["wednesday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.wednesday? && alarma["wednesday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.thursday? && x["thursday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.thursday? && alarma["thursday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.friday? && x["friday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.friday? && alarma["friday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.saturday? && x["saturday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.saturday? && alarma["saturday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.sunday? && x["sunday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.sunday? && alarma["sunday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
 	else
 		false

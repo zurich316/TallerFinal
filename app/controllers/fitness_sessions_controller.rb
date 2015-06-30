@@ -1,3 +1,4 @@
+#Fitness session controller to manage database info
 class FitnessSessionsController < ApplicationController
   before_action :set_session, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 

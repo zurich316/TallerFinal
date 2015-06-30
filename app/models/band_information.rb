@@ -1,3 +1,4 @@
+#Manage information sent from band
 class BandInformation < ActiveRecord::Base
   belongs_to :user
   belongs_to :band

@@ -1,3 +1,4 @@
+#Dreams sessions controller for views and methods for them. 
 class DreamSessionsController < ApplicationController
   before_action :set_dream_session, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 

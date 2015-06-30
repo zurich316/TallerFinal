@@ -1,3 +1,4 @@
+#Managing roles test
 require 'test_helper'
 
 class RoleTest < ActiveSupport::TestCase

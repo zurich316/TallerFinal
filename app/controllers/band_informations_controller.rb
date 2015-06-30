@@ -1,3 +1,4 @@
+#Controller for band information registers views and methods
 class BandInformationsController < ApplicationController
   before_action :set_band_information, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 
@@ -13,7 +14,7 @@ class BandInformationsController < ApplicationController
   end
 
   def custom
-    if params["custom"]==nil
+    if params["custom"].empty?
       @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
     else
       @initial= Time.new params["custom"]["initial_date(1i)"].to_i, params["custom"]["initial_date(2i)"].to_i, params["custom"]["initial_date(3i)"].to_i
