@@ -20,7 +20,7 @@ class BandInformationsController < ApplicationController
     else
       @initial= Time.new params["custom"]["initial_date(1i)"].to_i, params["custom"]["initial_date(2i)"].to_i, params["custom"]["initial_date(3i)"].to_i
       @final= Time.new params["custom"]["final_date(1i)"].to_i, params["custom"]["final_date(2i)"].to_i, params["custom"]["final_date(3i)"].to_i
-      if @initial > @final 
+      if @initial > @final || @initial > Time.now || @final > Time.now
         @flag=true 
         @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
       else
