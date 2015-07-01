@@ -1,3 +1,4 @@
+#Band Info migration to add a reference column
 class AddBandToBandInfo < ActiveRecord::Migration
   def change
     add_reference :band_infos, :band, index: true

@@ -1,8 +1,9 @@
+#Migration to create Auxiliar table to make reference
 class CreateTypeSessiongoers < ActiveRecord::Migration
   def change
-    create_table :type_sessiongoers do |t|
+    create_table :type_sessiongoers do |table|
 
-      t.timestamps null: false
+      table.timestamps null: false
     end
   end
 end

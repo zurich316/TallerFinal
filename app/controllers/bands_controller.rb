@@ -27,8 +27,8 @@ class BandsController < ApplicationController
     @band = Band.new(band_params)
     if current_user.goals.count==0
       
-        @band.goals_automatics.each do |g|
-              Goal.create(frequency: g[:frequency], goal: g[:goal], user_id: g[:user_id], type_goal_id: g[:type_goal_id], automatic_goal: g[:automatic], time_started:Time.now, time_finished:Time.now)       
+        @band.goals_automatics.each do |goal|
+              Goal.create(frequency: goal[:frequency], goal: goal[:goal], user_id: goal[:user_id], type_goal_id: goal[:type_goal_id], automatic_goal: goal[:automatic], time_started:Time.now, time_finished:Time.now)       
       end
    end
     respond_to do |format|

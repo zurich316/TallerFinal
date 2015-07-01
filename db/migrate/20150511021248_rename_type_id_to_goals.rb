@@ -1,3 +1,4 @@
+#Band migration to add a reference column
 class RenameTypeIdToGoals < ActiveRecord::Migration
   def change
 

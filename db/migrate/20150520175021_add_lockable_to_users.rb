@@ -1,3 +1,4 @@
+#User migration to add a lockable column to lock/unlock users
 class AddLockableToUsers < ActiveRecord::Migration
   def change
     add_column :users, :failed_attempts, :integer, default: 0

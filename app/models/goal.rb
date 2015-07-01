@@ -1,3 +1,4 @@
+#Goal model config and models
 class Goal < ActiveRecord::Base
     validates :frequency, :goal, presence: true #, length:{minimum 25}
 	belongs_to :user
@@ -17,12 +18,12 @@ class Goal < ActiveRecord::Base
         self.progress = self.progress + one.calories
        end
     end
-    def calculate_dream(one)
+    def calculate_dream()
        if self.type_goal.tip == "Dream"
          self.progress = self.goal
        end
     end
-    def calculate_weight(one)
+    def calculate_weight()
        if self.type_goal.tip == "Weight"
          self.progress = User.find(self.user_id).weight
        end

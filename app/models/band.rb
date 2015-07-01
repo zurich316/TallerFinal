@@ -1,3 +1,4 @@
+#Band model config and models
 class Band < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :band_type
@@ -30,15 +31,15 @@ class Band < ActiveRecord::Base
 
 
     if years_calculate <= 13
-     step1 = 15000
-     return step1
+     step = 15000
+     return step
     else 
         if years_calculate <= 50 && years_calculate > 13 
-          step1=10000
-          return step1
+          step=10000
+          return step
         else
-          step1=2000
-           return step1
+          step=2000
+           return step
         end
     end
   end
@@ -47,13 +48,13 @@ class Band < ActiveRecord::Base
 
   def sleep_all  # calculo de suenho para personas mayores a los 14 anhos 
     if years_calculate < 18
-      return sleep1 = 10
+      return sleep = 10
     end
     if years_calculate >= 18 && years_calculate < 26
-      return sleep1 = 8
+      return sleep = 8
     end
     if years_calculate > 25 
-      return sleep1 = 7
+      return sleep = 7
     end
   end
 
@@ -96,8 +97,8 @@ class Band < ActiveRecord::Base
   end
 
   def years_calculate  # calcula la edad del usuario
-    year1 = Time.diff(User.find(self.user_id).birthdate, Time.now)
-    return year1[:year]
+    year = Time.diff(User.find(self.user_id).birthdate, Time.now)
+    return year[:year]
   end
   def heart_rate
   	edad=User.find(self.user_id).age
