@@ -72,7 +72,9 @@
           <h2><td><%= tgoal.type_goal.tip%></td></h2>
           <p><strong>Goal: </strong><%= tgoal.goal %><br>
          
-          <strong>Frecuency: </strong><%= tgoal.frequency %></p>
+          <strong>Frecuency: </strong><%= tgoal.frequency %><br>
+          Progress: <%=tgoal.progress%>
+          </p>
           
         <div class="btn btn-group" align='center'>
           <%= link_to 'Show', tgoal ,class:"btn btn-default btn-xs"%>
@@ -82,7 +84,7 @@
 
 
           <%if tgoal.complete==true%>
-            <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button">compartir</a>
+            <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><img src='/assets/share.png'></a>
 
           <%end%>
         <br>

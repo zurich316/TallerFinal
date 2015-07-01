@@ -4,9 +4,8 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-
+    progress
     @goals = current_user.goals
-
   end
 
   # GET /goals/1
@@ -29,7 +28,6 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
-
     respond_to do |format|
       if @goal.save
         format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
@@ -76,6 +74,20 @@ class GoalsController < ApplicationController
       params.require(:goal).permit(:user_id, :type_goal_id, :frequency, :goal, :time_started, :time_finished,:automatic_goal, :progress, :complete)
     end
 
+    def progress
+      @goals= current_user.goals
+      info = current_user.band_informations.all()
+      @goals.each do |goal|
+        goal.progress = 0
+        info.each do |one|
+          goal.calculate_day(one)
+          goal.calculate_month(one)
+          goal.calculate_year(one)
+          goal.complete_goal
+        end
+      end
+    end
+
     def calculate_progress
       @goal = Goal.find(params[:id])
       info = current_user.band_informations.all()
@@ -89,12 +101,6 @@ class GoalsController < ApplicationController
       end
     end
 
-    def calculate_heart_rate
-      @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day).average(:heart_rate)
-      if @goal.type_goal.tip == "Heart Rate"
-      @goal.progress = @today
-      end
-    end
 
     
     

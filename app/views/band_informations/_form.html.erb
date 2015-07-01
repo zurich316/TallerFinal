@@ -20,8 +20,10 @@
     <%= f.label :steps %><br>
     <%= f.number_field :steps %>
   </div>
-  
-
+  <div class="field">
+    <%= f.label :heart_rate %><br>
+    <%= f.number_field :heart_rate %>
+  </div>  
   <div class="field">
     <%= f.label :lat %><br>
     <%= f.number_field :lat %>
@@ -30,7 +32,6 @@
     <%= f.label :long %><br>
     <%= f.number_field :long %>
   </div>
-
   <div class="field">
     <%= f.hidden_field :user_id,:value => current_user.id %>
   </div>
