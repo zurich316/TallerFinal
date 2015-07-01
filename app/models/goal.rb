@@ -65,9 +65,9 @@ class Goal < ActiveRecord::Base
 
     def complete_goal
       if self.progress >= self.goal
-        self.complete == true
+        self.complete = true
       else 
-        self.complete == false
+        self.complete = false
       end
     end
 end

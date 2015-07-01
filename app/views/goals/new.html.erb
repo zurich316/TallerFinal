@@ -2,11 +2,82 @@
 <div id="page-content-wrapper" style="margin-left:3%;">
 <div class="container"> 
     <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">New Goal</h1>  
+<br>
+<%= form_for(@goal) do |f| %>
+  <% if @goal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+
+      <ul>
+      <% @goal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 
 
-<%= render 'form' %>
+   <div class="col-lg-4">
+   	<strong>Select the type of the new goal:</strong>
+      <% TypeGoal.all.each do |tgoal|%>
+      <br>
+      	
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <%= f.radio_button :type_goal_id, tgoal.id , :checked =>true %>
+        
+      	&nbsp;<%= f.label :type_goal_id, ""+tgoal.tip%>
+        
+      <%end%>
+    </div>
+ 
+ 
+  <div class="col-lg-4">
+    <div class="field">
+    <%= f.label :Frequency %><br />
+    <%= f.select :frequency ,["Day","Week","Month","Year"], {},:style =>"width:50;",class:"form-control"%>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :goal %><br>
+    <%= f.number_field :goal, class:"form-control", min:1 %>
+  </div>
+  
+ 
+ 
+  
+   <div class="field">
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+        </div>
+          <div class="field">
+        <%= f.hidden_field :automatic_goal, :value => false%>
+        </div>
+  
+  
+  <br>
+  <br>
 
+   <div class="actions">
+   	<div class='btn btn-group'>
+    <%= f.submit :Create ,class:"btn btn-success btn-sm"%>
+	<%= link_to 'Show', @goal,class:"btn btn-primary btn-sm" %>
+	<%= link_to 'Back', goals_path,class:"btn btn-default btn-sm" %>
+	</div>
+  </div>
+
+
+
+  </div>
+
+  <div class="col-lg-4">
+
+  <img src="/assets/goals.jpg" width="100%" class="img-rounded">
+  </div>
+  <br>
+
+</div>
+  
+<% end %>
 
 </div>
 </div>

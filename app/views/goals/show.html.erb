@@ -9,59 +9,75 @@
 <title>Goal | FiTrack</title>
     <div id="page-content-wrapper" style="margin-left:3%;">
     <div class="container"> 
-    <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;">Goal</h1>  
+    <h1 style="border-bottom: 1px solid #A6AAA9; color: #000000;"><%= @goal.type_goal.tip%> Goal</h1> 
+     <h2 align='center'>Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2> <br>
 <div class="row featurette" >
         <div class="col-md-8">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead"><p>
-              <strong>Type:</strong>
-              <%= @goal.type_goal.tip%>
-            </p>
-
-            <p>
-              <strong>Frequency:</strong>
-              <%= @goal.frequency %>
-            </p>
-
-            <p>
-              <strong>Goal:</strong>
-              <%= @goal.goal %>
-            </p>
-
-             <p>
-              <strong>Progress:</strong>
-              <%= @goal.progress %>
-            </p>
-             
-              <p>
-              <strong>Complete:</strong>
-              <%= @goal.complete %>
-            </p>
-             
-
-
-                
             
 
-            <p>
-              <strong>Time started:</strong>
-              <%= @goal.time_started %>
-            </p>
+            <table class='table table-striped'>
+              <col width='50%'>
+              <col width='50%'>
+              <th >Frequency</th>
+              <th >Goal</th>
+              <tr>
+                <td  ><%= @goal.frequency %></td>
+                <td ><%= @goal.goal %></td>
+              </tr>
+            </table>
+            
+            <table class='table table-striped'>
+              <col width='50%'>
+              <col width='50%'>
+              <th >Progress</th>
+              <th ></th>
+              <tr>
+                <td  ><%= @goal.progress%></td>
+                <td >
 
-            <p>
-              <strong>Time finished:</strong>
-              <%= @goal.time_finished %>
-            </p></p>
+                    <%if @goal.type_goal.tip != 'Weight'%>
+                  <div class="progress">
+                    <%if (@goal.progress*100/@goal.goal)>=100%>
+
+                    <div class="progress-bar" role="progressbar" aria-valuenow='100' aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                      100%
+                    </div> 
+                    <%else%>
+                    <div class="progress-bar" role="progressbar" aria-valuenow=<%=(@goal.progress*100/@goal.goal)%> aria-valuemin="0" aria-valuemax="100" style="width: <%=(@goal.progress*100/@goal.goal)%>%;">
+                      <%=(@goal.progress*100/@goal.goal)%>%
+
+                    </div> 
+                    <%end%>
+                  </div>
+                   <%end%>
+                </td>
+              </tr>
+              <tr>
+                <%if @goal.complete==true%>
+                <td><p style="color: #00CC00;">Completed!</p></td>
+                <td> <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><img src='/assets/share.png' width='20%'></a>
+                </td>
+                <%else%>
+                <td><p style="color: #C80000;">Not completed!</p></td>
+                <td>
+                </td>
+                <%end%>
+              </tr>
+            </table>
+            
+            
+            
         </div>
-        <div class="col-md-4" style="margin-top:10%;">
+        <div class="col-md-4">
           <img class="img-circle" src="<%= @goal.type_goal.img%>" alt="Generic placeholder image" width='250px' height = '250px'>
         </div>
       </div>
-
-
-<%= link_to 'Edit', edit_goal_path(@goal), class:"btn btn-default" %> |
-<%= link_to 'Back', goals_path, class:"btn btn-default" %>
-
+<center>
+<div class='btn btn-group' align='center'>
+    <%= link_to 'Edit', edit_goal_path(@goal), class:"btn btn-primary btn-sm" %>
+    <%= link_to 'Back', goals_path, class:"btn btn-default btn-sm" %>
+</div>
+</center>
     </div>
   </div>
 
