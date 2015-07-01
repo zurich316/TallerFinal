@@ -18,12 +18,12 @@ class Goal < ActiveRecord::Base
         self.progress = self.progress + one.calories
        end
     end
-    def calculate_dream()
+    def calculate_dream
        if self.type_goal.tip == "Dream"
          self.progress = self.goal
        end
     end
-    def calculate_weight()
+    def calculate_weight
        if self.type_goal.tip == "Weight"
          self.progress = User.find(self.user_id).weight
        end
@@ -40,8 +40,8 @@ class Goal < ActiveRecord::Base
       if self.frequency=="Day" && Time.now.month == one.registered_date.month && Time.now.day == one.registered_date.day && Time.now.year == one.registered_date.year
        calculate_calories(one)
       calculate_steps(one)
-      calculate_dream(one)
-      calculate_weight(one)
+      calculate_dream
+      calculate_weight
       calculate_heart_rate
       end 
     end
@@ -50,8 +50,8 @@ class Goal < ActiveRecord::Base
       if self.frequency=="Month" && Time.now.month == one.registered_date.month && Time.now.year == one.registered_date.year
       calculate_calories(one)
       calculate_steps(one)
-      calculate_dream(one)
-      calculate_weight(one)
+      calculate_dream
+      calculate_weight
       end 
     end
 
@@ -59,8 +59,8 @@ class Goal < ActiveRecord::Base
       if self.frequency=="Year" && Time.now.year == one.registered_date.year
        calculate_calories(one)
       calculate_steps(one)
-      calculate_dream(one)
-      calculate_weight(one)
+      calculate_dream
+      calculate_weight
       end 
     end
 

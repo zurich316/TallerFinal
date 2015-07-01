@@ -1,17 +1,32 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-four: 
-  type_goal_id: 4
-  type_goalgoer_id: 4
-  user_id: 2
+
 one: 
   type_goal_id: 1
   type_goalgoer_id: 1
   user_id: 1
-three: 
-  type_goal_id: 3
-  type_goalgoer_id: 3
-  user_id: 1
+  progress: 0
+  goal: 5000
+  frequency: Day
 two: 
   type_goal_id: 2
   type_goalgoer_id: 2
   user_id: 1
+  progress: 0
+  frequency: Month
+three: 
+  type_goal_id: 3
+  type_goalgoer_id: 3
+  user_id: 1
+  progress: 0
+  goal: 8
+  frequency: Year
+four: 
+  type_goal_id: 4
+  type_goalgoer_id: 4
+  user_id: 1
+  progress: 0
+five: 
+  type_goal_id: 5
+  type_goalgoer_id: 2
+  user_id: 1
+  progress: 0

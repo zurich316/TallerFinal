@@ -141,3 +141,14 @@ twelve:
    birthdate: 1940-12-16 00:00:00
    sex: "Male"
    id: 12
+
+twelve: 
+   name: "Ana"
+   email: "ana@gmail.com" 
+   last_name: "Cuba" 
+   encrypted_password: "password" 
+   weight: 55
+   height: 160
+   birthdate: 1940-12-16 00:00:00
+   sex: "Female"
+   id: 12
