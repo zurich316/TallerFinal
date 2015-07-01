@@ -31,46 +31,30 @@ class Band < ActiveRecord::Base
 
     if years_calculate <= 13
      step1 = 15000
-
      return step1
-
     else 
-
         if years_calculate <= 50 && years_calculate > 13 
           step1=10000
-
           return step1
         else
           step1=2000
-
-
            return step1
-
         end
     end
-
-
   end
 
   
 
   def sleep_all  # calculo de suenho para personas mayores a los 14 anhos 
-
     if years_calculate < 18
-
       return sleep1 = 10
     end
     if years_calculate >= 18 && years_calculate < 26
-
       return sleep1 = 8
     end
     if years_calculate > 25 
-
       return sleep1 = 7
     end
-
-
-
   end
 
   
@@ -85,19 +69,14 @@ class Band < ActiveRecord::Base
 
   def calories_male # calcula cuantas calorias debe quemar un hombre
     tmb = (10*User.find(self.user_id).weight)+(6.25*User.find(self.user_id).height)-(5*years_calculate)+5
-
     tmb_activo = tmb*0.50
     tmb = tmb + tmb_activo
     tmb_digestion = tmb*0.10
     tmb = tmb + tmb_digestion
     if User.find(self.user_id).weight - weight_all > 0
-
       return tmb = tmb + 500
-
     else
-
       return tmb
-
     end
   end
 
@@ -110,26 +89,15 @@ class Band < ActiveRecord::Base
     tmb_digestion = tmb*0.10
     tmb = tmb + tmb_digestion
     if User.find(self.user_id).weight - weight_all > 0
-
       return tmb = tmb + 500
-
     else
-
       return tmb
-
     end
-
-
   end
 
   def years_calculate  # calcula la edad del usuario
-
     year1 = Time.diff(User.find(self.user_id).birthdate, Time.now)
-    
     return year1[:year]
-
-
-
   end
   def heart_rate
   	edad=User.find(self.user_id).age
