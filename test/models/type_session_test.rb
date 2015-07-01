@@ -1,3 +1,4 @@
+#Type Session tests
 require 'test_helper'
 
 class TypeSessionTest < ActiveSupport::TestCase

@@ -1,9 +1,10 @@
+#Migration to create Band Types table
 class CreateBandTypes < ActiveRecord::Migration
   def change
-    create_table :band_types do |t|
-      t.string :name
+    create_table :band_types do |table|
+      table.string :name
 
-      t.timestamps null: false
+      table.timestamps null: false
     end
   end
 end

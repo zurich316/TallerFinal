@@ -1,11 +1,12 @@
+#Migration to create Cycling ableSessions table
 class CreateCyclingSessions < ActiveRecord::Migration
   def change
-    create_table :cycling_sessions do |t|
-      t.integer :distance
-      t.integer :velocity
-      t.integer :fitness_session_id
-      t.references :fitness_session, index: true
-      t.timestamps null: false
+    create_table :cycling_sessions do |table|
+      table.integer :distance
+      table.integer :velocity
+      table.integer :fitness_session_id
+      table.references :fitness_session, index: true
+      table.timestamps null: false
     end
   end
 end

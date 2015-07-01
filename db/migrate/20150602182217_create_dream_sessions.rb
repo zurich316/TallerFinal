@@ -1,12 +1,13 @@
+#Migration to create Dream Session table
 class CreateDreamSessions < ActiveRecord::Migration
   def change
-    create_table :dream_sessions do |t|
-      t.datetime :time_started
-      t.datetime :time_finished
-      t.references :user, index: true, foreign_key: true
-      t.references :band, index: true, foreign_key: true
+    create_table :dream_sessions do |table|
+      table.datetime :time_started
+      table.datetime :time_finished
+      table.references :user, index: true, foreign_key: true
+      table.references :band, index: true, foreign_key: true
 
-      t.timestamps null: false
+      table.timestamps null: false
     end
   end
 end

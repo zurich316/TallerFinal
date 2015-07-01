@@ -4,21 +4,21 @@ require 'pusher'
 require 'cgi'
 require 'time'
 
-def alarm?(x)
+def alarm?(alarma)
 	right_now=Time.now
-	if (right_now.monday? && x["monday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	if (right_now.monday? && alarma["monday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif(right_now.tuesday? && x["tuesday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif(right_now.tuesday? && alarma["tuesday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.wednesday? && x["wednesday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.wednesday? && alarma["wednesday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.thursday? && x["thursday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.thursday? && alarma["thursday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.friday? && x["friday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.friday? && alarma["friday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.saturday? && x["saturday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.saturday? && alarma["saturday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
-	elsif (right_now.sunday? && x["sunday"] && right_now.strftime('%H:%M')==Time.parse(x["time"]).strftime('%H:%M') &&x["turn"])
+	elsif (right_now.sunday? && alarma["sunday"] && right_now.strftime('%H:%M')==Time.parse(alarma["time"]).strftime('%H:%M') &&alarma["turn"])
 		true
 	else
 		false
@@ -49,12 +49,13 @@ if bands.size == 1
 		long=Random.new.rand(-17.399343..-17.366742)
 		lat=Random.new.rand(-66.180571..-66.136969)
 		hr = Random.new.rand(60..250)
+		sq=Random.new.rand(0..100)
 		date=Time.now
 		user_id=agent.get('http://fitrackucb.herokuapp.com/band_informations/new').form_with(:method => 'POST').field_with(:name => 'band_information[user_id]').value
 		band_id=agent.get('http://fitrackucb.herokuapp.com/band_informations/new').form_with(:method => 'POST').field_with(:name => 'band_information[band_id]').value
 		#Asociamos los datos de la banda a la cuenta de usuario 1 (sergio@fitrack.com) y a su banda asociada con id 1.
 		
-		data = {'band_information[long]'=>long,'band_information[lat]'=>lat,'band_information[calories]'=>calories,'band_information[steps]'=>steps,'band_information[registered_date]'=>date, 'band_information[heart_rate]'=>hr,'band_information[user_id]'=>user_id,'band_information[band_id]'=>band_id}
+		data = {'band_information[long]'=>long,'band_information[lat]'=>lat,'band_information[calories]'=>calories,'band_information[steps]'=>steps,'band_information[registered_date]'=>date, 'band_information[heart_rate]'=>hr,'band_information[sleep_quality]'=>sq,'band_information[user_id]'=>user_id,'band_information[band_id]'=>band_id}
 		agent.post('http://fitrackucb.herokuapp.com/band_informations.json', data) 
 		puts "Minute #{flag}"
 		flag+=1

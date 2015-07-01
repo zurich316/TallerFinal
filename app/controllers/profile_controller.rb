@@ -1,3 +1,4 @@
+#Profile controller to manage database info for profiles with users
 class ProfileController < ApplicationController
 	before_action :authenticate_user!
 

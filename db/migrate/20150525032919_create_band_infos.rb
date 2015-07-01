@@ -1,12 +1,13 @@
+#Migration to create Band Information table to save Band Data
 class CreateBandInfos < ActiveRecord::Migration
   def change
-    create_table :band_infos do |t|
-      t.integer :steps
-      t.integer :calories
-      t.integer :lat
-      t.integer :long
+    create_table :band_infos do |table|
+      table.integer :steps
+      table.integer :calories
+      table.integer :lat
+      table.integer :long
 
-      t.timestamps null: false
+      table.timestamps null: false
     end
   end
 end

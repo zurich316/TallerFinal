@@ -1,3 +1,4 @@
+#Fitness Session config and methods
 class FitnessSession < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :type_session
@@ -5,8 +6,5 @@ class FitnessSession < ActiveRecord::Base
 	has_many :jogging_sessions
 	has_many :cycling_sessions
 	has_many :weight_lifting_sessions
-
-	#validates_presence_of :burned_calories, :hearth_rate
-	
 
 end

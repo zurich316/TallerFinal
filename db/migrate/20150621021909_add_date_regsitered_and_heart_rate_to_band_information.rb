@@ -1,3 +1,4 @@
+#Goals migration to add a Column 
 class AddDateRegsiteredAndHeartRateToBandInformation < ActiveRecord::Migration
   def change
     add_column :band_informations, :registered_date, :date

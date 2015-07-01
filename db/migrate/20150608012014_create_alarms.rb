@@ -1,18 +1,19 @@
+#Migration to create Alarms table
 class CreateAlarms < ActiveRecord::Migration
   def change
-    create_table :alarms do |t|
-      t.time :time
-      t.boolean :monday
-      t.boolean :tuesday
-      t.boolean :wednesday
-      t.boolean :thursday
-      t.boolean :friday
-      t.boolean :saturday
-      t.boolean :sunday
-      t.string :message
-      t.boolean :turn
+    create_table :alarms do |table|
+      table.time :time
+      table.boolean :monday
+      table.boolean :tuesday
+      table.boolean :wednesday
+      table.boolean :thursday
+      table.boolean :friday
+      table.boolean :saturday
+      table.boolean :sunday
+      table.string :message
+      table.boolean :turn
 
-      t.timestamps null: false
+      table.timestamps null: false
     end
   end
 end

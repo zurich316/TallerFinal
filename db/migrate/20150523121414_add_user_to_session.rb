@@ -1,3 +1,4 @@
+#Session migration to add a reference
 class AddUserToSession < ActiveRecord::Migration
   def change
     add_reference :fitness_sessions, :user, index: true

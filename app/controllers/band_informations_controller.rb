@@ -1,3 +1,4 @@
+#Controller for band information registers views and methods
 class BandInformationsController < ApplicationController
   before_action :set_band_information, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 
@@ -9,30 +10,42 @@ class BandInformationsController < ApplicationController
   end
 
   def today_work
-    @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+
+    right_now=Time.now
+    @today=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',right_now.beginning_of_day, right_now.end_of_day)
   end
 
   def custom
+    @flag=false
+    right_now=Time.now
     if params["custom"]==nil
-      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_day, Time.now.end_of_day)
+      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',right_now.beginning_of_day, right_now.end_of_day)
     else
       @initial= Time.new params["custom"]["initial_date(1i)"].to_i, params["custom"]["initial_date(2i)"].to_i, params["custom"]["initial_date(3i)"].to_i
       @final= Time.new params["custom"]["final_date(1i)"].to_i, params["custom"]["final_date(2i)"].to_i, params["custom"]["final_date(3i)"].to_i
-      @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',@initial.beginning_of_day, @final.end_of_day)
+      if @initial > @final || @initial > right_now || @final > right_now
+        @flag=true 
+        @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',right_now.beginning_of_day, right_now.end_of_day)
+      else
+        @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',@initial.beginning_of_day, @final.end_of_day)
+      end
     end
   end
 
   def daily_comp
-    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_week, Time.now.end_of_week)
+    right_now=Time.now
+    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',right_now.beginning_of_week, right_now.end_of_week)
   end
 
   def weekly_comp
-    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_month, Time.now.end_of_month)
+    right_now=Time.now
+    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',right_now.beginning_of_month, right_now.end_of_month)
   
   end
 
   def monthly_comp
-    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',Time.now.beginning_of_year, Time.now.end_of_year)
+    right_now=Time.now
+    @data=current_user.bands.first.band_informations.where('registered_date BETWEEN ? AND ?',right_now.beginning_of_year, right_now.end_of_year)
   
   end
   # GET /band_informations
@@ -59,6 +72,9 @@ class BandInformationsController < ApplicationController
   # POST /band_informations.json
   def create
     @band_information = BandInformation.new(band_information_params)
+    if @band_information.registered_date.nil?
+      @band_information.registered_date=Time.now
+    end
     respond_to do |format|
       if @band_information.save
         format.html { redirect_to @band_information, notice: 'Band information was successfully created.' }

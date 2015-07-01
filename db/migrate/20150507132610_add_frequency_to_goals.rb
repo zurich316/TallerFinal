@@ -1,3 +1,4 @@
+#Goal migration for adding a Frequency Column to Goals table
 class AddFrequencyToGoals < ActiveRecord::Migration
   def change
   	add_column :goals, :frequency, :string

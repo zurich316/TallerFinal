@@ -1,13 +1,14 @@
+#Migration to create Sessions table
 class CreateSessions < ActiveRecord::Migration
   def change
-    create_table :fitness_sessions do |t|
-      t.integer :burned_calories
-      t.integer :hearth_rate
-      t.time :total_time
-      t.datetime :time_started
-      t.datetime :time_finished
+    create_table :fitness_sessions do |table|
+      table.integer :burned_calories
+      table.integer :hearth_rate
+      table.time :total_time
+      table.datetime :time_started
+      table.datetime :time_finished
 
-      t.timestamps null: false
+      table.timestamps null: false
     end
   end
 end

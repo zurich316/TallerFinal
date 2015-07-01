@@ -1,3 +1,4 @@
+#Cycling sessions' tests
 require 'test_helper'
 
 class CyclingSessionTest < ActiveSupport::TestCase

@@ -1,3 +1,4 @@
+#Fitness session controller to manage database info
 class FitnessSessionsController < ApplicationController
   before_action :set_session, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! 
@@ -40,8 +41,8 @@ class FitnessSessionsController < ApplicationController
     @dist = 0
     @cal = 0
     @rt = 0
-    @time1 = @session.time_started.to_time
-    @time2 = @session.time_finished.to_time
+    @time_started = @session.time_started.to_time
+    @time_finished = @session.time_finished.to_time
      
      @hash = Gmaps4rails.build_markers(@information) do |infor, marker|
         marker.lat infor.long
@@ -55,7 +56,9 @@ class FitnessSessionsController < ApplicationController
             @dist = @pasos
             @rt += info.heart_rate
     end 
-    @rt = @rt/@information.count()
+    if @information.count() != 0
+        @rt = @rt/@information.count()
+    end
   end
 
 

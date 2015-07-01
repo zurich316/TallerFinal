@@ -1,8 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tip: MyString
+  tip: Steps
   img: MyString
+  id: 1
 two:
-  tip: MyString
+  tip: Weight
   img: MyString
+  id: 2
+three:
+  tip: Calories
+  img: MyString
+  id: 3
+four:
+  tip: Dream
+  img: MyString
+  id: 4
+five:
+  tip: Heart Rate
+  img: MyString
+  id: 5

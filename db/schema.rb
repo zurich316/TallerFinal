@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621143522) do
+ActiveRecord::Schema.define(version: 20150701180657) do
 
   create_table "alarms", force: :cascade do |t|
     t.time     "time"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150621143522) do
     t.integer  "calories"
     t.datetime "registered_date"
     t.integer  "heart_rate"
+    t.integer  "sleep_quality"
   end
 
   add_index "band_informations", ["band_id"], name: "index_band_informations_on_band_id"

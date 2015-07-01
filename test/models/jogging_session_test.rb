@@ -1,3 +1,4 @@
+#Jogging Session tests
 require 'test_helper'
 
 class JoggingSessionTest < ActiveSupport::TestCase

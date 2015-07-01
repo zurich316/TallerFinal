@@ -72,21 +72,21 @@
           <h2><td><%= tgoal.type_goal.tip%></td></h2>
           <p><strong>Goal: </strong><%= tgoal.goal %><br>
          
-          <strong>Frecuency: </strong><%= tgoal.frequency %></p>
-          
+          <strong>Frecuency: </strong><%= tgoal.frequency %><br></p>
+           <%if tgoal.complete==true%>
+                <p style="color: #00CC00;">Completed!<br>
+                 <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><img src='/assets/share.png' width='20%'></a></p>
+                <%else%>
+               <p style="color: #C80000;">Not completed!</p>
+               
+          <%end%>
         <div class="btn btn-group" align='center'>
           <%= link_to 'Show', tgoal ,class:"btn btn-default btn-xs"%>
           <%if tgoal.automatic_goal ==false%>
           <%= link_to 'Destroy', tgoal, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-xs" %>
           <%end%>
-
-
-          <%if tgoal.complete==true%>
-            <a href="http://www.facebook.com/sharer.php?s=100&p[url]=http://fitrackucb.herokuapp.com?s=100&p[title]=Goals+Fitrack&p[images][0]=http://fitrackucb.herokuapp.com&p[summary]=Congratulations+you+completed+a+goal" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button">compartir</a>
-
-          <%end%>
-        <br>
         </div>
+      </div>
       <% end %>
                 <!--<%= link_to 'New Goal', new_goal_path %>-->
                 

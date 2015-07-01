@@ -1,3 +1,4 @@
+#User controller and methods
 class User < ActiveRecord::Base
   	rolify
   	has_many :goals 

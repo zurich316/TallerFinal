@@ -1,3 +1,4 @@
+#Controller for alarms with notifications
 class AlarmsController < ApplicationController
   before_action :set_alarm, only: [:show, :edit, :update, :destroy]
 
@@ -37,7 +38,6 @@ class AlarmsController < ApplicationController
   # POST /alarms.json
   def create
     @alarm = Alarm.new(alarm_params)
-
     respond_to do |format|
       if @alarm.save
         format.html { redirect_to @alarm, notice: 'Alarm was successfully created.' }

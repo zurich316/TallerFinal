@@ -1,7 +1,9 @@
+#Manage information sent from band
 class BandInformation < ActiveRecord::Base
   belongs_to :user
   belongs_to :band
-  validates :steps, :lat,:long,:calories,:heart_rate , presence: true
+  validates :steps, :lat,:long,:calories,:heart_rate, :sleep_quality , presence: true
+  validates :sleep_quality, :inclusion => 0..100
   before_save :heart_rate_high
 
   def alarma?
