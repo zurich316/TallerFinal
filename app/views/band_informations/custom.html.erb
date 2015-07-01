@@ -9,6 +9,12 @@
   Here you can custom dates to see your progress!<br>
   Keep rocking!<br><br>
 </p>
+<%if @flag==true%>
+<p>
+  <h3 style='color: #C80000;'>Review dates you send.</h3>
+  There was a problem processing the data you send. Try again.<br>
+</p><br>
+<%end%>
 <center>
 <div class="row" style="width: 70%">
 <%= form_for :custom do |f| %>
